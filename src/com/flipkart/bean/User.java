@@ -5,14 +5,21 @@ public class User {
 	private Integer ID;
 	private String Password;
 	private String ContactNumber;
+	private String Type;
 	
-	protected String getName() {
+	protected String getType() {
+		return Type;
+	}
+	protected void setType(String type) {
+		Type = type;
+	}
+	public String getName() {
 		return Name;
 	}
 	protected void setName(String name) {
 		Name = name;
 	}
-	protected Integer getID() {
+	public Integer getID() {
 		return ID;
 	}
 	protected void setID(Integer iD) {
@@ -24,7 +31,7 @@ public class User {
 	protected void setPassword(String password) {
 		Password = password;
 	}
-	protected String getContactNumber() {
+	public String getContactNumber() {
 		return ContactNumber;
 	}
 	protected void setContactNumber(String contactNumber) {
