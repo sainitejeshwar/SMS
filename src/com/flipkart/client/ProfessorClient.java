@@ -37,8 +37,7 @@ public class ProfessorClient {
 			}
 			}
 			while(choice == 1 || choice == 2|| choice == 3);
-			
+	logger.info("Logging Out");		
 	input.close();
-	logger.info("Logging Out");
 	}
 }

@@ -31,9 +31,9 @@ public class AdminClient {
 			}
 			}
 			while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6);
-		
-	input.close();
 	logger.info("Logging Out");
+	input.close();
+	
 	}
 	
 }

@@ -34,15 +34,31 @@ public class Login {
 		
 		*/
 		Scanner input = new Scanner(System.in);
-		boolean flag = true;
-		while(flag) {
-			logger.info("SMS");
-			logger.info("Enter ID ");
-			String ID = input.next();
-			if(ID.equals("exit")) {
-				break;
+		boolean exit = true;
+		logger.info("SMS");
+		while(exit) {
+			
+			
+			boolean flag = true;
+			int id = 0;
+			do {
+				logger.info("Enter ID ");
+				String ID = input.next();
+				if(ID.equals("exit")) {
+					exit = false;
+					break;
+				}
+				try {
+					id = Integer.parseInt(ID);
+					flag = false;
+				}
+				catch (NumberFormatException e) {
+					logger.debug("Invalid Entry..!!");
+				}
 			}
-			int id = Integer.parseInt(ID);
+			while(flag);
+			if(exit == false)
+				break;
 			
 			logger.info("Enter Password");
 			String password = input.next();

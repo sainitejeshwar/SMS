@@ -19,33 +19,17 @@ public class AuthorCredentialDAO implements DBOperations {
 	public String checkIdentity(int ID , String password) throws InvalidUserException {
 			conn = DBUtils.getConnection();
 			String sql = "select * from users where ID=?";
-			try {
-				stmt = conn.prepareStatement(sql);
-			} catch (SQLException e) {
-				logger.debug(e.getMessage());
-			}
-			try {
-				stmt.setInt(1, ID);
-			} catch (SQLException e) {
-				logger.debug(e.getMessage());
-			}
 			ResultSet rs = null;
-			try {
-				rs = stmt.executeQuery();
-			} catch (SQLException e) {
-				logger.debug(e.getMessage());
-			}
 			String res= null;
 			String type = null;
 			try {
+				stmt = conn.prepareStatement(sql);
+				stmt.setInt(1, ID);
+				rs = stmt.executeQuery();
 				while(rs.next()) {
 					res = rs.getString("Password");
 					type = rs.getString("Type");
 				}
-			} catch (SQLException e) {
-				logger.debug(e.getMessage());
-			}
-			try {
 				rs.close();
 			} catch (SQLException e) {
 				logger.debug(e.getMessage());
