@@ -18,6 +18,7 @@ public class ProfessorClient {
 		int choice  = 4;
 		do {
 			int id = 0;
+			// view catalog
 			logger.info("\nChoices\n1.View Students in a Course\n2.View My Courses\n3.Upload Grades\n4.Logout");
 			choice = input.nextInt();
 			switch (choice) {

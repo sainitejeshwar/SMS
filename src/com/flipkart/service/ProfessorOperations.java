@@ -5,8 +5,9 @@ import org.apache.log4j.Logger;
 import com.flipkart.DAO.CourseDAO;
 import com.flipkart.DAO.ProfessorDAO;
 import com.flipkart.bean.Professor;
+import com.flipkart.helper.operationHelper;
 
-public class ProfessorOperations {
+public class ProfessorOperations implements operationHelper{
 	private static  Logger logger = Logger.getLogger(ProfessorOperations.class);
 	private CourseDAO courseDAO = new CourseDAO();
 	private ProfessorDAO professorDAO = new ProfessorDAO();

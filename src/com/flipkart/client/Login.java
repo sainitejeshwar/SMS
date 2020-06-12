@@ -34,19 +34,21 @@ public class Login {
 		boolean exit = true;
 		logger.info("SMS");
 		Scanner input = new Scanner(System.in);
+		String emailid = "";
+		String password ="";
+		AuthorCredentialDAO checker = new AuthorCredentialDAO();
+		
+		
 		while(exit) {
-			String emailid;
+			
 			logger.info("Enter ID ");
-			emailid = input.next();
+			emailid = input.nextLine();
 			if(emailid.equals("exit")) {
 				exit = false;
 				break;
 			}
 			logger.info("Enter Password");
-			String password = input.next();
-		
-			AuthorCredentialDAO checker = new AuthorCredentialDAO();
-			
+			password = input.nextLine();
 			String typeOfUser = null ;
 			try {
 				typeOfUser = checker.checkIdentity(emailid, password);
@@ -68,7 +70,7 @@ public class Login {
 			catch (InvalidUserException e) {
 				logger.error(e.getMessage());
 			}
-			
+			exit = false;
 		}
 		input.close();
 		logger.info("Terminated.!");

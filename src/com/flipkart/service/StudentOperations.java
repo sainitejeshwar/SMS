@@ -6,8 +6,9 @@ import com.flipkart.DAO.CourseCatalogDAO;
 import com.flipkart.DAO.CourseDAO;
 import com.flipkart.DAO.StudentDAO;
 import com.flipkart.bean.Student;
+import com.flipkart.helper.operationHelper;
 
-public class StudentOperations {
+public class StudentOperations implements operationHelper{
 	private static  Logger logger = Logger.getLogger(StudentOperations.class);
 	private CourseDAO courseDAO = new CourseDAO();
 	private StudentDAO studentDAO = new StudentDAO();
@@ -16,11 +17,6 @@ public class StudentOperations {
 	public String generateReportCard(String emailid) {
 		return null;
 	}
-	
-	public String viewCourseCatalog(int sem) {
-		return courseDAO.listAll(sem);
-	}
-	
 	public boolean doRegistration(String emailid) {
 		return false;
 	}

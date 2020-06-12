@@ -18,7 +18,7 @@ public class AdminClient {
 		logger.debug("Logged in as Admin "+emailID);
 		int choice  = 7;
 		do {
-			
+			// view catalog
 			logger.info("\nChoices\n"
 					+ "1.Add User\n2.Update User\n3.View Users\n"
 					+ "4.Add Course\n5.Update Course\n6.View Courses\n7.Logout");

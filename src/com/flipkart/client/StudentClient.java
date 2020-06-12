@@ -39,7 +39,7 @@ public class StudentClient {
 						+ student.getAllCourses());
 				break;
 			case 3:
-				logger.info(studOperations.viewCourseCatalog(student.getSemester()));
+				logger.info(studOperations.viewCourseCatalog());
 				break;
 			case 4:
 				logger.info(studOperations.addCourse());
