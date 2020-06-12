@@ -1,11 +1,13 @@
 package com.flipkart.bean;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Registration {
 	private static int Counter = 0;
 	private int RegistrationNumber;
+	private LocalDateTime  RegistrationTime;
 	private HashMap<Student, Integer> Registrations = new HashMap<Student, Integer>();
 	
 	
@@ -22,5 +24,12 @@ public class Registration {
 		Registrations.put(S, this.RegistrationNumber);
 		return S.getStudentCourses();
 	}
+	public LocalDateTime getRegistrationTime() {
+		return RegistrationTime;
+	}
+	public void setRegistrationTime() {
+		RegistrationTime = LocalDateTime.now();
+	}
+	
 
 }

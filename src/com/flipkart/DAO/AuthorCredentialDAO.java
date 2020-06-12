@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 
 import org.apache.log4j.Logger;
 
@@ -30,6 +31,7 @@ public class AuthorCredentialDAO implements DBOperations {
 					user.setPassword(rs.getString("Password"));
 					user.setType(rs.getString("Type"));
 				}
+				
 				rs.close();
 			} catch (SQLException e) {
 				logger.debug(e.getMessage());
@@ -49,7 +51,37 @@ public class AuthorCredentialDAO implements DBOperations {
 		
 		
 	}
-
+	
+	public void updateLoginTimeStamp(String emailid , String currDateTime) {
+		conn = DBUtils.getConnection();
+		ResultSet rs = null;
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.USER_UPDATE_TIMESTAMP);
+			stmt.setString(1, currDateTime);
+			stmt.setString(2, emailid);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+	}
+	public String getLastLoginTimeStamp(String emailid) {
+		conn = DBUtils.getConnection();
+		ResultSet rs = null;
+		String res = null;
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.USER_SET_TIMESTAMP);
+			stmt.setString(1, emailid);
+			rs = stmt.executeQuery();
+			while(rs.next()) {
+				res = rs.getString("LastLogin");
+			}
+			
+			rs.close();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		return res;
+	}
 
 	@Override
 	public boolean insertdata() {

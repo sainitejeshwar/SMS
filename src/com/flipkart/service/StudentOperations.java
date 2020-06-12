@@ -38,5 +38,9 @@ public class StudentOperations implements operationHelper{
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	public void updateLoginTimeStamp(String email, String timestamp) {
+		
+	}
 
 }
