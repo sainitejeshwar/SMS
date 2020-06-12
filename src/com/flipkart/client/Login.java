@@ -30,13 +30,11 @@ public class Login {
 		
 		*/
 		
-		Scanner input = new Scanner(System.in);
+		
 		boolean exit = true;
 		logger.info("SMS");
+		Scanner input = new Scanner(System.in);
 		while(exit) {
-			
-			
-			boolean flag = true;
 			String emailid;
 			logger.info("Enter ID ");
 			emailid = input.next();
@@ -46,7 +44,7 @@ public class Login {
 			}
 			logger.info("Enter Password");
 			String password = input.next();
-			
+		
 			AuthorCredentialDAO checker = new AuthorCredentialDAO();
 			
 			String typeOfUser = null ;
@@ -70,6 +68,7 @@ public class Login {
 			catch (InvalidUserException e) {
 				logger.error(e.getMessage());
 			}
+			
 		}
 		input.close();
 		logger.info("Terminated.!");

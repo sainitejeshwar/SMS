@@ -14,7 +14,7 @@ public class StudentClient {
 	
 	public void landingPage(String emailid) {
 		Student student = new Student();
-		Scanner input = new Scanner(System.in);
+		Scanner studScanner = new Scanner(System.in);
 		StudentOperations studOperations = new StudentOperations();
 		
 		
@@ -29,7 +29,7 @@ public class StudentClient {
 					+ "4.Add Course\n5.Drop Course\n"
 					+ "6.Start Registration\n7.Pay Semester Fees\n8.View Report card\n"
 					+ "9.Logout");
-			choice = input.nextInt();
+			choice = studScanner.nextInt();
 			switch (choice) {
 			case 1:
 				logger.info("\nID :"+student.getStudentID()+"\nName:"+student.getName()+"\nContact Number:");
@@ -60,9 +60,9 @@ public class StudentClient {
 				break;
 			}
 			}
-			while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6);
+			while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6 || choice ==7 || choice ==8);
 		
-	input.close();
+	studScanner.close();
 	logger.info("Logging Out");
 
 	}
