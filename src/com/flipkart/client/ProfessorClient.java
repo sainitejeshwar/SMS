@@ -9,15 +9,15 @@ import com.flipkart.service.ProfessorOperations;
 
 public class ProfessorClient {
 	private static  Logger logger = Logger.getLogger(ProfessorClient.class);
-	public void landingPage(int id) {
+	public void landingPage(String emailID) {
 		
 		Scanner input = new Scanner(System.in);
 		ProfessorOperations profOperations = new ProfessorOperations();
-		logger.debug("Logged in as Professor : "+id);
+		logger.debug("Logged in as Professor : "+emailID);
 		
 		int choice  = 4;
 		do {
-			
+			int id = 0;
 			logger.info("\nChoices\n1.View Students in a Course\n2.View My Courses\n3.Upload Grades\n4.Logout");
 			choice = input.nextInt();
 			switch (choice) {

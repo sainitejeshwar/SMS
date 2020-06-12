@@ -10,18 +10,18 @@ import com.flipkart.service.StudentOperations;
 public class AdminClient {
 	
 	private static  Logger logger = Logger.getLogger(AdminClient.class);
-	public void landingPage(int id) {
+	public void landingPage(String emailID) {
 		
 		Scanner input = new Scanner(System.in);
 		AdminOperations adminOperations = new AdminOperations();
 		
-		logger.debug("Logged in as Admin "+id);
+		logger.debug("Logged in as Admin "+emailID);
 		int choice  = 7;
 		do {
 			
 			logger.info("\nChoices\n"
-					+ "1.Show My Details\n2.View My Courses\n3.View Catalog\n"
-					+ "4.Start Registration\n5.Pay Semester Fees\n6.View Report card\n7.Logout");
+					+ "1.Add User\n2.Update User\n3.View Users\n"
+					+ "4.Add Course\n5.Update Course\n6.View Courses\n7.Logout");
 			choice = input.nextInt();
 			switch (choice) {
 			case 1:

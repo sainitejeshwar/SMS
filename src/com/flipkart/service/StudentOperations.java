@@ -9,32 +9,38 @@ import com.flipkart.bean.Student;
 
 public class StudentOperations {
 	private static  Logger logger = Logger.getLogger(StudentOperations.class);
-	private CourseCatalogDAO courseCatalogDAO = new CourseCatalogDAO();
 	private CourseDAO courseDAO = new CourseDAO();
 	private StudentDAO studentDAO = new StudentDAO();
+	Student student = new Student();
 	
-	public String generateReportCard(int id) {
+	public String generateReportCard(String emailid) {
 		return null;
 	}
 	
-	public String viewCourseCatalog() {
-		return courseCatalogDAO.listAll();
+	public String viewCourseCatalog(int sem) {
+		return courseDAO.listAll(sem);
 	}
 	
-	public String viewMyCourse(int ID) {
-		return studentDAO.getMyCourses(ID);
-	}
-	
-	public boolean doRegistration(int ID) {
+	public boolean doRegistration(String emailid) {
 		return false;
 	}
 	
-	public String payFees(int ID) {
+	public String payFees(String emailid) {
 		
 		return null;
 	}
-	public String showDetails(int id) {
-		return null;
+	public Student getStudent(String emailid) {
+		return studentDAO.listByID(emailid);
+	}
+
+	public boolean addCourse() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean dropCourse() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

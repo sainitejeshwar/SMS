@@ -6636,3 +6636,292 @@ Choices
 23:55:58,476  INFO StudentClient,main:49 - Logging Out
 23:55:58,476  INFO Login,main:39 - SMS
 23:55:58,477  INFO Login,main:40 - Enter ID 
+00:02:14,536  INFO Login,main:39 - SMS
+00:02:14,538  INFO Login,main:40 - Enter ID 
+00:02:18,666  INFO Login,main:47 - Enter Password
+00:02:20,381 ERROR Login,main:69 - ID or Password is incoorect
+00:02:20,381  INFO Login,main:39 - SMS
+00:02:20,381  INFO Login,main:40 - Enter ID 
+00:02:23,860  INFO Login,main:47 - Enter Password
+00:02:25,190 ERROR Login,main:69 - ID or Password is incoorect
+00:02:25,191  INFO Login,main:39 - SMS
+00:02:25,191  INFO Login,main:40 - Enter ID 
+00:04:13,674  INFO Login,main:39 - SMS
+00:04:13,677  INFO Login,main:40 - Enter ID 
+00:04:16,518 DEBUG Login,main:50 - Invalid Entry..!!
+00:04:16,518  INFO Login,main:52 - Enter Password
+00:07:23,314  INFO Login,main:39 - SMS
+00:07:23,316  INFO Login,main:40 - Enter ID 
+00:07:25,359  INFO Login,main:58 - Enter Password
+00:07:46,998 ERROR Login,main:80 - ID or Password is incoorect
+00:08:22,554  INFO Login,main:39 - SMS
+00:08:22,556  INFO Login,main:40 - Enter ID 
+00:08:27,327  INFO Login,main:39 - SMS
+00:08:27,330  INFO Login,main:40 - Enter ID 
+00:08:29,323  INFO Login,main:60 - Enter Password
+00:08:30,885 ERROR Login,main:82 - ID or Password is incoorect
+00:08:30,885  INFO Login,main:39 - SMS
+00:08:30,886  INFO Login,main:40 - Enter ID 
+00:08:33,570  INFO Login,main:60 - Enter Password
+00:08:34,295 ERROR Login,main:82 - ID or Password is incoorect
+00:08:34,296  INFO Login,main:39 - SMS
+00:08:34,297  INFO Login,main:40 - Enter ID 
+00:08:41,334 DEBUG Login,main:54 - Invalid Entry..!!
+00:08:50,940  INFO Login,main:60 - Enter Password
+00:08:57,532 DEBUG StudentClient,main:15 - Logged in as Student 1001
+00:08:57,533  INFO StudentClient,main:20 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+00:08:59,047  INFO StudentClient,main:49 - Logging Out
+00:08:59,048  INFO Login,main:39 - SMS
+00:08:59,048  INFO Login,main:40 - Enter ID 
+00:11:00,913  INFO Login,main:38 - SMS
+00:11:00,915  INFO Login,main:40 - Enter ID 
+00:11:00,915  INFO Login,main:44 - Enter ID 
+00:11:12,323  INFO Login,main:38 - SMS
+00:11:12,325  INFO Login,main:43 - Enter ID 
+00:11:14,241  INFO Login,main:60 - Enter Password
+00:11:17,706 DEBUG StudentClient,main:15 - Logged in as Student 1001
+00:11:17,707  INFO StudentClient,main:20 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+00:11:18,933  INFO StudentClient,main:49 - Logging Out
+00:11:18,934  INFO Login,main:43 - Enter ID 
+00:18:01,385  INFO Login,main:38 - SMS
+00:18:01,388  INFO Login,main:63 - Enter ID 
+00:18:04,100  INFO Login,main:65 - Enter Password
+00:18:06,555 ERROR Login,main:87 - ID or Password is incoorect
+00:18:06,555  INFO Login,main:63 - Enter ID 
+00:18:12,127  INFO Login,main:65 - Enter Password
+00:18:14,145 DEBUG StudentClient,main:15 - Logged in as Student 1001
+00:18:14,145  INFO StudentClient,main:20 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+00:18:15,576  INFO StudentClient,main:49 - Logging Out
+00:18:15,576  INFO Login,main:63 - Enter ID 
+00:19:07,149  INFO Login,main:38 - SMS
+00:19:07,152  INFO Login,main:63 - Enter ID 
+00:19:10,545  INFO Login,main:65 - Enter Password
+00:19:14,239 DEBUG AdminClient,main:18 - Logged in as Admin 1
+00:19:14,239  INFO AdminClient,main:22 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+00:19:17,003  INFO AdminClient,main:36 - Logging Out
+00:19:17,004  INFO Login,main:63 - Enter ID 
+00:19:40,039  INFO Login,main:38 - SMS
+00:19:40,043  INFO Login,main:63 - Enter ID 
+00:19:43,570  INFO Login,main:65 - Enter Password
+00:19:47,212 DEBUG AdminClient,main:18 - Logged in as Admin 1
+00:19:47,213  INFO AdminClient,main:22 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+00:19:47,800  INFO AdminClient,main:34 - Logging Out
+00:19:47,800  INFO Login,main:63 - Enter ID 
+00:20:39,542  INFO Login,main:38 - SMS
+00:20:39,545  INFO Login,main:63 - Enter ID 
+00:20:42,677  INFO Login,main:65 - Enter Password
+00:20:45,283 DEBUG ProfessorClient,main:16 - Logged in as Professor : 5000
+00:20:45,283  INFO ProfessorClient,main:21 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Logout
+00:20:48,279  INFO ProfessorClient,main:40 - Logging Out
+00:20:48,280  INFO Login,main:63 - Enter ID 
+00:25:40,893  INFO Login,main:38 - SMS
+00:25:40,894  INFO Login,main:45 - Enter ID 
+00:25:45,701 DEBUG Login,main:56 - Invalid Entry..!!
+00:25:45,703  INFO Login,main:45 - Enter ID 
+00:25:48,444  INFO Login,main:63 - Enter Password
+00:25:50,362 ERROR Login,main:85 - ID or Password is incoorect
+00:25:50,362  INFO Login,main:45 - Enter ID 
+00:25:53,294  INFO Login,main:63 - Enter Password
+00:25:54,644 DEBUG StudentClient,main:15 - Logged in as Student 1001
+00:25:54,645  INFO StudentClient,main:20 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+00:25:57,018  INFO StudentClient,main:49 - Logging Out
+00:25:57,018  INFO Login,main:45 - Enter ID 
+09:04:48,053  INFO Login,main:38 - SMS
+09:04:48,059  INFO Login,main:45 - Enter ID 
+09:04:51,192  INFO Login,main:63 - Enter Password
+09:04:54,819 DEBUG StudentClient,main:15 - Logged in as Student 1001
+09:04:54,819  INFO StudentClient,main:20 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:04:57,172  INFO StudentClient,main:49 - Logging Out
+09:04:57,173  INFO Login,main:45 - Enter ID 
+09:31:59,031  INFO Login,main:35 - SMS
+09:31:59,035  INFO Login,main:42 - Enter ID 
+09:32:01,579  INFO Login,main:60 - Enter Password
+09:32:03,275 ERROR Login,main:84 - ID or Password is incoorect
+09:32:03,275  INFO Login,main:42 - Enter ID 
+09:32:06,304  INFO Login,main:60 - Enter Password
+09:32:09,919 ERROR Login,main:84 - ID or Password is incoorect
+09:32:09,919  INFO Login,main:42 - Enter ID 
+09:32:14,022  INFO Login,main:60 - Enter Password
+09:32:17,348 DEBUG StudentClient,main:15 - Logged in as Student 1001
+09:32:17,348  INFO StudentClient,main:20 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:32:19,329  INFO StudentClient,main:49 - Logging Out
+09:32:19,329  INFO Login,main:42 - Enter ID 
+09:39:00,124  INFO Login,main:35 - SMS
+09:39:00,128  INFO Login,main:42 - Enter ID 
+09:39:01,918  INFO Login,main:60 - Enter Password
+09:39:06,243 DEBUG AdminClient,main:18 - Logged in as Admin 1
+09:39:06,244  INFO AdminClient,main:22 - 
+Choices
+1.Add User
+2.Update User
+3.View Users
+4.Add Course
+5.Update Course
+6.View Courses
+7.Logout
+09:39:10,055  INFO AdminClient,main:34 - Logging Out
+09:39:10,055  INFO Login,main:42 - Enter ID 
+09:49:15,082  INFO Login,main:35 - SMS
+09:49:15,084  INFO Login,main:42 - Enter ID 
+09:49:19,289 DEBUG Login,main:53 - Invalid Entry..!!
+09:49:19,290  INFO Login,main:42 - Enter ID 
+09:49:23,364  INFO Login,main:60 - Enter Password
+09:49:39,092 ERROR Login,main:84 - ID or Password is incoorect
+09:49:39,093  INFO Login,main:42 - Enter ID 
+09:49:43,544  INFO Login,main:60 - Enter Password
+09:49:47,534 DEBUG StudentClient,main:15 - Logged in as Student 1001
+09:49:47,535  INFO StudentClient,main:20 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:50:01,163  INFO StudentClient,main:49 - Logging Out
+09:50:01,164  INFO Login,main:42 - Enter ID 
+11:15:47,921  INFO Login,main:35 - SMS
+11:15:47,925  INFO Login,main:41 - Enter ID 
+11:15:51,144  INFO Login,main:47 - Enter Password
+11:15:54,262 DEBUG AdminClient,main:18 - Logged in as Admin admin
+11:15:54,263  INFO AdminClient,main:22 - 
+Choices
+1.Add User
+2.Update User
+3.View Users
+4.Add Course
+5.Update Course
+6.View Courses
+7.Logout
+11:15:57,200  INFO AdminClient,main:34 - Logging Out
+11:15:57,201  INFO Login,main:41 - Enter ID 
+11:22:05,062  INFO Login,main:35 - SMS
+11:22:05,066  INFO Login,main:41 - Enter ID 
+11:22:07,703  INFO Login,main:47 - Enter Password
+11:22:09,726 ERROR Login,main:71 - ID or Password is incoorect
+11:22:09,727  INFO Login,main:41 - Enter ID 
+11:22:18,441  INFO Login,main:47 - Enter Password
+11:22:21,034 DEBUG StudentClient,main:23 - Logged in as Student student
+11:22:21,054 DEBUG StudentDAO,main:63 - Table 'smssystem.student' doesn't exist
+11:22:21,054  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:22:27,682  INFO StudentClient,main:60 - Logging Out
+11:22:27,682  INFO Login,main:41 - Enter ID 
+11:27:54,237  INFO Login,main:35 - SMS
+11:27:54,239  INFO Login,main:41 - Enter ID 
+11:28:01,851  INFO Login,main:47 - Enter Password
+11:28:06,583 DEBUG StudentClient,main:23 - Logged in as Student student
+11:28:06,585  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:28:11,001  INFO StudentClient,main:34 - ID :1003
+Name:Tejeshwar Saini
+Contact Number:null
+11:28:11,002  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:28:17,343  INFO StudentClient,main:38 - ID : 1003
+ Name : Tejeshwar Saini
+ Courses : +null,null,null,null,
+11:28:17,344  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:28:23,511  INFO StudentClient,main:60 - Logging Out
+11:28:23,511  INFO Login,main:41 - Enter ID 
+11:29:59,810  INFO Login,main:35 - SMS
+11:29:59,812  INFO Login,main:41 - Enter ID 

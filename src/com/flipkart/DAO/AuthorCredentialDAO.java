@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
 
+import com.flipkart.bean.User;
+import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.exception.InvalidUserException;
 import com.flipkart.utils.DBUtils;
 
@@ -14,29 +16,26 @@ public class AuthorCredentialDAO implements DBOperations {
 	Connection conn = null;
 	PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(AuthorCredentialDAO.class);
+	User user = new User();
 	
-	
-	public String checkIdentity(int ID , String password) throws InvalidUserException {
+	public String checkIdentity(String emailid , String password) throws InvalidUserException {
 			conn = DBUtils.getConnection();
-			String sql = "select * from users where ID=?";
 			ResultSet rs = null;
-			String res= null;
-			String type = null;
 			try {
-				stmt = conn.prepareStatement(sql);
-				stmt.setInt(1, ID);
+				stmt = conn.prepareStatement(SQLQueryConstant.USER_SELECT_BY_ID);
+				stmt.setString(1, emailid);
 				rs = stmt.executeQuery();
 				while(rs.next()) {
-					res = rs.getString("Password");
-					type = rs.getString("Type");
+					user.setPassword(rs.getString("Password"));
+					user.setType(rs.getString("Type"));
 				}
 				rs.close();
 			} catch (SQLException e) {
 				logger.debug(e.getMessage());
 			}
 			try {
-				if(res.equals(password)) {
-					return type;
+				if(user.getPassword().equals(password)) {
+					return user.getType();
 				}
 				else {
 					throw new InvalidUserException();

@@ -4,40 +4,57 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import com.flipkart.bean.Student;
 import com.flipkart.service.StudentOperations;
 
 public class StudentClient {
 	private static  Logger logger = Logger.getLogger(StudentClient.class);
-	public void landingPage(int id) {
-		
+
+	
+	
+	public void landingPage(String emailid) {
+		Student student = new Student();
 		Scanner input = new Scanner(System.in);
 		StudentOperations studOperations = new StudentOperations();
-		logger.debug("Logged in as Student "+id);
+		
+		
+		student = studOperations.getStudent(emailid);
+		logger.debug("Logged in as Student :  "+student.getName());
+		
 		
 		int choice  = 7;
 		do {
 			
 			logger.info("\nChoices\n1.Show My Details\n2.View My Courses\n3.View Catalog\n"
-					+ "4.Start Registration\n5.Pay Semester Fees\n6.View Report card\n7.Logout");
+					+ "4.Add Course\n5.Drop Course\n"
+					+ "6.Start Registration\n7.Pay Semester Fees\n8.View Report card\n"
+					+ "9.Logout");
 			choice = input.nextInt();
 			switch (choice) {
 			case 1:
-				logger.info(studOperations.showDetails(id));
+				logger.info("\nID :"+student.getStudentID()+"\nName:"+student.getName()+"\nContact Number:");
 				break;
 			case 2:
-				logger.info(studOperations.viewMyCourse(id));
+				logger.info("\nID : " + student.getStudentID() + "\n Name : "+student.getName()+"\n Courses :"
+						+ student.getAllCourses());
 				break;
 			case 3:
-				logger.info(studOperations.viewCourseCatalog());
+				logger.info(studOperations.viewCourseCatalog(student.getSemester()));
 				break;
 			case 4:
-				logger.info(studOperations.doRegistration(id));
+				logger.info(studOperations.addCourse());
 				break;
 			case 5:
-				logger.info(studOperations.payFees(id));
+				logger.info(studOperations.dropCourse());
 				break;
 			case 6:
-				logger.info(studOperations.generateReportCard(id));
+				logger.info(studOperations.doRegistration(emailid));
+				break;
+			case 7:
+				logger.info(studOperations.payFees(emailid));
+				break;
+			case 8:
+				logger.info(studOperations.generateReportCard(emailid));
 				break;
 			default:
 				break;

@@ -28,11 +28,8 @@ public class Login {
 		payment passed or failed
 		
 		
-		
-		
-		
-		
 		*/
+		
 		Scanner input = new Scanner(System.in);
 		boolean exit = true;
 		logger.info("SMS");
@@ -40,26 +37,13 @@ public class Login {
 			
 			
 			boolean flag = true;
-			int id = 0;
-			do {
-				logger.info("Enter ID ");
-				String ID = input.next();
-				if(ID.equals("exit")) {
-					exit = false;
-					break;
-				}
-				try {
-					id = Integer.parseInt(ID);
-					flag = false;
-				}
-				catch (NumberFormatException e) {
-					logger.debug("Invalid Entry..!!");
-				}
-			}
-			while(flag);
-			if(exit == false)
+			String emailid;
+			logger.info("Enter ID ");
+			emailid = input.next();
+			if(emailid.equals("exit")) {
+				exit = false;
 				break;
-			
+			}
 			logger.info("Enter Password");
 			String password = input.next();
 			
@@ -67,26 +51,29 @@ public class Login {
 			
 			String typeOfUser = null ;
 			try {
-				typeOfUser = checker.checkIdentity(id, password);
-				if(typeOfUser.equals("student")) {
-					StudentClient studentLogin = new StudentClient();
-					studentLogin.landingPage(id);
-				}
-				else if (typeOfUser.equals("admin")) {
-					AdminClient adminClient = new AdminClient();
-					adminClient.landingPage(id);
-				}
-				else if (typeOfUser.equals("professor")) {
-					ProfessorClient professorClient = new ProfessorClient();
-					professorClient.landingPage(id);
+				typeOfUser = checker.checkIdentity(emailid, password);
+				switch(typeOfUser) {
+					case "student":
+						StudentClient studentLogin = new StudentClient();
+						studentLogin.landingPage(emailid);
+						break;
+					case "admin":
+						AdminClient adminClient = new AdminClient();
+						adminClient.landingPage(emailid);
+						break;
+					case "professor":
+						ProfessorClient professorClient = new ProfessorClient();
+						professorClient.landingPage(emailid);
+						break;
 				}
 			}
 			catch (InvalidUserException e) {
 				logger.error(e.getMessage());
 			}
-			
 		}
 		input.close();
+		logger.info("Terminated.!");
 	}
-
 }
+
+

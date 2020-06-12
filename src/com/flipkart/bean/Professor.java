@@ -16,14 +16,14 @@ public class Professor extends User {
 		this.profCourses.addAll(newCourses);
 ;	}
 	
-	private String getAllCourses() {
+	public String getAllCourses() {
 		String res="";
 		for(Course itrCourse : this.profCourses)
 			res = res + itrCourse +",";
 		return res;
 	}
 	@Override
-	protected String getUserInfo(User U) {
-		return "Professor : "+U.getID()+"\n"+ U.getName()+","+U.getContactNumber()+"\n Courses : ";
+	public String getUserInfo(User U) {
+		return "Professor : "+U.getemailID()+"\n"+ U.getName()+"\n Courses : ";
 	}
 }

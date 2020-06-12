@@ -4,12 +4,34 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Student extends User {
-	private ArrayList<Course> studentCourses = new ArrayList<Course>();
-	private HashMap<Integer, Boolean> RegistrationComplete = new HashMap<Integer, Boolean>();
 	
+	private ArrayList<String> studentCourses = new ArrayList<String>();
+	private HashMap<Integer, Boolean> RegistrationComplete = new HashMap<Integer, Boolean>();
+	private int semester;
+	private String Branch;
+	private String StudentID;
+	
+	public String getStudentID() {
+		return StudentID;
+	}
+	public void setStudentID(String studentID) {
+		StudentID = studentID;
+	}
+	public int getSemester() {
+		return semester;
+	}
+	public void setSemester(int semester) {
+		this.semester = semester;
+	}
+	public String getBranch() {
+		return Branch;
+	}
+	public void setBranch(String branch) {
+		Branch = branch;
+	}
 	public String getAllCourses() {
-		String res="Courses : ";
-		for(Course itrCourse : this.studentCourses)
+		String res="";
+		for(String itrCourse : this.studentCourses)
 			res = res + itrCourse +",";
 		return res;
 	}
@@ -17,23 +39,23 @@ public class Student extends User {
 		return getAllCourses();
 	}
 
-	public void setStudentCourses(ArrayList<Course> newCourses) {
+	public void setStudentCourses(ArrayList<String> newCourses) {
 		this.studentCourses.addAll(newCourses);
 	}
-	public void setStudentCourses(Course newCourse) {
-		this.studentCourses.add(newCourse);
+	public void setStudentCourses(String course) {
+		this.studentCourses.add(course);
 	}
 	
-	public String dropStudentCourse(Course excludeCourse) {
+	public String dropStudentCourse(String excludeCourse) {
 		this.studentCourses.remove(excludeCourse);
 		return getAllCourses();
 	}
 	public void startRegistration() {
-		Registration StudentRegistration = new Registration(this.studentCourses);
+		// TODO : dsds
 	}
 	@Override
 	public String getUserInfo(User U) {
-		return "Student : "+U.getID()+"\n"+ U.getName()+","+U.getContactNumber()+"\n"+getAllCourses();
+		return "Student : "+U.getemailID()+"\n"+ U.getName()+"\n"+getAllCourses();
 	}
 	public HashMap<Integer, Boolean> getRegistrationComplete() {
 		return RegistrationComplete;

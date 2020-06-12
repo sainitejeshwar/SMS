@@ -1,45 +1,38 @@
 package com.flipkart.bean;
 
 public class User {
-	private String Name;
-	private Integer ID;
-	private String Password;
-	private String ContactNumber;
-	private String Type;
+	protected String Name;
+	protected String emailID;
+	protected String Password;
+	protected String Type;
 	
-	protected String getType() {
+	public String getType() {
 		return Type;
 	}
-	protected void setType(String type) {
+	public void setType(String type) {
 		Type = type;
 	}
 	public String getName() {
 		return Name;
 	}
-	protected void setName(String name) {
+	public void setName(String name) {
 		Name = name;
 	}
-	public Integer getID() {
-		return ID;
+	public String getemailID() {
+		return emailID;
 	}
-	protected void setID(Integer iD) {
-		ID = iD;
+	public void setID(String iD) {
+		emailID = iD;
 	}
-	protected String getPassword() {
+	public String getPassword() {
 		return Password;
 	}
-	protected void setPassword(String password) {
+	public void setPassword(String password) {
 		Password = password;
 	}
-	public String getContactNumber() {
-		return ContactNumber;
-	}
-	protected void setContactNumber(String contactNumber) {
-		ContactNumber = contactNumber;
-	}
 	
-	protected String getUserInfo(User U) {
-		return  U.getName() + ", "+U.getContactNumber();
+	public String getUserInfo(User U) {
+		return  U.getName() + ", "+U.getemailID();
 	}
 
 }
