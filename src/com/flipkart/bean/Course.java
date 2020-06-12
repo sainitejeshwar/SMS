@@ -5,6 +5,14 @@ public class Course {
 	private String Name;
 	private int Semester;
 	private int Prof;
+	private int NumberofStudents;
+	
+	public int getNumberofStudents() {
+		return NumberofStudents;
+	}
+	public void setNumberofStudents(int numberofStudents) {
+		NumberofStudents = numberofStudents;
+	}
 	public int getCourseCode() {
 		return CourseCode;
 	}

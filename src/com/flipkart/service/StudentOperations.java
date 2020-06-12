@@ -14,9 +14,6 @@ public class StudentOperations implements operationHelper{
 	private StudentDAO studentDAO = new StudentDAO();
 	Student student = new Student();
 	
-	public String generateReportCard(String emailid) {
-		return null;
-	}
 	public boolean doRegistration(String emailid) {
 		return false;
 	}
@@ -30,7 +27,7 @@ public class StudentOperations implements operationHelper{
 	}
 
 	public boolean addCourse() {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 

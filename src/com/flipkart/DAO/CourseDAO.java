@@ -67,7 +67,6 @@ public class CourseDAO implements DBOperations {
 		ArrayList<Course> allCourses = new ArrayList<Course>();
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
-		String res = "";
 		Course course = new Course();
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_SELECT_ALL);
@@ -77,6 +76,7 @@ public class CourseDAO implements DBOperations {
 				course.setName(rs.getString("Name"));
 				course.setSemester(rs.getInt("Sem"));
 				course.setProf(rs.getInt("ProfessorInfo"));
+				course.setNumberofStudents(rs.getInt("NumberOfStudent"));
 				allCourses.add(course);
 			}
 			rs.close();
@@ -85,6 +85,8 @@ public class CourseDAO implements DBOperations {
 		}
 		return allCourses;
 	}
+
+
 
 
 }

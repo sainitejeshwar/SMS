@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Student;
+import com.flipkart.service.RegistrationOperations;
 import com.flipkart.service.StudentOperations;
 
 public class StudentClient {
@@ -15,9 +16,11 @@ public class StudentClient {
 	
 	
 	public void landingPage(String emailid) {
+		
 		Student student = new Student();
 		Scanner studScanner = new Scanner(System.in);
 		StudentOperations studOperations = new StudentOperations();
+		RegistrationOperations regOperations = new RegistrationOperations();
 		
 		
 		student = studOperations.getStudent(emailid);
@@ -28,9 +31,8 @@ public class StudentClient {
 		do {
 			
 			logger.info("\nChoices\n1.Show My Details\n2.View My Courses\n3.View Catalog\n"
-					+ "4.Add Course\n5.Drop Course\n"
-					+ "6.Start Registration\n7.Pay Semester Fees\n8.View Report card\n"
-					+ "9.Logout");
+					+ "4.Start Registration\n5.Pay Semester Fees\n6.View Report card\n"
+					+ "7.Logout");
 			choice = studScanner.nextInt();
 			switch (choice) {
 			case 1:
@@ -47,28 +49,22 @@ public class StudentClient {
 				if(allCourses != null)
 					allCourses
 					.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()+"\t"
-							+ course.getProf()+"\n"));
+							+ course.getProf()+"\t"+course.getNumberofStudents()+"\n"));
 				break;
 			case 4:
-				logger.info(studOperations.addCourse());
+				logger.info(regOperations.doRegistration(student.getStudentID()));
 				break;
 			case 5:
-				logger.info(studOperations.dropCourse());
-				break;
-			case 6:
-				logger.info(studOperations.doRegistration(emailid));
-				break;
-			case 7:
 				logger.info(studOperations.payFees(emailid));
 				break;
-			case 8:
-				logger.info(studOperations.generateReportCard(emailid));
+			case 6:
+				logger.info(studOperations.viewReportCard(student.getStudentID()));
 				break;
 			default:
 				break;
 			}
 			}
-			while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6 || choice ==7 || choice ==8);
+			while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6);
 		
 	studScanner.close();
 	logger.info("Logging Out");

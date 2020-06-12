@@ -8,13 +8,12 @@ import com.flipkart.bean.Course;
 public interface operationHelper {
 	CourseDAO courseDAO = new CourseDAO();
 	default public ArrayList<Course> viewCourseCatalog(){
-		ArrayList<Course> allCourses = new ArrayList<Course>();
-		allCourses.addAll(courseDAO.listAll());
-		return allCourses;
+		return courseDAO.listAll();
 	}
 	
-	default public String viewReportCard(int studentID) {
+	default public String viewReportCard(String string) {
 		return null;
 	}
 
+	
 }
