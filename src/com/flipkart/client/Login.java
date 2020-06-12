@@ -52,7 +52,7 @@ public class Login{
 				switch(typeOfUser) {
 					case "student":
 						StudentClient studentLogin = new StudentClient();
-						studentLogin.landingPage(emailid);
+						studentLogin.landingPage(emailid,input);
 						break;
 					case "admin":
 						AdminClient adminClient = new AdminClient();
@@ -69,7 +69,6 @@ public class Login{
 			}
 			exit = false;
 		}
-		input.close();
 		logger.info("Terminated.!");
 		
 		// TODO  - same error now in student operations , Unique RegistrationNumber Generation - same for transacction number 

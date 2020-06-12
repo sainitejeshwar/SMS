@@ -16,10 +16,9 @@ public class StudentClient {
 
 	
 	
-	public void landingPage(String emailid) {
+	public void landingPage(String emailid , Scanner studScanner) {
 		
 		Student student = new Student();
-		Scanner studScanner = new Scanner(System.in);
 		StudentOperations studOperations = new StudentOperations();
 		RegistrationOperations regOperations = new RegistrationOperations();
 		
@@ -54,7 +53,7 @@ public class StudentClient {
 				break;
 			case 4:
 				try {
-					logger.info(regOperations.doRegistration(student));
+					logger.info(regOperations.doRegistration(student,studScanner));
 				} catch (NotificationMessage e) {
 					logger.error(e.getMessage());
 				}
@@ -72,7 +71,6 @@ public class StudentClient {
 			}
 			while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6);
 		
-	studScanner.close();
 	logger.info("Logging Out");
 
 	}

@@ -23,8 +23,7 @@ public class RegistrationOperations implements operationHelper {
 	StudentDAO studentDAO = new StudentDAO();
 	
 	
-	public String doRegistration(Student student) throws NotificationMessage{
-		Scanner input = new Scanner(System.in);
+	public String doRegistration(Student student , Scanner input) throws NotificationMessage{
 		ArrayList<Course> allCourses = new ArrayList<Course>();
 		allCourses.addAll(viewCourseCatalog());
 		ArrayList<Course> studentCourses = new ArrayList<Course>();
@@ -106,7 +105,6 @@ public class RegistrationOperations implements operationHelper {
 		
 		registrationDAO.addRegistration(newRegistration, student);
 		student.setRegistrationNumber(newRegistration.getRegistrationNumber());
-		input.close();
 		studentDAO.UpdateStudentRegistration(final_courses, student);
 		return regDetails;
 	}
