@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Student;
+import com.flipkart.exception.NotificationMessage;
 import com.flipkart.service.RegistrationOperations;
 import com.flipkart.service.StudentOperations;
 
@@ -36,11 +37,11 @@ public class StudentClient {
 			choice = studScanner.nextInt();
 			switch (choice) {
 			case 1:
-				logger.info("\nID :"+student.getStudentID()+"\nName:"+student.getName()+"\nBranch:"+student.getBranch()
+				logger.info("ID :"+student.getStudentID()+"\nName:"+student.getName()+"\nBranch:"+student.getBranch()
 				+"\nSemester:"+student.getSemester());
 				break;
 			case 2:
-				logger.info("\nID : " + student.getStudentID() + "\n Name : "+student.getName()+"\n Courses :"
+				logger.info("ID : " + student.getStudentID() + "\n Name : "+student.getName()+"\n Courses :"
 						+ student.getAllCourses());
 				break;
 			case 3:
@@ -49,13 +50,18 @@ public class StudentClient {
 				if(allCourses != null)
 					allCourses
 					.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()+"\t"
-							+ course.getProf()+"\t"+course.getNumberofStudents()+"\n"));
+							+ course.getProf()+"\t"+course.getNumberofStudents()));
 				break;
 			case 4:
-				logger.info(regOperations.doRegistration(student.getStudentID()));
+				try {
+					logger.info(regOperations.doRegistration(student));
+				} catch (NotificationMessage e) {
+					logger.error(e.getMessage());
+				}
 				break;
 			case 5:
-				logger.info(studOperations.payFees(emailid));
+				logger.info("Paying Fees for : "+student.getRegistrationNumber());
+				logger.info(studOperations.payFees(student.getRegistrationNumber()));
 				break;
 			case 6:
 				logger.info(studOperations.viewReportCard(student.getStudentID()));

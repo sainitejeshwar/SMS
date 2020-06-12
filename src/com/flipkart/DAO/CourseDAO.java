@@ -67,11 +67,11 @@ public class CourseDAO implements DBOperations {
 		ArrayList<Course> allCourses = new ArrayList<Course>();
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
-		Course course = new Course();
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_SELECT_ALL);
 			rs = stmt.executeQuery();
 			while(rs.next()) {
+				Course course = new Course();
 				course.setCourseCode(rs.getInt("CourseCode"));
 				course.setName(rs.getString("Name"));
 				course.setSemester(rs.getInt("Sem"));
