@@ -15,6 +15,7 @@ public class SQLQueryConstant {
 	public static final String CATALOG_SELECT_ALL = "select * from catalog";
 	
 	public static final String COURSE_SELECT_BY_SEM = "select * from course where semester = ?";
+	public static final String COURSE_SELECT_ALL = "select * from course";
 	
 
 	

@@ -22,7 +22,6 @@ public class ProfessorDAO implements DBOperations{
 		return false;
 	}
 
-	@Override
 	public String listAll() {
 		// TODO Auto-generated method stub
 		return null;

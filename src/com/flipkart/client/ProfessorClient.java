@@ -1,9 +1,12 @@
 package com.flipkart.client;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import com.flipkart.bean.Course;
+import com.flipkart.bean.Professor;
 import com.flipkart.service.ProfessorOperations;
 
 
@@ -13,6 +16,8 @@ public class ProfessorClient {
 		
 		Scanner input = new Scanner(System.in);
 		ProfessorOperations profOperations = new ProfessorOperations();
+		Professor prof = new Professor();
+		
 		logger.debug("Logged in as Professor : "+emailID);
 		
 		int choice  = 4;
@@ -28,7 +33,12 @@ public class ProfessorClient {
 				logger.info(profOperations.getStudentINCourse(courseCode));
 				break;
 			case 2:
-				logger.info(profOperations.viewMyCourse(id));
+				ArrayList<Course> allCourses = new ArrayList<Course>();
+				allCourses.addAll(profOperations.viewCourseCatalog());
+				allCourses
+				.stream()
+				.filter(course -> course.getProf() == prof.getProfessorID())
+				.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()+"\n"));
 				break;
 			case 3:
 				logger.info(profOperations.uploadGrades(id));

@@ -4,7 +4,16 @@ import java.util.ArrayList;
 
 public class Professor extends User {
 	private ArrayList<Course> profCourses = new ArrayList<Course>();
+	private  int professorID;
 	
+	public int getProfessorID() {
+		return professorID;
+	}
+
+	public void setProfessorID(int professorID) {
+		this.professorID = professorID;
+	}
+
 	public ArrayList<Course> getProfCourses() {
 		return profCourses;
 	}

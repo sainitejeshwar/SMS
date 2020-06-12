@@ -39,8 +39,6 @@ public class StudentOperations implements operationHelper{
 		return false;
 	}
 	
-	public void updateLoginTimeStamp(String email, String timestamp) {
-		
-	}
+
 
 }

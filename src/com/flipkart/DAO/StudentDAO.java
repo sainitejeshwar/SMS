@@ -34,7 +34,7 @@ public class StudentDAO implements DBOperations{
 		return false;
 	}
 
-	@Override
+
 	public String listAll() {
 		// TODO Auto-generated method stub
 		return null;
@@ -52,6 +52,8 @@ public class StudentDAO implements DBOperations{
 			while(rs.next()) {
 				student.setStudentID(rs.getString("StudentID"));
 				student.setName(rs.getString("Name"));
+				student.setBranch(rs.getString("Branch"));
+				student.setSemester(rs.getInt("Semester"));
 				student.setStudentCourses(rs.getString("Course1"));
 				student.setStudentCourses(rs.getString("Course2"));
 				student.setStudentCourses(rs.getString("Course3"));
