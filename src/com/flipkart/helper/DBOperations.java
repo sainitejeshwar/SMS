@@ -1,4 +1,4 @@
-package com.flipkart.DAO;
+package com.flipkart.helper;
 
 //TODO : helper Class
 public interface DBOperations {
@@ -6,5 +6,6 @@ public interface DBOperations {
 	public boolean updatedata();
 	public boolean deletedata();
 	public String listAll();
+	
 	
 }

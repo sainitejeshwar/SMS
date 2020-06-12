@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import org.apache.log4j.Logger;
 
 import com.flipkart.constants.SQLQueryConstant;
+import com.flipkart.helper.DBOperations;
 import com.flipkart.utils.DBUtils;
 
 public class CourseCatalogDAO implements DBOperations {

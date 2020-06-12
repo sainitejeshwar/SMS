@@ -1,5 +1,7 @@
 package com.flipkart.DAO;
 
+import com.flipkart.helper.DBOperations;
+
 public class ProfessorDAO implements DBOperations{
 
 	@Override

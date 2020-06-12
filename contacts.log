@@ -6925,3 +6925,119 @@ Choices
 11:28:23,511  INFO Login,main:41 - Enter ID 
 11:29:59,810  INFO Login,main:35 - SMS
 11:29:59,812  INFO Login,main:41 - Enter ID 
+11:47:19,449  INFO Login,main:35 - SMS
+11:47:19,464  INFO Login,main:41 - Enter ID 
+11:47:24,283  INFO Login,main:47 - Enter Password
+11:47:26,993 DEBUG AdminClient,main:18 - Logged in as Admin admin
+11:47:26,993  INFO AdminClient,main:22 - 
+Choices
+1.Add User
+2.Update User
+3.View Users
+4.Add Course
+5.Update Course
+6.View Courses
+7.Logout
+11:47:28,692  INFO AdminClient,main:34 - Logging Out
+11:47:28,693  INFO Login,main:41 - Enter ID 
+11:48:14,262  INFO Login,main:35 - SMS
+11:48:14,278  INFO Login,main:41 - Enter ID 
+11:48:16,415  INFO Login,main:52 - Enter Password
+11:48:19,192 DEBUG AdminClient,main:18 - Logged in as Admin admin
+11:48:19,193  INFO AdminClient,main:22 - 
+Choices
+1.Add User
+2.Update User
+3.View Users
+4.Add Course
+5.Update Course
+6.View Courses
+7.Logout
+11:48:20,850  INFO AdminClient,main:34 - Logging Out
+11:48:20,850  INFO Login,main:41 - Enter ID 
+11:48:20,851  INFO Login,main:80 - Terminated.!
+11:48:52,372  INFO Login,main:35 - SMS
+11:48:52,389  INFO Login,main:41 - Enter ID 
+11:48:56,068  INFO Login,main:52 - Enter Password
+11:48:58,725 DEBUG AdminClient,main:18 - Logged in as Admin admin
+11:48:58,726  INFO AdminClient,main:22 - 
+Choices
+1.Add User
+2.Update User
+3.View Users
+4.Add Course
+5.Update Course
+6.View Courses
+7.Logout
+11:48:59,865  INFO AdminClient,main:34 - Logging Out
+11:48:59,867  INFO Login,main:41 - Enter ID 
+11:49:57,766  INFO Login,main:35 - SMS
+11:49:57,780  INFO Login,main:41 - Enter ID 
+11:49:59,731  INFO Login,main:47 - Enter Password
+11:50:02,370 DEBUG AdminClient,main:18 - Logged in as Admin admin
+11:50:02,370  INFO AdminClient,main:22 - 
+Choices
+1.Add User
+2.Update User
+3.View Users
+4.Add Course
+5.Update Course
+6.View Courses
+7.Logout
+11:50:03,529  INFO AdminClient,main:34 - Logging Out
+11:50:03,530  INFO Login,main:41 - Enter ID 
+11:57:52,281  INFO Login,main:38 - SMS
+11:57:52,285  INFO Login,main:45 - Enter ID 
+11:57:54,617  INFO Login,main:51 - Enter Password
+11:57:57,545 DEBUG AdminClient,main:18 - Logged in as Admin admin
+11:57:57,545  INFO AdminClient,main:22 - 
+Choices
+1.Add User
+2.Update User
+3.View Users
+4.Add Course
+5.Update Course
+6.View Courses
+7.Logout
+11:57:58,919  INFO AdminClient,main:34 - Logging Out
+11:57:58,920  INFO Login,main:45 - Enter ID 
+11:58:35,129  INFO Login,main:35 - SMS
+11:58:35,141  INFO Login,main:41 - Enter ID 
+11:58:41,640  INFO Login,main:47 - Enter Password
+11:58:43,370 ERROR Login,main:71 - ID or Password is incoorect
+11:58:43,370  INFO Login,main:41 - Enter ID 
+11:59:37,130  INFO Login,main:35 - SMS
+11:59:37,146  INFO Login,main:39 - Enter ID 
+11:59:39,558  INFO Login,main:45 - Enter Password
+11:59:41,045 ERROR Login,main:69 - ID or Password is incoorect
+11:59:41,045  INFO Login,main:39 - Enter ID 
+11:59:44,130  INFO Login,main:45 - Enter Password
+11:59:48,086 DEBUG AdminClient,main:18 - Logged in as Admin admin
+11:59:48,086  INFO AdminClient,main:22 - 
+Choices
+1.Add User
+2.Update User
+3.View Users
+4.Add Course
+5.Update Course
+6.View Courses
+7.Logout
+11:59:49,864  INFO AdminClient,main:34 - Logging Out
+11:59:49,865  INFO Login,main:39 - Enter ID 
+12:00:35,227  INFO Login,main:35 - SMS
+12:00:35,243  INFO Login,main:39 - Enter ID 
+12:00:40,918  INFO Login,main:45 - Enter Password
+12:00:44,244 DEBUG StudentClient,main:22 - Logged in as Student :  Tejeshwar Saini
+12:00:44,244  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
+12:00:49,074  INFO StudentClient,main:66 - Logging Out
+12:00:49,074  INFO Login,main:39 - Enter ID 

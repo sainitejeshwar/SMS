@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import com.flipkart.bean.User;
 import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.exception.InvalidUserException;
+import com.flipkart.helper.DBOperations;
 import com.flipkart.utils.DBUtils;
 
 public class AuthorCredentialDAO implements DBOperations {
