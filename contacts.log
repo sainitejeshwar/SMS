@@ -8757,3 +8757,451 @@ Choices
 5.Logout
 15:31:52,201  INFO ProfessorClient,main:57 - Logging Out
 15:31:52,201  INFO Login,main:26 - Enter ID 
+15:39:43,751  INFO Login,main:19 - SMS
+15:39:43,765  INFO Login,main:28 - Enter ID 
+15:39:53,698  INFO Login,main:34 - Enter Password
+15:39:56,112  INFO Login,main:39 - Last Login : 2020-06-12 15:16:41
+15:39:56,151 DEBUG AdminClient,main:18 - Logged in as Admin admin
+15:39:56,151  INFO AdminClient,main:22 - 
+Choices
+1.Add User
+2.Update User
+3.View Users
+4.Add Course
+5.Update Course
+6.View Courses
+7.Logout
+15:40:01,553  INFO AdminClient,main:34 - Logging Out
+15:40:01,554  INFO Login,main:28 - Enter ID 
+15:51:56,594  INFO Login,main:19 - SMS
+15:51:56,613  INFO Login,main:28 - Enter ID 
+15:52:01,535  INFO Login,main:34 - Enter Password
+15:52:04,812 ERROR Login,main:60 - ID or Password is incoorect
+15:52:04,812  INFO Login,main:28 - Enter ID 
+15:52:08,763  INFO Login,main:34 - Enter Password
+15:52:36,739  INFO Login,main:19 - SMS
+15:52:36,756  INFO Login,main:28 - Enter ID 
+15:52:39,946  INFO Login,main:34 - Enter Password
+15:52:43,809  INFO Login,main:39 - Last Login : 2020-06-13 14:14:33
+15:52:43,972 DEBUG StudentClient,main:26 - Logged in as Student :  Tejeshwar Saini
+15:52:43,974  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:52:47,761  INFO StudentClient,main:74 - Logging Out
+15:52:47,761  INFO Login,main:28 - Enter ID 
+15:52:53,802  INFO Login,main:63 - Terminated.!
+15:59:24,162  INFO Login,main:19 - SMS
+15:59:24,178  INFO Login,main:28 - Enter ID 
+15:59:30,385  INFO Login,main:34 - Enter Password
+15:59:33,715 ERROR Login,main:60 - ID or Password is incoorect
+15:59:33,715  INFO Login,main:28 - Enter ID 
+15:59:40,167  INFO Login,main:34 - Enter Password
+15:59:45,002  INFO Login,main:39 - Last Login : 2020-06-13 15:52:43SATURDAY
+15:59:45,041 DEBUG StudentClient,main:26 - Logged in as Student :  Tejeshwar Saini
+15:59:45,041  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:59:50,118  INFO StudentClient,main:74 - Logging Out
+15:59:50,118  INFO Login,main:28 - Enter ID 
+15:59:54,390  INFO Login,main:63 - Terminated.!
+16:08:22,246  INFO Login,main:19 - SMS
+16:08:22,263  INFO Login,main:28 - Enter ID 
+16:08:27,523  INFO Login,main:34 - Enter Password
+16:08:29,732  INFO Login,main:39 - Last Login : 2020-06-13 15:31:06    SATURDAY
+16:08:29,769 DEBUG ProfessorClient,main:21 - Logged in as Professor : Amit
+16:08:29,770  INFO ProfessorClient,main:27 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+16:08:39,395  INFO ProfessorClient,main:58 - Logging Out at 16:8    13-JUNE    SATURDAY
+16:08:39,395  INFO Login,main:28 - Enter ID 
+16:09:00,090  INFO Login,main:63 - Terminated.!
+16:13:36,703  INFO Login,main:19 - SMS
+16:13:36,719  INFO Login,main:28 - Enter ID 
+16:13:39,705  INFO Login,main:34 - Enter Password
+16:13:41,881 ERROR Login,main:60 - ID or Password is incoorect
+16:13:41,882  INFO Login,main:28 - Enter ID 
+16:13:45,927  INFO Login,main:34 - Enter Password
+16:13:49,017  INFO Login,main:39 - Last Login : 2020-06-13 15:59:45    SATURDAY
+16:13:49,053 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:13:49,053  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:13:54,720  INFO RegistrationOperations,main:30 - Courses Available for you : 
+16:13:54,741  INFO RegistrationOperations,main:35 - 101	DAA
+16:13:54,742  INFO RegistrationOperations,main:35 - 102	Computer Networks
+16:13:54,742  INFO RegistrationOperations,main:35 - 103	Math
+16:13:54,742  INFO RegistrationOperations,main:35 - 104	English
+16:13:54,742  INFO RegistrationOperations,main:35 - 105	Graph Theory
+16:13:54,742  INFO RegistrationOperations,main:35 - 106	Chemistry
+16:13:54,743  INFO RegistrationOperations,main:35 - 107	Physics
+16:13:54,743  INFO RegistrationOperations,main:35 - 108	SCM
+16:13:54,743  INFO RegistrationOperations,main:35 - 109	Software Engineering
+16:13:54,743  INFO RegistrationOperations,main:35 - 110	DM
+16:13:54,743  INFO RegistrationOperations,main:39 - Enter 4 Primary Course and 2 Secondary Course
+16:15:05,591  INFO Login,main:19 - SMS
+16:15:05,606  INFO Login,main:28 - Enter ID 
+16:15:10,648  INFO Login,main:34 - Enter Password
+16:15:14,346  INFO Login,main:39 - Last Login : 2020-06-13 16:13:49    SATURDAY
+16:15:14,398 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:15:14,398  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:15:16,425  INFO RegistrationOperations,main:30 - Courses Available for you : 
+16:15:16,427  INFO RegistrationOperations,main:35 - 101	DAA
+16:15:16,427  INFO RegistrationOperations,main:35 - 102	Computer Networks
+16:15:16,428  INFO RegistrationOperations,main:35 - 103	Math
+16:15:16,428  INFO RegistrationOperations,main:35 - 104	English
+16:15:16,428  INFO RegistrationOperations,main:35 - 105	Graph Theory
+16:15:16,428  INFO RegistrationOperations,main:35 - 106	Chemistry
+16:15:16,428  INFO RegistrationOperations,main:35 - 107	Physics
+16:15:16,428  INFO RegistrationOperations,main:35 - 108	SCM
+16:15:16,428  INFO RegistrationOperations,main:35 - 109	Software Engineering
+16:15:16,429  INFO RegistrationOperations,main:35 - 110	DM
+16:15:16,429  INFO RegistrationOperations,main:39 - Enter 4 Primary Course and 2 Secondary Course
+16:17:18,833  INFO Login,main:19 - SMS
+16:17:18,850  INFO Login,main:28 - Enter ID 
+16:17:22,797  INFO Login,main:34 - Enter Password
+16:17:28,847  INFO Login,main:39 - Last Login : 2020-06-13 16:15:14    SATURDAY
+16:17:28,884 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:17:28,884  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:17:30,585  INFO RegistrationOperations,main:30 - Courses Available for you : 
+16:17:30,588  INFO RegistrationOperations,main:35 - 101	DAA
+16:17:30,589  INFO RegistrationOperations,main:35 - 102	Computer Networks
+16:17:30,589  INFO RegistrationOperations,main:35 - 103	Math
+16:17:30,590  INFO RegistrationOperations,main:35 - 104	English
+16:17:30,590  INFO RegistrationOperations,main:35 - 105	Graph Theory
+16:17:30,590  INFO RegistrationOperations,main:35 - 106	Chemistry
+16:17:30,590  INFO RegistrationOperations,main:35 - 107	Physics
+16:17:30,591  INFO RegistrationOperations,main:35 - 108	SCM
+16:17:30,591  INFO RegistrationOperations,main:35 - 109	Software Engineering
+16:17:30,591  INFO RegistrationOperations,main:35 - 110	DM
+16:17:30,591  INFO RegistrationOperations,main:39 - Enter 4 Primary Course and 2 Secondary Course
+16:17:42,373 DEBUG RegistrationOperations,main:44 - 1
+16:19:07,226  INFO Login,main:19 - SMS
+16:19:07,242  INFO Login,main:28 - Enter ID 
+16:19:17,194  INFO Login,main:34 - Enter Password
+16:19:20,438 ERROR Login,main:60 - ID or Password is incoorect
+16:19:20,438  INFO Login,main:28 - Enter ID 
+16:19:23,871  INFO Login,main:34 - Enter Password
+16:19:26,708  INFO Login,main:39 - Last Login : 2020-06-13 16:17:28    SATURDAY
+16:19:26,750 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:19:26,750  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:19:28,183  INFO RegistrationOperations,main:30 - Courses Available for you : 
+16:19:28,186  INFO RegistrationOperations,main:35 - 101	DAA
+16:19:28,186  INFO RegistrationOperations,main:35 - 102	Computer Networks
+16:19:28,186  INFO RegistrationOperations,main:35 - 103	Math
+16:19:28,187  INFO RegistrationOperations,main:35 - 104	English
+16:19:28,187  INFO RegistrationOperations,main:35 - 105	Graph Theory
+16:19:28,187  INFO RegistrationOperations,main:35 - 106	Chemistry
+16:19:28,187  INFO RegistrationOperations,main:35 - 107	Physics
+16:19:28,187  INFO RegistrationOperations,main:35 - 108	SCM
+16:19:28,188  INFO RegistrationOperations,main:35 - 109	Software Engineering
+16:19:28,188  INFO RegistrationOperations,main:35 - 110	DM
+16:19:28,188  INFO RegistrationOperations,main:39 - Enter 4 Primary Course and 2 Secondary Course
+16:19:37,918 DEBUG RegistrationOperations,main:45 - 6
+16:19:37,933  INFO RegistrationOperations,main:74 - There is a change in your Primary Course 
+ Final Courses are :
+16:19:37,933  INFO RegistrationOperations,main:76 - DAA
+
+16:19:37,933  INFO RegistrationOperations,main:76 - Computer Networks
+
+16:19:37,933  INFO RegistrationOperations,main:76 - Math
+
+16:19:37,933  INFO RegistrationOperations,main:76 - English
+
+16:19:37,934  INFO Registration,main:31 - Registration number : 1
+ Registration Time : 2020-6-13 16:19:37    SATURDAY
+16:19:37,950  INFO StudentClient,main:55 - Registration Completed
+16:19:37,950  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:24:54,333  INFO Login,main:19 - SMS
+16:24:54,347  INFO Login,main:28 - Enter ID 
+16:24:59,604  INFO Login,main:34 - Enter Password
+16:25:05,357  INFO Login,main:39 - Last Login : 2020-06-13 16:19:26    SATURDAY
+16:25:05,395 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:25:05,395  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:25:07,589  INFO RegistrationOperations,main:30 - Courses Available for you : 
+16:25:07,592  INFO RegistrationOperations,main:35 - 101	DAA
+16:25:07,592  INFO RegistrationOperations,main:35 - 102	Computer Networks
+16:25:07,592  INFO RegistrationOperations,main:35 - 103	Math
+16:25:07,592  INFO RegistrationOperations,main:35 - 104	English
+16:25:07,592  INFO RegistrationOperations,main:35 - 105	Graph Theory
+16:25:07,593  INFO RegistrationOperations,main:35 - 106	Chemistry
+16:25:07,593  INFO RegistrationOperations,main:35 - 107	Physics
+16:25:07,593  INFO RegistrationOperations,main:35 - 108	SCM
+16:25:07,593  INFO RegistrationOperations,main:35 - 109	Software Engineering
+16:25:07,593  INFO RegistrationOperations,main:35 - 110	DM
+16:25:07,593  INFO RegistrationOperations,main:39 - Enter 4 Primary Course and 2 Secondary Course
+16:25:20,923 DEBUG RegistrationOperations,main:51 - Break
+16:25:20,923  INFO RegistrationOperations,main:74 - There is a change in your Primary Course 
+ Final Courses are :
+16:25:20,923  INFO RegistrationOperations,main:76 - DAA
+16:25:20,924  INFO RegistrationOperations,main:76 - Computer Networks
+16:25:20,924  INFO RegistrationOperations,main:76 - Math
+16:25:20,924  INFO RegistrationOperations,main:76 - English
+16:25:20,926  INFO Registration,main:31 - Registration number : 1
+ Registration Time : 2020-6-13 16:25:20    SATURDAY
+16:25:20,992 DEBUG CourseDAO,main:77 - 1
+16:25:21,014 DEBUG CourseDAO,main:77 - 1
+16:25:21,028 DEBUG CourseDAO,main:77 - 1
+16:25:21,045 DEBUG CourseDAO,main:77 - 1
+16:25:21,046  INFO StudentClient,main:55 - Registration Completed
+16:25:21,046  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:25:59,330  INFO RegistrationOperations,main:28 - Registration Already Done 
+ Pay fees (if not paid yet)
+16:25:59,330  INFO RegistrationOperations,main:30 - Courses Available for you : 
+16:25:59,332  INFO RegistrationOperations,main:35 - 101	DAA
+16:25:59,332  INFO RegistrationOperations,main:35 - 102	Computer Networks
+16:25:59,332  INFO RegistrationOperations,main:35 - 103	Math
+16:25:59,332  INFO RegistrationOperations,main:35 - 104	English
+16:25:59,332  INFO RegistrationOperations,main:35 - 105	Graph Theory
+16:25:59,332  INFO RegistrationOperations,main:35 - 106	Chemistry
+16:25:59,333  INFO RegistrationOperations,main:35 - 107	Physics
+16:25:59,333  INFO RegistrationOperations,main:35 - 108	SCM
+16:25:59,333  INFO RegistrationOperations,main:35 - 109	Software Engineering
+16:25:59,333  INFO RegistrationOperations,main:35 - 110	DM
+16:25:59,333  INFO RegistrationOperations,main:39 - Enter 4 Primary Course and 2 Secondary Course
+16:27:53,722  INFO Login,main:19 - SMS
+16:27:53,738  INFO Login,main:28 - Enter ID 
+16:27:58,179  INFO Login,main:34 - Enter Password
+16:28:02,111  INFO Login,main:39 - Last Login : 2020-06-13 16:25:05    SATURDAY
+16:28:02,142 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:28:02,142  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:28:05,818  INFO RegistrationOperations,main:30 - Courses Available for you : 
+16:28:05,821  INFO RegistrationOperations,main:35 - 101	DAA
+16:28:05,821  INFO RegistrationOperations,main:35 - 102	Computer Networks
+16:28:05,821  INFO RegistrationOperations,main:35 - 103	Math
+16:28:05,821  INFO RegistrationOperations,main:35 - 104	English
+16:28:05,821  INFO RegistrationOperations,main:35 - 105	Graph Theory
+16:28:05,822  INFO RegistrationOperations,main:35 - 106	Chemistry
+16:28:05,822  INFO RegistrationOperations,main:35 - 107	Physics
+16:28:05,822  INFO RegistrationOperations,main:35 - 108	SCM
+16:28:05,822  INFO RegistrationOperations,main:35 - 109	Software Engineering
+16:28:05,822  INFO RegistrationOperations,main:35 - 110	DM
+16:28:05,822  INFO RegistrationOperations,main:39 - Enter 4 Primary Course and 2 Secondary Course
+16:29:58,095  INFO Login,main:19 - SMS
+16:29:58,115  INFO Login,main:28 - Enter ID 
+16:30:05,016  INFO Login,main:34 - Enter Password
+16:30:08,047 ERROR Login,main:60 - ID or Password is incoorect
+16:30:08,047  INFO Login,main:28 - Enter ID 
+16:30:11,669  INFO Login,main:34 - Enter Password
+16:30:13,854  INFO Login,main:39 - Last Login : 2020-06-13 16:28:02    SATURDAY
+16:30:13,904 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:30:13,904  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:30:15,650 DEBUG RegistrationOperations,main:27 - 0
+16:30:15,650  INFO RegistrationOperations,main:31 - Courses Available for you : 
+16:30:15,652  INFO RegistrationOperations,main:36 - 101	DAA
+16:30:15,653  INFO RegistrationOperations,main:36 - 102	Computer Networks
+16:30:15,653  INFO RegistrationOperations,main:36 - 103	Math
+16:30:15,653  INFO RegistrationOperations,main:36 - 104	English
+16:30:15,653  INFO RegistrationOperations,main:36 - 105	Graph Theory
+16:30:15,653  INFO RegistrationOperations,main:36 - 106	Chemistry
+16:30:15,653  INFO RegistrationOperations,main:36 - 107	Physics
+16:30:15,654  INFO RegistrationOperations,main:36 - 108	SCM
+16:30:15,654  INFO RegistrationOperations,main:36 - 109	Software Engineering
+16:30:15,654  INFO RegistrationOperations,main:36 - 110	DM
+16:30:15,655  INFO RegistrationOperations,main:40 - Enter 4 Primary Course and 2 Secondary Course
+16:32:16,327  INFO Login,main:19 - SMS
+16:32:16,345  INFO Login,main:28 - Enter ID 
+16:32:21,000  INFO Login,main:34 - Enter Password
+16:32:24,645  INFO Login,main:39 - Last Login : 2020-06-13 16:30:13    SATURDAY
+16:32:24,679 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:32:24,679  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:32:26,916 DEBUG RegistrationOperations,main:27 - 1
+16:32:26,916  INFO StudentClient,main:55 - Registration Already Done 
+ Pay fees (if not paid yet)
+16:32:26,917  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:32:31,763  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 1
+16:32:31,808  INFO StudentClient,main:62 - Fees paid on : 2020-06-13T16:32:31.764189200 with Transacction ID : 0
+16:32:31,808  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:32:39,548  INFO StudentClient,main:75 - Logging Out at 16:32    13-JUNE    SATURDAY
+16:32:39,548  INFO Login,main:28 - Enter ID 
+16:32:42,363  INFO Login,main:63 - Terminated.!
+16:47:39,279  INFO Login,main:19 - SMS
+16:47:39,296  INFO Login,main:28 - Enter ID 
+16:47:42,790  INFO Login,main:34 - Enter Password
+16:47:45,526  INFO Login,main:39 - Last Login : 2020-06-13 16:32:24    SATURDAY
+16:47:45,601 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:47:45,601  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:47:49,426  INFO StudentClient,main:55 - Registration Already Done 
+ Pay fees (if not paid yet)
+16:47:49,426  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:47:52,357  INFO StudentClient,main:75 - Logging Out at 16:47    13-JUNE    SATURDAY
+16:47:52,358  INFO Login,main:28 - Enter ID 
+16:48:26,313  INFO Login,main:63 - Terminated.!
+16:48:29,792  INFO Login,main:19 - SMS
+16:48:29,806  INFO Login,main:28 - Enter ID 
+16:48:35,162  INFO Login,main:34 - Enter Password
+16:48:38,498  INFO Login,main:39 - Last Login : 2020-06-13 16:47:45    SATURDAY
+16:48:38,573 DEBUG StudentClient,main:27 - Logged in as Student :  Tejeshwar Saini
+16:48:38,573  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:48:40,871  INFO RegistrationOperations,main:30 - Courses Available for you : 
+16:48:40,875  INFO RegistrationOperations,main:35 - 101	DAA
+16:48:40,875  INFO RegistrationOperations,main:35 - 102	Computer Networks
+16:48:40,876  INFO RegistrationOperations,main:35 - 103	Math
+16:48:40,877  INFO RegistrationOperations,main:35 - 104	English
+16:48:40,877  INFO RegistrationOperations,main:35 - 105	Graph Theory
+16:48:40,877  INFO RegistrationOperations,main:35 - 106	Chemistry
+16:48:40,878  INFO RegistrationOperations,main:35 - 107	Physics
+16:48:40,878  INFO RegistrationOperations,main:35 - 108	SCM
+16:48:40,878  INFO RegistrationOperations,main:35 - 109	Software Engineering
+16:48:40,878  INFO RegistrationOperations,main:35 - 110	DM
+16:48:40,878  INFO RegistrationOperations,main:39 - Enter 4 Primary Course and 2 Secondary Course
+16:48:58,487 ERROR RegistrationOperations,main:61 - 101is filled
+16:48:58,490 ERROR RegistrationOperations,main:61 - 102is filled
+16:48:58,500  INFO RegistrationOperations,main:74 - There is a change in your Primary Course 
+ Final Courses are :
+16:48:58,501  INFO RegistrationOperations,main:76 - Math
+16:48:58,501  INFO RegistrationOperations,main:76 - English
+16:48:58,501  INFO RegistrationOperations,main:76 - Graph Theory
+16:48:58,501  INFO RegistrationOperations,main:76 - Chemistry
+16:48:58,503  INFO Registration,main:31 - Registration number : 1
+ Registration Time : 2020-6-13 16:48:58    SATURDAY
+16:48:58,716 DEBUG CourseDAO,main:77 - 1
+16:48:58,781 DEBUG CourseDAO,main:77 - 1
+16:48:58,830 DEBUG CourseDAO,main:77 - 1
+16:48:58,909 DEBUG CourseDAO,main:77 - 1
+16:48:58,910  INFO StudentClient,main:55 - Registration Completed
+16:48:58,910  INFO StudentClient,main:33 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+16:49:08,639  INFO StudentClient,main:75 - Logging Out at 16:49    13-JUNE    SATURDAY
+16:49:08,639  INFO Login,main:28 - Enter ID 
+16:49:13,523  INFO Login,main:63 - Terminated.!

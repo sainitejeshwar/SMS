@@ -6,10 +6,14 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.service.AdminOperations;
 import com.flipkart.service.StudentOperations;
+import com.flipkart.utils.DateTimeUtil;
 
 public class AdminClient {
 	
 	private static  Logger logger = Logger.getLogger(AdminClient.class);
+	private static DateTimeUtil  DTUtils= new DateTimeUtil();
+	
+	
 	public void landingPage(String emailID) {
 		
 		Scanner input = new Scanner(System.in);
@@ -31,7 +35,8 @@ public class AdminClient {
 			}
 			}
 			while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6);
-	logger.info("Logging Out");
+
+	logger.info("Logging Out at "+ DTUtils.currDateandTime());
 	input.close();
 	
 	}

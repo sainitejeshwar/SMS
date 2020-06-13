@@ -24,9 +24,9 @@ public class RegistrationOperations implements operationHelper {
 	
 	
 	public String doRegistration(Student student , Scanner input) throws NotificationMessage{
-		if(student.getRegistrationNumber() != 0)
-			logger.info("Registration Already Done \n Pay fees (if not paid yet)");
-
+		if(student.getRegistrationNumber() != 0) {
+			return "Registration Already Done \n Pay fees (if not paid yet)";
+		}
 		logger.info("Courses Available for you : ");
 		for(Course course : (returnCourseCatalog()
 				.stream()
@@ -37,8 +37,10 @@ public class RegistrationOperations implements operationHelper {
 		
 		ArrayList<Integer> tempCourses = new ArrayList<Integer>();
 		logger.info("Enter 4 Primary Course and 2 Secondary Course");
-		for(String str : input.nextLine().split(" ")){
+		for(int i = 0 ;  i<6 ; i ++){
+			String str = input.next();
 			tempCourses.add(Integer.parseInt(str));
+		
 		}
 		
 		boolean flag = false;
@@ -46,6 +48,7 @@ public class RegistrationOperations implements operationHelper {
 		ArrayList<Course> final_courses = new ArrayList<Course>();
 		for(ind = 0 ; ind < 6 ; ind++) {
 			if(final_courses.size()==4) {
+				logger.debug("Break");
 				break;
 			}
 			for(Course course : returnCourseCatalog()) {
@@ -67,10 +70,10 @@ public class RegistrationOperations implements operationHelper {
 		if(final_courses.size()<4) {
 			throw new NotificationMessage();
 		}
-		if(flag) {
+		if(flag == true) {
 			logger.info("There is a change in your Primary Course \n Final Courses are :");
 			for(Course fCourse:final_courses) {
-				logger.info(fCourse.getName()+"\n");
+				logger.info(fCourse.getName());
 			}
 		}
 		

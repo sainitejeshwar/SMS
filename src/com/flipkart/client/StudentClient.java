@@ -10,10 +10,11 @@ import com.flipkart.bean.Student;
 import com.flipkart.exception.NotificationMessage;
 import com.flipkart.service.RegistrationOperations;
 import com.flipkart.service.StudentOperations;
+import com.flipkart.utils.DateTimeUtil;
 
 public class StudentClient {
 	private static  Logger logger = Logger.getLogger(StudentClient.class);
-
+	private static DateTimeUtil  DTUtils= new DateTimeUtil();
 
 	public void landingPage(String emailid , Scanner studScanner) {
 		
@@ -71,7 +72,7 @@ public class StudentClient {
 		}
 		while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6);
 		
-	logger.info("Logging Out");
+	logger.info("Logging Out at "+ DTUtils.currDateandTime());
 
 	}
 	

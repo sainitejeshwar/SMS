@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.DAO.AuthorCredentialDAO;
 import com.flipkart.exception.InvalidUserException;
+import com.flipkart.utils.DateTimeUtil;
 
 
 public class Login{
@@ -20,6 +21,7 @@ public class Login{
 		String emailid = "";
 		String password ="";
 		AuthorCredentialDAO checker = new AuthorCredentialDAO();
+		DateTimeUtil DTutil = new DateTimeUtil();
 		
 		while(exit) {
 			
@@ -34,9 +36,8 @@ public class Login{
 			String typeOfUser = null ;
 			try {
 				typeOfUser = checker.checkIdentity(emailid, password);
-				logger.info("Last Login : "+checker.getLastLoginTimeStamp(emailid));
-				
-				checker.updateLoginTimeStamp(emailid,DateandTime() );
+				logger.info("Last Login : "+ DTutil.systemDateTime(checker.getLastLoginTimeStamp(emailid)));
+				checker.updateLoginTimeStamp(emailid, DTutil.SQLdatetime() );
 				switch(typeOfUser) {
 				
 					case "student":
@@ -61,15 +62,8 @@ public class Login{
 		}
 		logger.info("Terminated.!");
 		
-		// TODO  - same error now in student operations , Unique RegistrationNumber Generation - same for transacction number 
+		// TODO  -  Unique RegistrationNumber Generation - same for transacction number 
 	}
-	private static String DateandTime() {
-		LocalDateTime localDateTime = LocalDateTime.now();
-		return localDateTime.getYear() + "-" +localDateTime.getMonthValue()+"-"+localDateTime.getDayOfMonth()+" "
-				+ localDateTime.getHour()+":"+localDateTime.getMinute()+":"+localDateTime.getSecond();
-
-	}
-	
 }
 
 

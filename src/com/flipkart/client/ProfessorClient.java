@@ -8,11 +8,12 @@ import org.apache.log4j.Logger;
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Professor;
 import com.flipkart.service.ProfessorOperations;
+import com.flipkart.utils.DateTimeUtil;
 
 
 public class ProfessorClient {
 	private static  Logger logger = Logger.getLogger(ProfessorClient.class);
-	
+	private static DateTimeUtil  DTUtils= new DateTimeUtil();
 	
 	public void landingPage(String emailID , Scanner input) {
 		final ProfessorOperations profOperations = new ProfessorOperations();
@@ -54,6 +55,6 @@ public class ProfessorClient {
 			}
 		}
 		while(choice == 1 || choice == 2|| choice == 3|| choice == 4);
-	logger.info("Logging Out");		
+		logger.info("Logging Out at "+ DTUtils.currDateandTime());		
 	}
 }

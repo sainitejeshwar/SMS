@@ -56,6 +56,7 @@ public class StudentDAO implements DBOperations{
 				student.setStudentCourses(rs.getString("Course2"));
 				student.setStudentCourses(rs.getString("Course3"));
 				student.setStudentCourses(rs.getString("Course4"));
+				student.setRegistrationNumber(rs.getInt("RegNo"));
 				students.add(student);
 			}
 			rs.close();
@@ -83,6 +84,7 @@ public class StudentDAO implements DBOperations{
 				student.setStudentCourses(rs.getString("Course2"));
 				student.setStudentCourses(rs.getString("Course3"));
 				student.setStudentCourses(rs.getString("Course4"));
+				student.setRegistrationNumber(rs.getInt("RegNo"));
 			return student;
 			}
 			rs.close();

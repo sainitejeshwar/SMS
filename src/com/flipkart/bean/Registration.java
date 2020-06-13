@@ -7,6 +7,7 @@ import java.util.HashMap;
 import org.apache.log4j.Logger;
 
 import com.flipkart.service.RegistrationOperations;
+import com.flipkart.utils.DateTimeUtil;
 
 public class Registration {
 	private static  Logger logger = Logger.getLogger(Registration.class);
@@ -14,6 +15,7 @@ public class Registration {
 	private int RegistrationNumber;
 	private String  RegistrationTime;
 	private boolean feespaid;
+	private DateTimeUtil DTUtil = new DateTimeUtil();
 	
 	
 	public boolean isFeespaid() {
@@ -27,7 +29,7 @@ public class Registration {
 		this.setFeespaid(false);
 		this.setRegistrationTime();
 		logger.info("Registration number : " + this.getRegistrationNumber()
-		+"\n Registration Time : "+this.getRegistrationNumber());
+		+"\n Registration Time : "+DTUtil.systemDateTime(this.getRegistrationTime()));
 		Counter++;
 	}
 	public int getRegistrationNumber() {
@@ -38,15 +40,7 @@ public class Registration {
 		return RegistrationTime;
 	}
 	public void setRegistrationTime() {
-		RegistrationTime = DateandTime();
-	}
-	
-	
-	private static String DateandTime() {
-		LocalDateTime localDateTime = LocalDateTime.now();
-		return localDateTime.getYear() + "-" +localDateTime.getMonthValue()+"-"+localDateTime.getDayOfMonth()+" "
-				+ localDateTime.getHour()+":"+localDateTime.getMinute()+":"+localDateTime.getSecond();
-
+		RegistrationTime = DTUtil.SQLdatetime();
 	}
 
 }
