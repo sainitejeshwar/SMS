@@ -41,8 +41,8 @@ public class Student extends User {
 			res = res + itrCourse +",";
 		return res;
 	}
-	public String getStudentCourses() {
-		return getAllCourses();
+	public ArrayList<String> getStudentCourses() {
+		return studentCourses;
 	}
 
 	public void setStudentCourses(ArrayList<String> newCourses) {

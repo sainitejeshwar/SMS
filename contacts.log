@@ -8389,3 +8389,371 @@ Choices
 7.Logout
 00:15:52,306  INFO StudentClient,main:74 - Logging Out
 00:15:52,307  INFO Login,main:72 - Terminated.!
+09:37:58,080  INFO Login,main:32 - SMS
+09:37:58,131  INFO Login,main:40 - Enter ID 
+09:38:15,331  INFO Login,main:46 - Enter Password
+09:38:18,774 ERROR Login,main:73 - ID or Password is incoorect
+09:38:18,774  INFO Login,main:40 - Enter ID 
+09:38:24,325  INFO Login,main:46 - Enter Password
+09:38:30,176  INFO Login,main:51 - Last Login : 2020-06-13 00:15:11
+09:38:30,253 DEBUG StudentClient,main:26 - Logged in as Student :  Tejeshwar Saini
+09:38:30,253  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:38:33,558  INFO StudentClient,main:54 - 101	DAA	1001	9
+09:38:33,558  INFO StudentClient,main:54 - 102	Computer Networks	1001	9
+09:38:33,558  INFO StudentClient,main:54 - 103	Math	1001	1
+09:38:33,558  INFO StudentClient,main:54 - 104	English	1002	1
+09:38:33,558  INFO StudentClient,main:54 - 105	Graph Theory	1003	1
+09:38:33,558  INFO StudentClient,main:54 - 106	Chemistry	1004	1
+09:38:33,559  INFO StudentClient,main:54 - 107	Physics	1005	1
+09:38:33,559  INFO StudentClient,main:54 - 108	SCM	1006	1
+09:38:33,559  INFO StudentClient,main:54 - 109	Software Engineering	1007	1
+09:38:33,559  INFO StudentClient,main:54 - 110	DM	1007	1
+09:38:33,559  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:38:39,205  INFO StudentClient,main:45 - ID : 1003
+ Name : Tejeshwar Saini
+ Courses :101,102,103,104,
+09:38:39,205  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:39:10,040  INFO StudentClient,main:80 - Logging Out
+09:39:10,041  INFO Login,main:40 - Enter ID 
+09:39:10,042  INFO Login,main:46 - Enter Password
+09:39:13,662 ERROR Login,main:73 - ID or Password is incoorect
+09:39:13,663  INFO Login,main:40 - Enter ID 
+09:50:05,171  INFO Login,main:18 - SMS
+09:50:05,185  INFO Login,main:26 - Enter ID 
+09:50:07,320  INFO Login,main:32 - Enter Password
+09:50:10,321  INFO Login,main:37 - Last Login : 2020-06-13 09:38:30
+09:50:10,374 DEBUG StudentClient,main:26 - Logged in as Student :  Tejeshwar Saini
+09:50:10,374  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:51:51,470  INFO StudentClient,main:67 - Paying Fees for : 0
+09:51:51,490  INFO StudentClient,main:68 - Fees paid on : 2020-06-13T09:51:51.473744200 with Transacction ID : 0
+09:51:51,490  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:52:01,883  INFO StudentClient,main:80 - Logging Out
+09:52:01,883  INFO Login,main:26 - Enter ID 
+09:52:01,884  INFO Login,main:32 - Enter Password
+10:20:47,714  INFO Login,main:18 - SMS
+10:20:47,731  INFO Login,main:26 - Enter ID 
+10:26:49,093  INFO Login,main:32 - Enter Password
+10:26:51,970  INFO Login,main:37 - Last Login : 2020-06-13 09:50:10
+10:26:52,029 DEBUG StudentClient,main:26 - Logged in as Student :  Tejeshwar Saini
+10:26:52,030  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:26:54,233  INFO StudentClient,main:40 - ID :1003
+Name:Tejeshwar Saini
+Branch:CS
+Semester:1
+10:26:54,234  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:26:57,997  INFO StudentClient,main:44 - ID : 1003
+ Name : Tejeshwar Saini
+ Courses :101,102,103,104,
+10:26:57,999  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:27:09,238  INFO RegistrationOperations,main:42 - Courses Available for you : 
+10:27:09,239  INFO RegistrationOperations,main:44 - 101	DAA
+10:27:09,239  INFO RegistrationOperations,main:44 - 102	Computer Networks
+10:27:09,239  INFO RegistrationOperations,main:44 - 103	Math
+10:27:09,240  INFO RegistrationOperations,main:44 - 104	English
+10:27:09,240  INFO RegistrationOperations,main:44 - 105	Graph Theory
+10:27:09,240  INFO RegistrationOperations,main:44 - 106	Chemistry
+10:27:09,240  INFO RegistrationOperations,main:44 - 107	Physics
+10:27:09,240  INFO RegistrationOperations,main:44 - 108	SCM
+10:27:09,241  INFO RegistrationOperations,main:44 - 109	Software Engineering
+10:27:09,241  INFO RegistrationOperations,main:44 - 110	DM
+10:27:09,241  INFO RegistrationOperations,main:54 - Enter 4 Primary Course
+10:27:09,243  INFO RegistrationOperations,main:56 - Enter Course Code for course 1
+10:27:18,948  INFO RegistrationOperations,main:56 - Enter Course Code for course 2
+10:27:20,150  INFO RegistrationOperations,main:56 - Enter Course Code for course 3
+10:27:21,316  INFO RegistrationOperations,main:56 - Enter Course Code for course 4
+10:27:22,621  INFO RegistrationOperations,main:59 - Enter 2 Secondary Course
+10:27:22,622  INFO RegistrationOperations,main:61 - Enter Course Code for course 1
+10:27:26,453  INFO RegistrationOperations,main:61 - Enter Course Code for course 2
+10:27:28,559  INFO RegistrationOperations,main:100 - Computer Networks
+10:27:28,559  INFO RegistrationOperations,main:100 - Math
+10:27:28,559  INFO RegistrationOperations,main:100 - English
+10:27:28,559  INFO RegistrationOperations,main:100 - Graph Theory
+10:27:28,672  INFO StudentClient,main:54 - Registration number : 1
+ Registration Time : 1
+10:27:28,673  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:28:04,309  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 1
+10:28:04,322  INFO StudentClient,main:61 - Fees paid on : 2020-06-13T10:28:04.310939800 with Transacction ID : 0
+10:28:04,323  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:28:43,510  INFO StudentClient,main:74 - Logging Out
+10:28:43,510  INFO Login,main:26 - Enter ID 
+10:28:43,510  INFO Login,main:32 - Enter Password
+10:42:09,199  INFO Login,main:18 - SMS
+10:42:09,214  INFO Login,main:26 - Enter ID 
+10:42:11,401  INFO Login,main:32 - Enter Password
+10:42:13,972  INFO Login,main:37 - Last Login : 2020-06-13 10:26:51
+10:42:14,021 DEBUG StudentClient,main:26 - Logged in as Student :  Tejeshwar Saini
+10:42:14,022  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:42:15,936  INFO RegistrationOperations,main:42 - Courses Available for you : 
+10:42:15,936  INFO RegistrationOperations,main:44 - 101	DAA
+10:42:15,936  INFO RegistrationOperations,main:44 - 102	Computer Networks
+10:42:15,937  INFO RegistrationOperations,main:44 - 103	Math
+10:42:15,937  INFO RegistrationOperations,main:44 - 104	English
+10:42:15,937  INFO RegistrationOperations,main:44 - 105	Graph Theory
+10:42:15,937  INFO RegistrationOperations,main:44 - 106	Chemistry
+10:42:15,937  INFO RegistrationOperations,main:44 - 107	Physics
+10:42:15,937  INFO RegistrationOperations,main:44 - 108	SCM
+10:42:15,937  INFO RegistrationOperations,main:44 - 109	Software Engineering
+10:42:15,938  INFO RegistrationOperations,main:44 - 110	DM
+10:42:15,938  INFO RegistrationOperations,main:54 - Enter 4 Primary Course
+10:42:23,561  INFO RegistrationOperations,main:62 - Enter 2 Secondary Course
+10:42:27,201  INFO RegistrationOperations,main:104 - DAA
+10:42:27,201  INFO RegistrationOperations,main:104 - Computer Networks
+10:42:27,201  INFO RegistrationOperations,main:104 - Math
+10:42:27,202  INFO RegistrationOperations,main:104 - English
+10:42:27,215 DEBUG RegistrationDAO,main:29 - Duplicate entry '1' for key 'registrations.PRIMARY'
+10:42:27,228  INFO StudentClient,main:54 - Registration number : 1
+ Registration Time : 1
+10:42:27,228  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:42:33,343  INFO StudentClient,main:74 - Logging Out
+10:42:33,343  INFO Login,main:26 - Enter ID 
+10:42:33,343  INFO Login,main:32 - Enter Password
+14:14:13,964  INFO Login,main:18 - SMS
+14:14:13,976  INFO Login,main:26 - Enter ID 
+14:14:16,623  INFO Login,main:32 - Enter Password
+14:14:19,530 ERROR Login,main:59 - ID or Password is incoorect
+14:14:19,530  INFO Login,main:26 - Enter ID 
+14:14:28,499  INFO Login,main:32 - Enter Password
+14:14:33,079  INFO Login,main:37 - Last Login : 2020-06-13 10:42:13
+14:14:33,122 DEBUG StudentClient,main:26 - Logged in as Student :  Tejeshwar Saini
+14:14:33,123  INFO StudentClient,main:32 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+14:14:36,230  INFO StudentClient,main:74 - Logging Out
+14:14:36,230  INFO Login,main:26 - Enter ID 
+14:14:36,230  INFO Login,main:32 - Enter Password
+14:21:02,593  INFO Login,main:18 - SMS
+14:21:02,612  INFO Login,main:26 - Enter ID 
+14:23:25,731  INFO Login,main:32 - Enter Password
+14:23:29,248 ERROR Login,main:59 - ID or Password is incoorect
+14:23:29,249  INFO Login,main:26 - Enter ID 
+14:23:31,395  INFO Login,main:32 - Enter Password
+14:23:32,904  INFO Login,main:37 - Last Login : null
+14:23:32,953 DEBUG ProfessorDAO,main:37 - Table 'smssystem.professor' doesn't exist
+15:25:35,163  INFO Login,main:18 - SMS
+15:25:35,176  INFO Login,main:26 - Enter ID 
+15:25:57,236  INFO Login,main:32 - Enter Password
+15:25:59,502  INFO Login,main:37 - Last Login : 2020-06-13 14:23:32
+15:25:59,550 DEBUG ProfessorClient,main:20 - Logged in as Professor : Amit
+15:25:59,550  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:26:07,094  INFO ProfessorClient,main:31 - Enter Course Code
+15:26:18,664 DEBUG StudentDAO,main:64 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''student'' at line 1
+15:26:18,665  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:26:23,679  INFO ProfessorClient,main:39 - 101	DAA
+
+15:26:23,679  INFO ProfessorClient,main:39 - 103	Math
+
+15:26:23,680  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:26:35,390  INFO ProfessorClient,main:48 - 102	Computer Networks
+15:26:41,878  INFO ProfessorClient,main:50 - Course Added
+15:26:41,879  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:26:46,084  INFO ProfessorClient,main:39 - 101	DAA
+
+15:26:46,084  INFO ProfessorClient,main:39 - 102	Computer Networks
+
+15:26:46,084  INFO ProfessorClient,main:39 - 103	Math
+
+15:26:46,085  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:26:49,036  INFO ProfessorClient,main:57 - Logging Out
+15:26:49,036  INFO Login,main:26 - Enter ID 
+15:30:45,454  INFO Login,main:18 - SMS
+15:30:45,470  INFO Login,main:26 - Enter ID 
+15:30:49,801  INFO Login,main:32 - Enter Password
+15:30:52,077  INFO Login,main:37 - Last Login : 2020-06-13 15:25:59
+15:30:52,115 DEBUG ProfessorClient,main:20 - Logged in as Professor : Amit
+15:30:52,115  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:31:02,175  INFO Login,main:18 - SMS
+15:31:02,187  INFO Login,main:26 - Enter ID 
+15:31:04,110  INFO Login,main:32 - Enter Password
+15:31:06,171  INFO Login,main:37 - Last Login : 2020-06-13 15:30:52
+15:31:06,206 DEBUG ProfessorClient,main:20 - Logged in as Professor : Amit
+15:31:06,206  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:31:08,557  INFO ProfessorClient,main:31 - Enter Course Code
+15:31:16,287  INFO ProfessorOperations,main:28 - Tejeshwar Saini	1003
+15:31:16,287  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:31:25,489  INFO ProfessorClient,main:31 - Enter Course Code
+15:31:31,325  INFO ProfessorOperations,main:28 - Tejeshwar Saini	1003
+15:31:31,325  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:31:33,750  INFO ProfessorClient,main:31 - Enter Course Code
+15:31:35,447  INFO ProfessorOperations,main:28 - Tejeshwar Saini	1003
+15:31:35,448  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:31:42,056  INFO ProfessorClient,main:31 - Enter Course Code
+15:31:44,256  INFO ProfessorOperations,main:28 - Tejeshwar Saini	1003
+15:31:44,257  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:31:47,228  INFO ProfessorClient,main:31 - Enter Course Code
+15:31:48,316  INFO ProfessorClient,main:26 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:31:52,201  INFO ProfessorClient,main:57 - Logging Out
+15:31:52,201  INFO Login,main:26 - Enter ID 

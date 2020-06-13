@@ -1,6 +1,5 @@
 package com.flipkart.exception;
 
-import org.apache.log4j.Logger;
 
 public class CourseFilledException extends Exception {
 	private String message;

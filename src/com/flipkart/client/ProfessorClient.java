@@ -15,10 +15,9 @@ public class ProfessorClient {
 	
 	
 	public void landingPage(String emailID , Scanner input) {
-		ProfessorOperations profOperations = new ProfessorOperations();
-		Professor prof = new Professor();
-		
-		logger.debug("Logged in as Professor : "+emailID);
+		final ProfessorOperations profOperations = new ProfessorOperations();
+		final Professor prof =  profOperations.getProfessor(emailID);
+		logger.debug("Logged in as Professor : "+prof.getName());
 		
 		int choice  = 4;
 		do {
@@ -31,7 +30,7 @@ public class ProfessorClient {
 			case 1:
 				logger.info("Enter Course Code");
 				int courseCode = input.nextInt();
-				logger.info(profOperations.getStudentINCourse(courseCode));
+				profOperations.getStudentINCourse(courseCode);
 				break;
 			case 2:
 				profOperations.returnCourseCatalog()
@@ -43,7 +42,12 @@ public class ProfessorClient {
 				logger.info(profOperations.uploadGrades(id));
 				break;
 			case 4:
-				//TODO add course 
+				profOperations.returnCourseCatalog()
+				.stream()
+				.filter(course -> (course.getProf() == -1))
+				.forEach(course -> logger.info(course.getCourseCode()+"\t"+course.getName()));
+				int courseCode1 = input.nextInt();
+				logger.info(profOperations.addCourse(courseCode1 , prof.getProfessorID()));
 				break;
 			default:
 				break;
@@ -51,6 +55,5 @@ public class ProfessorClient {
 		}
 		while(choice == 1 || choice == 2|| choice == 3|| choice == 4);
 	logger.info("Logging Out");		
-	input.close();
 	}
 }

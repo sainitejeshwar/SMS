@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.DAO.CourseDAO;
 import com.flipkart.bean.Course;
+import com.flipkart.exception.InvalidCourseException;
 
 public interface operationHelper {
 	static  Logger logger = Logger.getLogger(operationHelper.class);
@@ -28,5 +29,13 @@ public interface operationHelper {
 		return null;
 	}
 
+		
+	default public boolean isCourseContained(int courseCode , ArrayList<Course> courseList) throws InvalidCourseException{
+		for (Course course : courseList) {
+			if(course.getCourseCode() == courseCode)
+				return true;
+		}
+		throw new InvalidCourseException(courseCode);
+	}
 	
 }

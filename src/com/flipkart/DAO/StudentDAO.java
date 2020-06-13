@@ -44,8 +44,7 @@ public class StudentDAO implements DBOperations{
 		ResultSet rs = null;
 		
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.LIST_ALL_TABLE_NAME);
-			stmt.setString(1, "student");
+			stmt = conn.prepareStatement(SQLQueryConstant.STUDENT_SELECT_ALL);
 			rs = stmt.executeQuery();
 			while(rs.next()) {
 				Student student = new Student();

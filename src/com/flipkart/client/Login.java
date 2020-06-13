@@ -24,13 +24,13 @@ public class Login{
 		while(exit) {
 			
 			logger.info("Enter ID ");
-			emailid = input.nextLine();
+			emailid = input.next();
 			if(emailid.equals("exit")) {
 				exit = false;
 				break;
 			}
 			logger.info("Enter Password");
-			password = input.nextLine();
+			password = input.next();
 			String typeOfUser = null ;
 			try {
 				typeOfUser = checker.checkIdentity(emailid, password);

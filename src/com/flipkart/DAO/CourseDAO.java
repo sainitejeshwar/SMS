@@ -38,25 +38,6 @@ public class CourseDAO implements DBOperations {
 		return false;
 	}
 
-
-//	public String listAll(int sem) {
-//		conn = DBUtils.getConnection();
-//		ResultSet rs = null;
-//		String res = "";
-//		try {
-//			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_SELECT_BY_SEM);
-//			stmt.setInt(1, sem);
-//			rs = stmt.executeQuery();
-//			while(rs.next()) {
-//				res = res + rs.getInt("CourseCode")+"\t"+rs.getString("Name") + "\t"+rs.getString("ProfessorInfo")+"\n";
-//			}
-//			rs.close();
-//		} catch (SQLException e) {
-//			logger.debug(e.getMessage());
-//		}
-//		return res;
-//	}
-
 	public String getAllStudents(int courseCode) {
 		// TODO Auto-generated method stub
 		return null;
@@ -98,6 +79,19 @@ public class CourseDAO implements DBOperations {
 				logger.debug(e.getMessage());
 			}
 		}
+	}
+
+	public void addCourseProf(int courseCode1, int profID) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_COURSE_PROF);
+			stmt.setInt(1, profID);
+			stmt.setInt(2, courseCode1);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
 		}
+		
+	}
 		
 }
