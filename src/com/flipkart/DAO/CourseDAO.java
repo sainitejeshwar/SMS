@@ -86,7 +86,18 @@ public class CourseDAO implements DBOperations {
 		return allCourses;
 	}
 
-
-
-
+	public void updateStudents(ArrayList<Course> final_courses) {
+		conn = DBUtils.getConnection();
+		for(Course course : final_courses) {
+			try {
+				stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_COURSE_COUNT);
+				stmt.setInt(1, course.getCourseCode());
+				stmt.setInt(2, (course.getNumberofStudents()+1));
+				stmt.executeUpdate();
+			} catch (SQLException e) {
+				logger.debug(e.getMessage());
+			}
+		}
+		}
+		
 }

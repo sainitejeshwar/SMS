@@ -12,19 +12,7 @@ import com.flipkart.exception.InvalidUserException;
 public class Login{
 	private static  Logger logger = Logger.getLogger(Login.class);
 	public static void main (String[] args) {
-		
-		
-		/*
-		
-		exceptions::
-		course completed
-		invalid user
-		password exceptions
-		payment passed or failed
-		
-		
-		*/
-		
+		// pass Scanner to each client and deep down the function Calls
 		
 		boolean exit = true;
 		logger.info("SMS");
@@ -50,24 +38,26 @@ public class Login{
 				
 				checker.updateLoginTimeStamp(emailid,DateandTime() );
 				switch(typeOfUser) {
+				
 					case "student":
 						StudentClient studentLogin = new StudentClient();
 						studentLogin.landingPage(emailid,input);
 						break;
+						
 					case "admin":
 						AdminClient adminClient = new AdminClient();
 						adminClient.landingPage(emailid);
 						break;
+						
 					case "professor":
 						ProfessorClient professorClient = new ProfessorClient();
-						professorClient.landingPage(emailid);
+						professorClient.landingPage(emailid,input);
 						break;
 				}
 			}
 			catch (InvalidUserException e) {
 				logger.error(e.getMessage());
 			}
-			exit = false;
 		}
 		logger.info("Terminated.!");
 		

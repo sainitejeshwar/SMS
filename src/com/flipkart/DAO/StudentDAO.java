@@ -37,9 +37,33 @@ public class StudentDAO implements DBOperations{
 	}
 
 
-	public String listAll() {
+	public ArrayList<Student> listAll() {
 		// TODO Auto-generated method stub
-		return null;
+		ArrayList<Student> students = new ArrayList<Student>();
+		conn = DBUtils.getConnection();
+		ResultSet rs = null;
+		
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.LIST_ALL_TABLE_NAME);
+			stmt.setString(1, "student");
+			rs = stmt.executeQuery();
+			while(rs.next()) {
+				Student student = new Student();
+				student.setStudentID(rs.getString("StudentID"));
+				student.setName(rs.getString("Name"));
+				student.setBranch(rs.getString("Branch"));
+				student.setSemester(rs.getInt("Semester"));
+				student.setStudentCourses(rs.getString("Course1"));
+				student.setStudentCourses(rs.getString("Course2"));
+				student.setStudentCourses(rs.getString("Course3"));
+				student.setStudentCourses(rs.getString("Course4"));
+				students.add(student);
+			}
+			rs.close();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		return students;
 	}
 
 

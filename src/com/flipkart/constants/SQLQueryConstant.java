@@ -17,10 +17,12 @@ public class SQLQueryConstant {
 	
 	public static final String COURSE_SELECT_BY_SEM = "select * from course where semester = ?";
 	public static final String COURSE_SELECT_ALL = "select * from course";
-	
+	public static final String UPDATE_COURSE_COUNT = "update course set NumberOfStudent = ? where CourseCode = ?";
+
 	public static final String INSERT_REGISTRATION = "insert into registrations values(?,?,?,?)";
 	public static final String UPDATE_REGISTRATION = "update registrations set feespaid = true where RegNo = ?";
-	
+
+		
 	
 
 	

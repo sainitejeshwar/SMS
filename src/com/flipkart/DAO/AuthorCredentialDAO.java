@@ -42,7 +42,6 @@ public class AuthorCredentialDAO implements DBOperations {
 				else {
 					throw new InvalidUserException();
 				}
-				
 			}
 			catch (NullPointerException e) {
 				throw new InvalidUserException();
@@ -53,7 +52,6 @@ public class AuthorCredentialDAO implements DBOperations {
 	
 	public void updateLoginTimeStamp(String emailid , String currDateTime) {
 		conn = DBUtils.getConnection();
-		ResultSet rs = null;
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.USER_UPDATE_TIMESTAMP);
 			stmt.setString(1, currDateTime);
@@ -63,6 +61,7 @@ public class AuthorCredentialDAO implements DBOperations {
 			logger.debug(e.getMessage());
 		}
 	}
+	
 	public String getLastLoginTimeStamp(String emailid) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;

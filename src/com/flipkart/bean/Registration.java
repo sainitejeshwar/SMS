@@ -4,8 +4,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.apache.log4j.Logger;
+
+import com.flipkart.service.RegistrationOperations;
+
 public class Registration {
-	private static int Counter = 0;
+	private static  Logger logger = Logger.getLogger(Registration.class);
+	private static int Counter = 1;
 	private int RegistrationNumber;
 	private String  RegistrationTime;
 	private boolean feespaid;
@@ -19,6 +24,10 @@ public class Registration {
 	}
 	public Registration(ArrayList<Course> studentCourses) {
 		this.RegistrationNumber = Counter;
+		this.setFeespaid(false);
+		this.setRegistrationTime();
+		logger.info("Registration number : " + this.getRegistrationNumber()
+		+"\n Registration Time : "+this.getRegistrationNumber());
 		Counter++;
 	}
 	public int getRegistrationNumber() {
