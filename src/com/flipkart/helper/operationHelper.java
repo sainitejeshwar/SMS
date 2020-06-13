@@ -1,16 +1,31 @@
 package com.flipkart.helper;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import com.flipkart.DAO.AdminDAO;
+import com.flipkart.DAO.AuthorCredentialDAO;
 import com.flipkart.DAO.CourseDAO;
+import com.flipkart.DAO.ProfessorDAO;
+import com.flipkart.DAO.RegistrationDAO;
+import com.flipkart.DAO.StudentDAO;
+import com.flipkart.bean.Admin;
 import com.flipkart.bean.Course;
+import com.flipkart.bean.Professor;
+import com.flipkart.bean.Student;
+import com.flipkart.bean.User;
 import com.flipkart.exception.InvalidCourseException;
 
 public interface operationHelper {
 	static  Logger logger = Logger.getLogger(operationHelper.class);
+	AuthorCredentialDAO authorCredentialDAO = new AuthorCredentialDAO();
 	CourseDAO courseDAO = new CourseDAO();
+	AdminDAO adminDAO = new AdminDAO();
+	StudentDAO studentDAO = new StudentDAO();
+	ProfessorDAO professorDAO = new ProfessorDAO();
+	RegistrationDAO registrationDAO = new RegistrationDAO();
 	
 	default public  void viewCourseCatalog(){
 		ArrayList<Course> allCourses = new ArrayList<Course>();
@@ -28,14 +43,39 @@ public interface operationHelper {
 	default public String viewReportCard(String string) {
 		return null;
 	}
-
-		
+	
+	default public ArrayList<Student> getAllStudents(){
+		return studentDAO.listAll();
+	}
+	default public ArrayList<Professor> getAllProfessors(){
+		return professorDAO.listAll();
+	}
+	default public ArrayList<Admin> getAllAdmins(){
+		return adminDAO.listAll();
+	}
 	default public boolean isCourseContained(int courseCode , ArrayList<Course> courseList) throws InvalidCourseException{
 		for (Course course : courseList) {
 			if(course.getCourseCode() == courseCode)
 				return true;
 		}
 		throw new InvalidCourseException(courseCode);
+	}
+	
+	default public User addNewUser(Scanner input) {
+		User user = new User();
+		logger.info("Enter Name : ");
+		user.setName(input.next());
+		logger.info("Enter EmailID : ");
+		user.setEmailID(input.next());
+		//TODO  check unique email id  pass dummy password and check
+		logger.info("Enter Password");
+		user.setPassword(input.next());
+		logger.info("Enter Type(student/admin/professor)");
+		user.setType(input.next());
+		logger.info("Enter Gender (M/F)");
+		user.setGender(input.next());
+		return user;
+		
 	}
 	
 }

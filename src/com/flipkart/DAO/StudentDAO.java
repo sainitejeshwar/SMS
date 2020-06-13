@@ -10,27 +10,39 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Student;
+import com.flipkart.bean.User;
 import com.flipkart.constants.SQLQueryConstant;
-import com.flipkart.helper.DBOperations;
+
 import com.flipkart.utils.DBUtils;
 
-public class StudentDAO implements DBOperations{
+public class StudentDAO{
 	Connection conn = null;
 	PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(StudentDAO.class);
-	@Override
-	public boolean insertdata() {
-		// TODO Auto-generated method stub
-		return false;
+
+
+	public void addStudent(User user, Student student) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.STUDENT_INSERT);
+			stmt.setString(1, user.getemailID());
+			stmt.setString(2, student.getStudentID());
+			stmt.setString(3, user.getName());
+			stmt.setInt(4, student.getSemester());
+			stmt.setString(5, student.getBranch());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		
+		
 	}
 
-	@Override
 	public boolean updatedata() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
 	public boolean deletedata() {
 		// TODO Auto-generated method stub
 		return false;
@@ -108,5 +120,8 @@ public class StudentDAO implements DBOperations{
 			logger.debug(e.getMessage());
 		}
 	}
+
+
+
 
 }

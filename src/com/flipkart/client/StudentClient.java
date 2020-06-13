@@ -7,24 +7,26 @@ import org.apache.log4j.Logger;
 
 
 import com.flipkart.bean.Student;
+import com.flipkart.bean.User;
 import com.flipkart.exception.NotificationMessage;
+import com.flipkart.helper.clientHelper;
 import com.flipkart.service.RegistrationOperations;
 import com.flipkart.service.StudentOperations;
 import com.flipkart.utils.DateTimeUtil;
 
-public class StudentClient {
+public class StudentClient implements clientHelper{
 	private static  Logger logger = Logger.getLogger(StudentClient.class);
 	private static DateTimeUtil  DTUtils= new DateTimeUtil();
 
-	public void landingPage(String emailid , Scanner studScanner) {
+	public void landingPage(User user , Scanner studScanner) {
 		
 		Student student = new Student();
 		StudentOperations studOperations = new StudentOperations();
 		RegistrationOperations regOperations = new RegistrationOperations();
 		
 		
-		student = studOperations.getStudent(emailid);
-		logger.debug("Logged in as Student :  "+student.getName());
+		student = studOperations.getStudent(user.getEmailID());
+		logger.debug("Logged in as Student :  "+getSalutation(user.getGender())+student.getName());
 		
 		
 		int choice  = 7;

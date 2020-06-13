@@ -22,7 +22,20 @@ public class SQLQueryConstant {
 	public static final String INSERT_REGISTRATION = "insert into registrations values(?,?,?,?)";
 	public static final String UPDATE_REGISTRATION = "update registrations set feespaid = true where RegNo = ?";
 	
-	public static final String STUDENT_PROFESSOR_BY_ID = "select * from professor where EmailID=?";
+	public static final String PROFESSOR_SELECT_BY_ID = "select * from professor where EmailID=?";
+	
+	
+	public static final String ADMIN_SELECT_BY_ID = "select * from admin where EmailID=?";
+	
+	public static final String STUDENT_INSERT = "insert into student (EmailID , StudentID , Name , Semester , Branch)  values (?,?,?,?,?)";
+	public static final String USER_INSERT = "insert into users (EmailID , Password,Type,Gender) values (?,?,?,?)";
+	public static final String ADMIN_INSERT = "insert into admin (EmailID , Name , Level) values (?,?,?)";
+	public static final String PROF_INSERT = "insert into professor (EmailID , Name) values (?,?)";
+	public static final String USER_UPDATE = "update users set Password = ? where EmailID = ?";
+	public static final String PROFESSOR_SELECT_ALL = "select * from professor";
+	public static final String ADMIN_SELECT_ALL = "select * from admin";
+	public static final String COURSE_INSERT = "insert into course (Name,Sem) values (?,?)";
+	public static final String COURSE_RESET = "update course set ProfessorInfo = ? , NumberOfStudent = ? where CourseCode = ?";
 	
 		
 	

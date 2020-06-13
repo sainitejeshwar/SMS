@@ -7,15 +7,18 @@ public class Student extends User {
 	
 	private ArrayList<String> studentCourses = new ArrayList<String>();
 	private int RegistrationNumber ;
+	private int semester;
+	private String Branch;  //TODO remove
+	private String StudentID;
+	
+	
 	public int getRegistrationNumber() {
 		return RegistrationNumber;
 	}
 	public void setRegistrationNumber(int registrationNumber) {
 		RegistrationNumber = registrationNumber;
 	}
-	private int semester;
-	private String Branch;
-	private String StudentID;
+	
 	
 	public String getStudentID() {
 		return StudentID;

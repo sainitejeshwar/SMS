@@ -8,82 +8,78 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
-import com.flipkart.bean.Professor;
+import com.flipkart.bean.Admin;
 import com.flipkart.bean.Student;
 import com.flipkart.bean.User;
 import com.flipkart.constants.SQLQueryConstant;
-import com.flipkart.helper.DBOperations;
 import com.flipkart.utils.DBUtils;
 
-public class ProfessorDAO {
+public class AdminDAO{
 	Connection conn = null;
 	PreparedStatement stmt = null;
-	private static Logger logger = Logger.getLogger(ProfessorDAO.class);
+	private static Logger logger = Logger.getLogger(AdminDAO.class);
 	
 	
-	public Professor listByID(String emailid) {
+	public Admin listByID(String emailID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
-		Professor professor = new Professor();
+		Admin admin = new Admin();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.PROFESSOR_SELECT_BY_ID);
-			stmt.setString(1, emailid);
+			stmt = conn.prepareStatement(SQLQueryConstant.ADMIN_SELECT_BY_ID);
+			stmt.setString(1, emailID);
 			rs = stmt.executeQuery();
 			while(rs.next()) {
-				professor.setProfessorID(rs.getInt("ProfID"));
-				professor.setName(rs.getString("Name"));
+				admin.setName(rs.getString("Name"));
+				admin.setEmailID(rs.getString("EmailID"));
+				admin.setAdminID(rs.getInt("AdminID"));
+				admin.setLevel(rs.getString("Level"));
 			}
 			rs.close();
-			return professor;
+			return admin;
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
 		return null;
 	}
-	
-	
-	
-	public ArrayList<Professor> listAll() {
+	public ArrayList<Admin> listAll(){
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
-		ArrayList<Professor> professors = new ArrayList<Professor>();
-		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.PROFESSOR_SELECT_ALL);
-			rs = stmt.executeQuery();
-			while(rs.next()) {
-				Professor professor = new Professor();
-				professor.setProfessorID(rs.getInt("ProfID"));
-				professor.setName(rs.getString("Name"));
-				professors.add(professor);
-			}
-			rs.close();
-			
-		} catch (SQLException e) {
-			logger.debug(e.getMessage());
-		}
-		return professors;
-	}
-
-	public String getAllCourse(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<Admin> admins = new ArrayList<Admin>();
 		
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.ADMIN_SELECT_ALL);
+			rs = stmt.executeQuery();
+			while(rs.next()) {
+				Admin admin = new Admin();
+				admin.setName(rs.getString("Name"));
+				admin.setEmailID(rs.getString("EmailID"));
+				admin.setAdminID(rs.getInt("AdminID"));
+				admin.setLevel(rs.getString("Level"));
+				admins.add(admin);
+			}
+			rs.close();
+			return admins;
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		return null;
 	}
 
-
-	public void addProf(User user) {
+	public void addAdmin(User user , Admin admin) {
 		conn = DBUtils.getConnection();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.PROF_INSERT);
+			stmt = conn.prepareStatement(SQLQueryConstant.ADMIN_INSERT);
 			stmt.setString(1, user.getemailID());
 			stmt.setString(2, user.getName());
+			stmt.setString(3, admin.getLevel());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
 		
 	}
-	
-	 
 
+
+	
 }
+

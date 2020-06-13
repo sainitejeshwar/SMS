@@ -14,13 +14,9 @@ import com.flipkart.bean.Registration;
 import com.flipkart.bean.Student;
 import com.flipkart.helper.operationHelper;
 
-public class StudentOperations implements operationHelper{
-	private static  Logger logger = Logger.getLogger(StudentOperations.class);
-	private CourseDAO courseDAO = new CourseDAO();
-	private StudentDAO studentDAO = new StudentDAO();
-	private RegistrationDAO registrationDAO = new RegistrationDAO();
-	Student student = new Student();
+public class StudentOperations implements operationHelper{;
 	
+	Student student = new Student();
 	
 	public String payFees(int registrationID) {
 		//TODO Check Payment Status

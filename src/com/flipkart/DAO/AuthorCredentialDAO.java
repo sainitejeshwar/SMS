@@ -13,13 +13,13 @@ import com.flipkart.exception.InvalidUserException;
 import com.flipkart.helper.DBOperations;
 import com.flipkart.utils.DBUtils;
 
-public class AuthorCredentialDAO implements DBOperations {
+public class AuthorCredentialDAO  {
 	Connection conn = null;
 	PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(AuthorCredentialDAO.class);
 	User user = new User();
 	
-	public String checkIdentity(String emailid , String password) throws InvalidUserException {
+	public User checkIdentity(String emailid , String password) throws InvalidUserException {
 			conn = DBUtils.getConnection();
 			ResultSet rs = null;
 			try {
@@ -29,15 +29,17 @@ public class AuthorCredentialDAO implements DBOperations {
 				while(rs.next()) {
 					user.setPassword(rs.getString("Password"));
 					user.setType(rs.getString("Type"));
+					user.setGender(rs.getString("Gender"));
+					user.setEmailID(rs.getString("EmailID"));
 				}
-				
 				rs.close();
 			} catch (SQLException e) {
-				logger.debug(e.getMessage());
+				logger.debug("no email id");
+				return null;
 			}
 			try {
 				if(user.getPassword().equals(password)) {
-					return user.getType();
+					return user;
 				}
 				else {
 					throw new InvalidUserException();
@@ -81,31 +83,34 @@ public class AuthorCredentialDAO implements DBOperations {
 		return res;
 	}
 
-	@Override
-	public boolean insertdata() {
-		// TODO Auto-generated method stub
-		return false;
+
+	public void addUser(User user2) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.USER_INSERT);
+			stmt.setString(1, user.getemailID());
+			stmt.setString(2, user.getPassword());
+			stmt.setString(3, user.getType());
+			stmt.setString(4, user.getGender());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		
+		
 	}
 
-
-	@Override
-	public boolean updatedata() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-
-	@Override
-	public boolean deletedata() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-
-	
-	public String listAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public void updateUser(String emailID, String password) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.USER_UPDATE);
+			stmt.setString(1, password);
+			stmt.setString(2, emailID);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		
 	}
 	
 	/*

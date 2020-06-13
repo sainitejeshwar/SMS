@@ -18,9 +18,7 @@ import com.flipkart.helper.operationHelper;
 
 public class RegistrationOperations implements operationHelper {
 	private static  Logger logger = Logger.getLogger(RegistrationOperations.class);
-	private  CourseDAO courseDAO = new CourseDAO();
-	private  RegistrationDAO registrationDAO = new RegistrationDAO();
-	private  StudentDAO studentDAO = new StudentDAO();
+
 	
 	
 	public String doRegistration(Student student , Scanner input) throws NotificationMessage{

@@ -1,11 +1,24 @@
 package com.flipkart.bean;
 
 public class User {
-	protected String Name;
-	protected String emailID;
-	protected String Password;
-	protected String Type;
+	public String Name;
+	public String emailID;
+	public String Password;
+	public String Type;
+	public String Gender;
 	
+	public String getEmailID() {
+		return emailID;
+	}
+	public void setEmailID(String emailID) {
+		this.emailID = emailID;
+	}
+	public String getGender() {
+		return Gender;
+	}
+	public void setGender(String gender) {
+		Gender = gender;
+	}
 	public String getType() {
 		return Type;
 	}

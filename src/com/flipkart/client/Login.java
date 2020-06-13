@@ -6,6 +6,7 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.flipkart.DAO.AuthorCredentialDAO;
+import com.flipkart.bean.User;
 import com.flipkart.exception.InvalidUserException;
 import com.flipkart.utils.DateTimeUtil;
 
@@ -22,6 +23,7 @@ public class Login{
 		String password ="";
 		AuthorCredentialDAO checker = new AuthorCredentialDAO();
 		DateTimeUtil DTutil = new DateTimeUtil();
+		User user = new User();
 		
 		while(exit) {
 			
@@ -33,26 +35,26 @@ public class Login{
 			}
 			logger.info("Enter Password");
 			password = input.next();
-			String typeOfUser = null ;
+
 			try {
-				typeOfUser = checker.checkIdentity(emailid, password);
+				user = checker.checkIdentity(emailid, password);
 				logger.info("Last Login : "+ DTutil.systemDateTime(checker.getLastLoginTimeStamp(emailid)));
 				checker.updateLoginTimeStamp(emailid, DTutil.SQLdatetime() );
-				switch(typeOfUser) {
+				switch(user.getType()) {
 				
 					case "student":
 						StudentClient studentLogin = new StudentClient();
-						studentLogin.landingPage(emailid,input);
+						studentLogin.landingPage(user,input);
 						break;
 						
 					case "admin":
 						AdminClient adminClient = new AdminClient();
-						adminClient.landingPage(emailid);
+						adminClient.landingPage(user,input);
 						break;
 						
 					case "professor":
 						ProfessorClient professorClient = new ProfessorClient();
-						professorClient.landingPage(emailid,input);
+						professorClient.landingPage(user,input);
 						break;
 				}
 			}

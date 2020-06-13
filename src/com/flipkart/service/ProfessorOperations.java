@@ -15,9 +15,6 @@ import com.flipkart.helper.operationHelper;
 
 public class ProfessorOperations implements operationHelper{
 	private static  Logger logger = Logger.getLogger(ProfessorOperations.class);
-	private CourseDAO courseDAO = new CourseDAO();
-	private ProfessorDAO professorDAO = new ProfessorDAO();
-	private StudentDAO studentDAO = new StudentDAO();
 	
 	
 	public void getStudentINCourse(int courseCode){

@@ -14,35 +14,13 @@ import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.helper.DBOperations;
 import com.flipkart.utils.DBUtils;
 
-public class CourseDAO implements DBOperations {
+public class CourseDAO{
 	Connection conn = null;
 	PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(CourseDAO.class);
 	Course course = new Course();
 	
-	@Override
-	public boolean insertdata() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
-	@Override
-	public boolean updatedata() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean deletedata() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public String getAllStudents(int courseCode) {
-		// TODO Auto-generated method stub
-		return null;
-		
-	}
 
 	public ArrayList<Course> listAll() {
 		ArrayList<Course> allCourses = new ArrayList<Course>();
@@ -87,6 +65,34 @@ public class CourseDAO implements DBOperations {
 			stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_COURSE_PROF);
 			stmt.setInt(1, profID);
 			stmt.setInt(2, courseCode1);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		
+	}
+
+	public void addCourse(Course course2) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_INSERT);
+			stmt.setString(1, course2.getName());
+			stmt.setInt(2, course2.getSemester());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		
+		
+	}
+
+	public void resetCourse(int courseCode) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_RESET);
+			stmt.setInt(1, -1);
+			stmt.setInt(2, 0);
+			stmt.setInt(3, courseCode);
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());

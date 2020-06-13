@@ -7,18 +7,20 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Professor;
+import com.flipkart.bean.User;
+import com.flipkart.helper.clientHelper;
 import com.flipkart.service.ProfessorOperations;
 import com.flipkart.utils.DateTimeUtil;
 
 
-public class ProfessorClient {
+public class ProfessorClient implements clientHelper{
 	private static  Logger logger = Logger.getLogger(ProfessorClient.class);
 	private static DateTimeUtil  DTUtils= new DateTimeUtil();
 	
-	public void landingPage(String emailID , Scanner input) {
+	public void landingPage(User user , Scanner input) {
 		final ProfessorOperations profOperations = new ProfessorOperations();
-		final Professor prof =  profOperations.getProfessor(emailID);
-		logger.debug("Logged in as Professor : "+prof.getName());
+		final Professor prof =  profOperations.getProfessor(user.getEmailID());
+		logger.debug("Logged in as Professor : "+getSalutation(user.getGender())+prof.getName());
 		
 		int choice  = 4;
 		do {
