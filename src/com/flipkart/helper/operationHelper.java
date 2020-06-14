@@ -1,5 +1,6 @@
 package com.flipkart.helper;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -29,6 +30,7 @@ public interface operationHelper {
 	ProfessorDAO professorDAO = new ProfessorDAO();
 	RegistrationDAO registrationDAO = new RegistrationDAO();
 	MarksDAO marksDAO = new MarksDAO();
+	LocalDate RegistrationEndDate = LocalDate.of(2020, 7, 1);
 	
 	public final ArrayList<Student> StudentList = studentDAO.listAll();
 	
@@ -80,6 +82,15 @@ public interface operationHelper {
 		user.setGender(input.next());
 		return user;
 		
+	}
+	default public boolean isAfterDateRegistrationDate() {
+		LocalDate localDate1 = LocalDate.now();
+		LocalDate localDate2 = RegistrationEndDate;
+		if (localDate1.isAfter(localDate2)) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 }

@@ -26,8 +26,9 @@ public class DateTimeUtil {
 		else {
 			return currDateandTime();
 		}
-		
-		
+	}
+	public String systemDate(LocalDate localDate) {
+		return localDate.getDayOfMonth()+"-"+localDate.getMonth()+"-"+localDate.getYear();
 	}
 	public String currDateandTime() {
 		LocalDateTime localDateTime = LocalDateTime.now();
@@ -39,6 +40,8 @@ public class DateTimeUtil {
 		LocalDateTime localDateTime = LocalDateTime.now();
 		return Integer.valueOf(Integer.toString(ID)+Integer.toString(localDateTime.getDayOfMonth())+Integer.toString(localDateTime.getMonthValue()));
 	}
+	
+	
 }
 
 //sql datetime

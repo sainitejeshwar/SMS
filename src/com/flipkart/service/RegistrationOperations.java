@@ -14,6 +14,7 @@ import com.flipkart.bean.Registration;
 import com.flipkart.bean.Student;
 import com.flipkart.exception.CourseFilledException;
 import com.flipkart.exception.NotificationMessage;
+import com.flipkart.exception.RegistrationEndedException;
 import com.flipkart.helper.operationHelper;
 
 public class RegistrationOperations implements operationHelper {
@@ -21,9 +22,12 @@ public class RegistrationOperations implements operationHelper {
 
 	
 	
-	public String doRegistration(Student student , Scanner input) throws NotificationMessage{
+	public String doRegistration(Student student , Scanner input) throws NotificationMessage , RegistrationEndedException {
 		if(student.getRegistrationNumber() != 0) {
 			return "Registration Already Done \n Pay fees (if not paid yet)";
+		}
+		if(isAfterDateRegistrationDate()) {
+			throw new RegistrationEndedException(RegistrationEndDate);
 		}
 		logger.info("Courses Available for you : ");
 		for(Course course : (returnCourseCatalog()

@@ -10340,3 +10340,30 @@ Choices
 4.Add courses to teach
 5.Logout
 11:39:12,910  INFO ProfessorClient,main:56 - 111	SQL
+12:08:49,329  INFO Login,main:18 - SMS
+12:08:49,342  INFO Login,main:28 - Enter ID 
+12:08:53,596  INFO Login,main:34 - Enter Password
+12:08:56,978  INFO Login,main:39 - Last Login : 2020-06-14 11:03:34    SUNDAY
+12:08:57,020 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. Tejeshwar Saini
+12:08:57,020  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+12:08:59,487 ERROR StudentClient,main:62 - Registration ended at :2020-06-01
+12:08:59,488  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+12:09:05,499  INFO StudentClient,main:81 - Logging Out at 12:9    14-JUNE    SUNDAY
+12:09:05,500  INFO Login,main:28 - Enter ID 
+12:09:08,905  INFO Login,main:63 - Terminated.!

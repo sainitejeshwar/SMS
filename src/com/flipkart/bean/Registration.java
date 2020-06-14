@@ -1,6 +1,7 @@
 package com.flipkart.bean;
 
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 
@@ -15,19 +16,21 @@ public class Registration {
 	private boolean feespaid;
 	private DateTimeUtil DTUtil = new DateTimeUtil();
 	
-	
-	public boolean isFeespaid() {
-		return feespaid;
-	}
-	public void setFeespaid(boolean feespaid) {
-		this.feespaid = feespaid;
-	}
 	public Registration(ArrayList<Course> studentCourses , int studentID) {
 		this.RegistrationNumber = DTUtil.getUniqueNumber(studentID);
 		this.setFeespaid(false);
 		this.setRegistrationTime();
 		logger.info("Registration number : " + this.getRegistrationNumber()
 		+"\n Registration Time : "+DTUtil.systemDateTime(this.getRegistrationTime()));
+	}
+	public Registration() {
+		
+	}
+	public boolean isFeespaid() {
+		return feespaid;
+	}
+	public void setFeespaid(boolean feespaid) {
+		this.feespaid = feespaid;
 	}
 	public int getRegistrationNumber() {
 		return RegistrationNumber;

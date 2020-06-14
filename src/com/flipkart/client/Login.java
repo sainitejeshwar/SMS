@@ -62,7 +62,6 @@ public class Login{
 		}
 		logger.info("Terminated.!");
 		
-		// TODO  -  Unique RegistrationNumber Generation - same for transacction number 
 
 	}
 }

@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import com.flipkart.bean.Student;
 import com.flipkart.bean.User;
 import com.flipkart.exception.NotificationMessage;
+import com.flipkart.exception.RegistrationEndedException;
 import com.flipkart.helper.clientHelper;
 import com.flipkart.service.RegistrationOperations;
 import com.flipkart.service.StudentOperations;
@@ -57,7 +58,10 @@ public class StudentClient implements clientHelper{
 					logger.info(regOperations.doRegistration(student,studScanner));
 				} catch (NotificationMessage e) {
 					logger.error(e.getMessage());
+				} catch (RegistrationEndedException e) {
+					logger.error(e.getMessage());
 				}
+				
 				break;
 				
 			case 5:
