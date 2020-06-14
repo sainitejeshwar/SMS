@@ -46,7 +46,6 @@ public class RegistrationOperations implements operationHelper {
 		ArrayList<Course> final_courses = new ArrayList<Course>();
 		for(ind = 0 ; ind < 6 ; ind++) {
 			if(final_courses.size()==4) {
-				logger.debug("Break");
 				break;
 			}
 			for(Course course : returnCourseCatalog()) {
@@ -75,13 +74,13 @@ public class RegistrationOperations implements operationHelper {
 			}
 		}
 		
-		Registration newRegistration = new Registration(final_courses);
+		Registration newRegistration = new Registration(final_courses , student.getStudentID());
 		student.setRegistrationNumber(newRegistration.getRegistrationNumber());
 		
 		registrationDAO.addRegistration(newRegistration, student);
 		studentDAO.UpdateStudentRegistration(final_courses, student);
 		courseDAO.updateStudents(final_courses);
-
+		marksDAO.createStudent(student.getStudentID());
 		return "Registration Completed";
 	}
 	

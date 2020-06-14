@@ -26,7 +26,7 @@ public class StudentDAO{
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.STUDENT_INSERT);
 			stmt.setString(1, user.getemailID());
-			stmt.setString(2, student.getStudentID());
+			stmt.setInt(2, student.getStudentID());
 			stmt.setString(3, user.getName());
 			stmt.setInt(4, student.getSemester());
 			stmt.setString(5, student.getBranch());
@@ -39,7 +39,6 @@ public class StudentDAO{
 	}
 
 	public ArrayList<Student> listAll() {
-		// TODO Auto-generated method stub
 		ArrayList<Student> students = new ArrayList<Student>();
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -49,7 +48,7 @@ public class StudentDAO{
 			rs = stmt.executeQuery();
 			while(rs.next()) {
 				Student student = new Student();
-				student.setStudentID(rs.getString("StudentID"));
+				student.setStudentID(rs.getInt("StudentID"));
 				student.setName(rs.getString("Name"));
 				student.setBranch(rs.getString("Branch"));
 				student.setSemester(rs.getInt("Semester"));
@@ -77,7 +76,7 @@ public class StudentDAO{
 			stmt.setString(1, emailid);
 			rs = stmt.executeQuery();
 			while(rs.next()) {
-				student.setStudentID(rs.getString("StudentID"));
+				student.setStudentID(rs.getInt("StudentID"));
 				student.setName(rs.getString("Name"));
 				student.setBranch(rs.getString("Branch"));
 				student.setSemester(rs.getInt("Semester"));
@@ -95,6 +94,8 @@ public class StudentDAO{
 		return null;
 	}
 	public void UpdateStudentRegistration(ArrayList<Course> courses , Student student) {
+		
+		//	TODO  make column in marks table
 		conn = DBUtils.getConnection();
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_STUDENT_REGISTRATION);
@@ -103,7 +104,7 @@ public class StudentDAO{
 			stmt.setInt(3, courses.get(2).getCourseCode());
 			stmt.setInt(4, courses.get(3).getCourseCode());
 			stmt.setInt(5, student.getRegistrationNumber());
-			stmt.setString(6, student.getStudentID());
+			stmt.setInt(6, student.getStudentID());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
@@ -118,7 +119,7 @@ public class StudentDAO{
 		student = listByID(emailID);
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.MARKS_SELECT_BY_ID);
-			stmt.setString(1, student.getStudentID());
+			stmt.setInt(1, student.getStudentID());
 			rs = stmt.executeQuery();
 			while(rs.next()) {
 				student.setMarks(0 , rs.getInt("Course1"));
@@ -160,7 +161,7 @@ public class StudentDAO{
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, student.getMarks().get(ind));
 
-			stmt.setString(2, student.getStudentID());
+			stmt.setInt(2, student.getStudentID());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());

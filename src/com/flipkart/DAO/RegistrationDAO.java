@@ -21,7 +21,7 @@ public class RegistrationDAO {
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.INSERT_REGISTRATION);
 			stmt.setInt(1, newRegistration.getRegistrationNumber());
-			stmt.setString(2, student.getStudentID());
+			stmt.setInt(2, student.getStudentID());
 			stmt.setString(3, newRegistration.getRegistrationTime());
 			stmt.setBoolean(4, newRegistration.isFeespaid());
 			stmt.executeUpdate();

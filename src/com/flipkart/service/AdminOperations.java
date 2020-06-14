@@ -19,18 +19,17 @@ public class AdminOperations implements operationHelper,clientHelper {
 	public void addUser(Scanner input) {
 		User user = new User();
 		user = addNewUser(input);
+		authorCredentialDAO.addUser(user);
 		switch (user.getType()) {
 		case "student":
 			Student student = new Student();
 			logger.info("Enter Student ID : ");
-			student.setStudentID(input.next());  // Change to int and auto increment
+			student.setStudentID(input.nextInt());  // Change to int and auto increment
 			logger.info("Enter Student Semester :");
 			student.setSemester(input.nextInt());
 			logger.info("Enter Branch : ");
 			student.setBranch(input.next());
-			
 			studentDAO.addStudent(user,student);
-			authorCredentialDAO.addUser(user);
 			
 			break;
 		case "admin":
@@ -39,12 +38,12 @@ public class AdminOperations implements operationHelper,clientHelper {
 			admin.setLevel(input.next());
 			
 			adminDAO.addAdmin(user, admin);
-			authorCredentialDAO.addUser(user);
+
 			break;
 			
 		case "professor":
 			professorDAO.addProf(user);
-			authorCredentialDAO.addUser(user);
+
 			break;
 			
 		default:

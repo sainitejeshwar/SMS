@@ -18,7 +18,7 @@ public class StudentOperations implements operationHelper{;
 		Payment payment = new Payment();
 		payment.setTimeStamp();
 		payment.setStatus(true);
-		payment.setTransactionID();
+		payment.setTransactionID(registrationID);
 		if(payment.isStatus()) {
 			registrationDAO.updateFeesStatus(registrationID);
 		}

@@ -72,7 +72,6 @@ public interface operationHelper {
 		user.setName(input.next());
 		logger.info("Enter EmailID : ");
 		user.setEmailID(input.next());
-		//TODO  check unique email id  pass dummy password and check
 		logger.info("Enter Password");
 		user.setPassword(input.next());
 		logger.info("Enter Type(student/admin/professor)");

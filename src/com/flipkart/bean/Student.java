@@ -9,7 +9,7 @@ public class Student extends User {
 	private int RegistrationNumber ;
 	private int semester;
 	private String Branch;  //TODO remove
-	private String StudentID;
+	private int StudentID;
 	private  ArrayList<Integer> marks = new ArrayList<Integer>();
 	
 
@@ -25,10 +25,10 @@ public class Student extends User {
 	public ArrayList<Integer> getMarks(){
 		return marks;
 	}
-	public String getStudentID() {
+	public int getStudentID() {
 		return StudentID;
 	}
-	public void setStudentID(String studentID) {
+	public void setStudentID(int studentID) {
 		StudentID = studentID;
 	}
 	public int getSemester() {

@@ -52,7 +52,7 @@ public class CourseDAO{
 				stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_COURSE_COUNT);
 				stmt.setInt(2, course.getCourseCode());
 				stmt.setInt(1, (course.getNumberofStudents()+1));
-				logger.debug(stmt.executeUpdate());
+				stmt.executeUpdate();
 			} catch (SQLException e) {
 				logger.debug(e.getMessage());
 			}

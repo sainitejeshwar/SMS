@@ -88,10 +88,10 @@ public class AuthorCredentialDAO  {
 		conn = DBUtils.getConnection();
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.USER_INSERT);
-			stmt.setString(1, user.getemailID());
-			stmt.setString(2, user.getPassword());
-			stmt.setString(3, user.getType());
-			stmt.setString(4, user.getGender());
+			stmt.setString(1, user2.getemailID());
+			stmt.setString(2, user2.getPassword());
+			stmt.setString(3, user2.getType());
+			stmt.setString(4, user2.getGender());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());

@@ -42,6 +42,7 @@ public class SQLQueryConstant {
 	public static final String MARKS_UPDATE_COURSE2 = "update marks set Course2 = ?  where StudentID = ?";
 	public static final String MARKS_UPDATE_COURSE3 = "update marks set Course3 = ?  where StudentID = ?";
 	public static final String MARKS_UPDATE_COURSE4 = "update marks set Course4 = ?  where StudentID = ?";
+	public static final String MARKS_INSERT = "insert into marks (StudentID) values (?)";
 
 	
 		
