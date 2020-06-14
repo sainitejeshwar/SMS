@@ -1,6 +1,13 @@
 package com.flipkart.bean;
 
-import java.util.ArrayList;
+/*
+ * CLASS DESCRIPTION
+ * 
+ *	Professors who will be teaching student 
+ * 
+ * ATTRIBUTES
+ * 		-	TransactionID 	: Unique for all Professor
+ */
 
 public class Professor extends User {
 
@@ -9,14 +16,9 @@ public class Professor extends User {
 	public int  getProfessorID() {
 		return professorID;
 	}
-
 	public void setProfessorID(int professorID) {
 		this.professorID = professorID;
 	}
 
 	
-	@Override
-	public String getUserInfo(User U) {
-		return "Professor : "+U.getemailID()+"\n"+ U.getName()+"\n Courses : ";
-	}
 }

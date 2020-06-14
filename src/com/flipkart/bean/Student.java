@@ -1,14 +1,31 @@
 package com.flipkart.bean;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+
+
+/*
+ * CLASS DESCRIPTION
+ * 
+ * Student Class : stores Student details 
+ * 
+ * 
+ * ATTRIBUTES
+ * 		- 	studentCourses 		: Store CourseCode of student Courses for which student has registered
+ * 		-	RegistrationNumber 	: Registration Number  
+ * 		- 	semester			: Semester in which student is studying
+ * 		- 	Branch				: Branch in which student is enrolled
+ * 		- 	StudentID			: Primary Key
+ * 		- 	marks				: Arraylist of marks of student , courseCode can be taken from student course corresponding to same index
+ * 									
+ */
+
 
 public class Student extends User {
 	
 	private ArrayList<Integer> studentCourses = new ArrayList<Integer>();
 	private int RegistrationNumber ;
 	private int semester;
-	private String Branch;  //TODO remove
+	private String Branch;  
 	private int StudentID;
 	private  ArrayList<Integer> marks = new ArrayList<Integer>();
 	
@@ -52,27 +69,14 @@ public class Student extends User {
 	public ArrayList<Integer> getStudentCourses() {
 		return studentCourses;
 	}
-
 	public void setStudentCourses(ArrayList<Integer> newCourses) {
 		this.studentCourses.addAll(newCourses);
 	}
 	public void setStudentCourses(Integer course) {
 		this.studentCourses.add(course);
 	}
-	
 	public String dropStudentCourse(int excludeCourse) {
 		this.studentCourses.remove(excludeCourse);
 		return getAllCourses();
 	}
-	public void startRegistration() {
-		// TODO : dsds
-	}
-	@Override
-	public String getUserInfo(User U) {
-		return "Student : "+U.getemailID()+"\n"+ U.getName()+"\n"+getAllCourses();
-	}
-
-	
-	
-	
 }

@@ -1,12 +1,34 @@
 package com.flipkart.bean;
 
+/*
+ * CLASS DESCRIPTION
+ * 
+ * Parent class of Student , Professor , Admin
+ * Contains login Details 
+ * 
+ * 
+ * ATTRIBUTES
+ * 		- 	Name		 		: Name of the user
+ * 		-	emailID			 	: Email Id of user (unique)  
+ * 		- 	Password			: password for emailID
+ * 		- 	Type				: type of user : student / professor / admin
+ * 		- 	Gender				: M/F
+ * 									
+ */
+
+
+
 public class User {
-	public String Name;
-	public String emailID;
-	public String Password;
-	public String Type;
-	public String Gender;
+	private String Name;
+	private String emailID;
+	private String Password;
+	private String Type;
+	private String Gender;
 	
+	
+	/*
+	 * GETTERS AND SETTERS
+	 */
 	public String getEmailID() {
 		return emailID;
 	}
@@ -43,9 +65,4 @@ public class User {
 	public void setPassword(String password) {
 		Password = password;
 	}
-	
-	public String getUserInfo(User U) {
-		return  U.getName() + ", "+U.getemailID();
-	}
-
 }
