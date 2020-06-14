@@ -1,5 +1,6 @@
 package com.flipkart.helper;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -20,6 +21,7 @@ import com.flipkart.bean.Professor;
 import com.flipkart.bean.Student;
 import com.flipkart.bean.User;
 import com.flipkart.exception.InvalidCourseException;
+import com.flipkart.exception.InvalidUserException;
 
 public interface operationHelper {
 	static  Logger logger = Logger.getLogger(operationHelper.class);
@@ -72,8 +74,21 @@ public interface operationHelper {
 		User user = new User();
 		logger.info("Enter Name : ");
 		user.setName(input.next());
-		logger.info("Enter EmailID : ");
-		user.setEmailID(input.next());
+		String emailID = "";
+		boolean flag = true;
+		while(flag) {
+			logger.info("Enter EmailID : ");
+			emailID = input.next();
+				try {
+					authorCredentialDAO.checkIdentity(emailID, "dummy");
+				} catch (InvalidUserException e) {
+					logger.info("Email ID already Exists");
+				} catch (NullPointerException e) {
+					logger.info("Email ID available");
+					flag = false;
+				}
+		}
+		user.setEmailID(emailID);
 		logger.info("Enter Password");
 		user.setPassword(input.next());
 		logger.info("Enter Type(student/admin/professor)");

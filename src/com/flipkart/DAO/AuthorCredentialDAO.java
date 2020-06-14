@@ -17,11 +17,12 @@ public class AuthorCredentialDAO  {
 	Connection conn = null;
 	PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(AuthorCredentialDAO.class);
-	User user = new User();
 	
-	public User checkIdentity(String emailid , String password) throws InvalidUserException {
+	
+	public User checkIdentity(String emailid , String password) throws InvalidUserException{
 			conn = DBUtils.getConnection();
 			ResultSet rs = null;
+			User user = new User();
 			try {
 				stmt = conn.prepareStatement(SQLQueryConstant.USER_SELECT_BY_ID);
 				stmt.setString(1, emailid);
@@ -34,7 +35,10 @@ public class AuthorCredentialDAO  {
 				}
 				rs.close();
 			} catch (SQLException e) {
-				logger.debug("no email id");
+				logger.debug(e.getMessage());
+				return null;
+			}
+			if(user.getPassword().length() == 0) {
 				return null;
 			}
 			try {

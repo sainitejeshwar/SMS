@@ -58,6 +58,8 @@ public class Login{
 			}
 			catch (InvalidUserException e) {
 				logger.error(e.getMessage());
+			} catch (NullPointerException e) {
+				logger.error(e.getMessage());
 			}
 		}
 		logger.info("Terminated.!");

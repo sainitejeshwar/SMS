@@ -10367,3 +10367,121 @@ Choices
 12:09:05,499  INFO StudentClient,main:81 - Logging Out at 12:9    14-JUNE    SUNDAY
 12:09:05,500  INFO Login,main:28 - Enter ID 
 12:09:08,905  INFO Login,main:63 - Terminated.!
+12:18:16,830  INFO Login,main:18 - SMS
+12:18:16,845  INFO Login,main:28 - Enter ID 
+12:18:20,706  INFO Login,main:34 - Enter Password
+12:18:23,178  INFO Login,main:39 - Last Login : 2020-06-14 11:38:02    SUNDAY
+12:18:23,210 DEBUG AdminClient,main:26 - Logged in as Admin: Mr. Tejas
+12:18:23,210  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+12:18:24,863  INFO operationHelper,main:74 - Enter Name : 
+12:18:32,354  INFO operationHelper,main:79 - Enter EmailID : 
+12:18:36,280  INFO operationHelper,main:86 - Email ID already exits
+12:18:36,281  INFO operationHelper,main:79 - Enter EmailID : 
+12:19:00,161  INFO operationHelper,main:86 - Email ID already exits
+12:19:00,162  INFO operationHelper,main:79 - Enter EmailID : 
+12:19:08,037  INFO operationHelper,main:86 - Email ID already exits
+12:19:08,037  INFO operationHelper,main:79 - Enter EmailID : 
+12:19:53,969  INFO Login,main:18 - SMS
+12:19:53,982  INFO Login,main:28 - Enter ID 
+12:19:56,114  INFO Login,main:34 - Enter Password
+12:19:58,355  INFO Login,main:39 - Last Login : 2020-06-14 12:18:23    SUNDAY
+12:19:58,389 DEBUG AdminClient,main:26 - Logged in as Admin: Mr. Tejas
+12:19:58,389  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+12:20:00,981  INFO operationHelper,main:74 - Enter Name : 
+12:20:08,797  INFO operationHelper,main:79 - Enter EmailID : 
+12:20:11,412  INFO operationHelper,main:86 - Email ID already exits
+12:20:11,412  INFO operationHelper,main:79 - Enter EmailID : 
+12:20:14,810  INFO operationHelper,main:86 - Email ID already exits
+12:20:14,811  INFO operationHelper,main:79 - Enter EmailID : 
+12:21:58,760  INFO Login,main:18 - SMS
+12:21:58,776  INFO Login,main:28 - Enter ID 
+12:22:01,507  INFO Login,main:34 - Enter Password
+12:22:03,489  INFO Login,main:39 - Last Login : 2020-06-14 12:19:58    SUNDAY
+12:22:03,523 DEBUG AdminClient,main:26 - Logged in as Admin: Mr. Tejas
+12:22:03,523  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+12:22:05,022  INFO operationHelper,main:74 - Enter Name : 
+12:22:07,870  INFO operationHelper,main:79 - Enter EmailID : 
+12:22:11,187  INFO operationHelper,main:86 - Email ID already exits
+12:22:11,187  INFO operationHelper,main:79 - Enter EmailID : 
+12:22:14,153  INFO operationHelper,main:86 - Email ID already exits
+12:22:14,154  INFO operationHelper,main:79 - Enter EmailID : 
+12:22:16,614  INFO operationHelper,main:86 - Email ID already exits
+12:22:16,614  INFO operationHelper,main:79 - Enter EmailID : 
+12:22:18,277  INFO operationHelper,main:86 - Email ID already exits
+12:22:18,277  INFO operationHelper,main:79 - Enter EmailID : 
+12:22:19,088  INFO operationHelper,main:86 - Email ID already exits
+12:22:19,088  INFO operationHelper,main:79 - Enter EmailID : 
+12:22:19,314  INFO operationHelper,main:86 - Email ID already exits
+12:22:19,314  INFO operationHelper,main:79 - Enter EmailID : 
+12:22:19,470  INFO operationHelper,main:86 - Email ID already exits
+12:22:19,470  INFO operationHelper,main:79 - Enter EmailID : 
+12:22:19,586  INFO operationHelper,main:86 - Email ID already exits
+12:22:19,586  INFO operationHelper,main:79 - Enter EmailID : 
+12:26:13,333  INFO Login,main:19 - SMS
+12:26:13,350  INFO Login,main:29 - Enter ID 
+12:26:18,107  INFO Login,main:35 - Enter Password
+12:26:20,431  INFO Login,main:40 - Last Login : 2020-06-14 12:22:03    SUNDAY
+12:26:20,479 DEBUG AdminClient,main:26 - Logged in as Admin: Mr. Tejas
+12:26:20,479  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+12:26:21,513  INFO operationHelper,main:75 - Enter Name : 
+12:26:24,120  INFO operationHelper,main:80 - Enter EmailID : 
+12:26:25,510  INFO operationHelper,main:86 - Email ID already Exists
+12:26:25,510  INFO operationHelper,main:80 - Enter EmailID : 
+12:26:28,311  INFO operationHelper,main:86 - Email ID already Exists
+12:26:28,312  INFO operationHelper,main:80 - Enter EmailID : 
+12:26:30,603  INFO operationHelper,main:86 - Email ID already Exists
+12:26:30,603  INFO operationHelper,main:80 - Enter EmailID : 
+12:26:32,532  INFO operationHelper,main:86 - Email ID already Exists
+12:26:32,533  INFO operationHelper,main:80 - Enter EmailID : 
+12:32:10,281  INFO Login,main:19 - SMS
+12:32:10,299  INFO Login,main:29 - Enter ID 
+12:32:13,725  INFO Login,main:35 - Enter Password
+12:32:16,307  INFO Login,main:40 - Last Login : 2020-06-14 12:26:20    SUNDAY
+12:32:16,346 DEBUG AdminClient,main:26 - Logged in as Admin: Mr. Tejas
+12:32:16,347  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+12:32:17,039  INFO operationHelper,main:75 - Enter Name : 
+12:32:19,373  INFO operationHelper,main:80 - Enter EmailID : 
+12:32:20,840  INFO operationHelper,main:85 - Email ID already Exists
+12:32:20,841  INFO operationHelper,main:80 - Enter EmailID : 
+12:32:23,895  INFO operationHelper,main:87 - Email ID available
+12:32:23,895  INFO operationHelper,main:95 - Enter Password
