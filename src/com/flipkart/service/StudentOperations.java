@@ -4,25 +4,29 @@ package com.flipkart.service;
 import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Payment;
-import com.flipkart.bean.Registration;
 import com.flipkart.bean.Student;
 import com.flipkart.helper.operationHelper;
+import com.flipkart.utils.DateTimeUtil;
 
 public class StudentOperations implements operationHelper{;
 	private static  Logger logger = Logger.getLogger(StudentOperations.class);
 	Student student = new Student();
+	DateTimeUtil dTimeUtil = new DateTimeUtil();
 	
 	public String payFees(int registrationID) {
-		//TODO Check Payment Status
+		if(registrationDAO.getPaymentStatus(registrationID).isStatus()) {
+			return "Fees Already Paid on :" +dTimeUtil.systemDateTime(registrationDAO.getPaymentStatus(registrationID).getTimeStamp());
+		}
 		logger.info("Paying Fees for Registration ID : "+registrationID);
 		Payment payment = new Payment();
-		payment.setTimeStamp();
-		payment.setStatus(true);
+		payment.setTimeStamp(dTimeUtil.SQLdatetime());
+		payment.setStatus(true);   //Assuming True from payment Gateway
 		payment.setTransactionID(registrationID);
+		payment.setRegNO(registrationID);
 		if(payment.isStatus()) {
-			registrationDAO.updateFeesStatus(registrationID);
+			registrationDAO.updateFeesStatus(payment);
 		}
-		return "Fees paid on : "+payment.getTimeStamp()+" with Transacction ID : "+ payment.getTransactionID();
+		return "Fees paid on : "+dTimeUtil.systemDateTime(payment.getTimeStamp())+" with Transacction ID : "+ payment.getTransactionID();
 	}
 	
 	

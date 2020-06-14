@@ -10485,3 +10485,65 @@ Choices
 12:32:20,841  INFO operationHelper,main:80 - Enter EmailID : 
 12:32:23,895  INFO operationHelper,main:87 - Email ID available
 12:32:23,895  INFO operationHelper,main:95 - Enter Password
+20:50:04,831  INFO Login,main:18 - SMS
+20:50:04,870  INFO Login,main:28 - Enter ID 
+20:50:12,913  INFO Login,main:34 - Enter Password
+20:50:15,718  INFO Login,main:39 - Last Login : 2020-06-14 12:08:56    SUNDAY
+20:50:15,776 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. Tejeshwar Saini
+20:50:15,778  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+20:50:18,071  INFO RegistrationOperations,main:32 - Courses Available for you : 
+20:50:18,076  INFO RegistrationOperations,main:37 - 101	DAA
+20:50:18,077  INFO RegistrationOperations,main:37 - 102	Computer Networks
+20:50:18,077  INFO RegistrationOperations,main:37 - 103	Math
+20:50:18,077  INFO RegistrationOperations,main:37 - 104	English
+20:50:18,077  INFO RegistrationOperations,main:37 - 105	Graph Theory
+20:50:18,078  INFO RegistrationOperations,main:37 - 106	Chemistry
+20:50:18,078  INFO RegistrationOperations,main:37 - 107	Physics
+20:50:18,078  INFO RegistrationOperations,main:37 - 108	SCM
+20:50:18,078  INFO RegistrationOperations,main:37 - 109	Software Engineering
+20:50:18,078  INFO RegistrationOperations,main:37 - 110	DM
+20:50:18,079  INFO RegistrationOperations,main:41 - Enter 4 Primary Course and 2 Secondary Course
+20:50:27,060 ERROR RegistrationOperations,main:62 - 101is filled
+20:50:27,063 ERROR RegistrationOperations,main:62 - 102is filled
+20:50:27,077  INFO RegistrationOperations,main:75 - There is a change in your Primary Course 
+ Final Courses are :
+20:50:27,077  INFO RegistrationOperations,main:77 - Math
+20:50:27,078  INFO RegistrationOperations,main:77 - English
+20:50:27,078  INFO RegistrationOperations,main:77 - Graph Theory
+20:50:27,078  INFO RegistrationOperations,main:77 - Chemistry
+20:50:27,079  INFO Registration,main:23 - Registration number : 1003146
+ Registration Time : 2020-6-14 20:50:27    SUNDAY
+20:50:27,088 DEBUG RegistrationDAO,main:31 - Column count doesn't match value count at row 1
+20:50:27,272 DEBUG MarksDAO,main:23 - Duplicate entry '1003' for key 'marks.PRIMARY'
+20:50:27,273  INFO StudentClient,main:58 - Registration Completed
+20:50:27,273  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+20:50:59,985  INFO StudentOperations,main:22 - Paying Fees for Registration ID : 1003146
+20:50:59,986  INFO StudentClient,main:68 - Fees paid on : 2020-6-14 20:50:59    SUNDAY with Transacction ID : 1003146146
+20:50:59,986  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+20:51:11,870  INFO StudentClient,main:81 - Logging Out at 20:51    14-JUNE    SUNDAY
+20:51:11,871  INFO Login,main:28 - Enter ID 
+20:51:14,863  INFO Login,main:65 - Terminated.!

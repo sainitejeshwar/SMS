@@ -8,7 +8,13 @@ public class Payment {
 	private int TransactionID;
 	private boolean Status;
 	private String timeStamp;
-	private static int counter = 0;
+	private int RegNO ;
+	public int getRegNO() {
+		return RegNO;
+	}
+	public void setRegNO(int regNO) {
+		RegNO = regNO;
+	}
 	DateTimeUtil DTUtil = new DateTimeUtil();
 	
 	public int getTransactionID() {
@@ -27,8 +33,9 @@ public class Payment {
 	public String getTimeStamp() {
 		return timeStamp;
 	}
-	public void setTimeStamp() {
-		this.timeStamp = DTUtil.systemDateTime(null);
+	public void setTimeStamp(String timeStamp) {
+		this.timeStamp = timeStamp;
 	}
+
 
 }
