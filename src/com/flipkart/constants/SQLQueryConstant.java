@@ -36,6 +36,13 @@ public class SQLQueryConstant {
 	public static final String ADMIN_SELECT_ALL = "select * from admin";
 	public static final String COURSE_INSERT = "insert into course (Name,Sem) values (?,?)";
 	public static final String COURSE_RESET = "update course set ProfessorInfo = ? , NumberOfStudent = ? where CourseCode = ?";
+	public static final String MARKS_SELECT_BY_ID = "select * from marks where StudentID = ?";
+	public static final String MARKS_UPDATE = "update marks set Course1 = ? , Course2 = ? , Course3 = ? , Course4 = ?  where StudentID = ?";
+	public static final String MARKS_UPDATE_COURSE1 = "update marks set Course1 = ?  where StudentID = ?";
+	public static final String MARKS_UPDATE_COURSE2 = "update marks set Course2 = ?  where StudentID = ?";
+	public static final String MARKS_UPDATE_COURSE3 = "update marks set Course3 = ?  where StudentID = ?";
+	public static final String MARKS_UPDATE_COURSE4 = "update marks set Course4 = ?  where StudentID = ?";
+
 	
 		
 	

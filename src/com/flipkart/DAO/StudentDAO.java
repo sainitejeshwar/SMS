@@ -38,17 +38,6 @@ public class StudentDAO{
 		
 	}
 
-	public boolean updatedata() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public boolean deletedata() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-
 	public ArrayList<Student> listAll() {
 		// TODO Auto-generated method stub
 		ArrayList<Student> students = new ArrayList<Student>();
@@ -64,10 +53,10 @@ public class StudentDAO{
 				student.setName(rs.getString("Name"));
 				student.setBranch(rs.getString("Branch"));
 				student.setSemester(rs.getInt("Semester"));
-				student.setStudentCourses(rs.getString("Course1"));
-				student.setStudentCourses(rs.getString("Course2"));
-				student.setStudentCourses(rs.getString("Course3"));
-				student.setStudentCourses(rs.getString("Course4"));
+				student.setStudentCourses(rs.getInt("Course1"));
+				student.setStudentCourses(rs.getInt("Course2"));
+				student.setStudentCourses(rs.getInt("Course3"));
+				student.setStudentCourses(rs.getInt("Course4"));
 				student.setRegistrationNumber(rs.getInt("RegNo"));
 				students.add(student);
 			}
@@ -92,14 +81,14 @@ public class StudentDAO{
 				student.setName(rs.getString("Name"));
 				student.setBranch(rs.getString("Branch"));
 				student.setSemester(rs.getInt("Semester"));
-				student.setStudentCourses(rs.getString("Course1"));
-				student.setStudentCourses(rs.getString("Course2"));
-				student.setStudentCourses(rs.getString("Course3"));
-				student.setStudentCourses(rs.getString("Course4"));
+				student.setStudentCourses(rs.getInt("Course1"));
+				student.setStudentCourses(rs.getInt("Course2"));
+				student.setStudentCourses(rs.getInt("Course3"));
+				student.setStudentCourses(rs.getInt("Course4"));
 				student.setRegistrationNumber(rs.getInt("RegNo"));
-			return student;
 			}
 			rs.close();
+			return student;
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
@@ -119,6 +108,64 @@ public class StudentDAO{
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
+		
+	}
+
+	public Student getGrade(String emailID) {
+		conn = DBUtils.getConnection();
+		ResultSet rs = null;
+		Student student = new Student();
+		student = listByID(emailID);
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.MARKS_SELECT_BY_ID);
+			stmt.setString(1, student.getStudentID());
+			rs = stmt.executeQuery();
+			while(rs.next()) {
+				student.setMarks(0 , rs.getInt("Course1"));
+				student.setMarks(1,rs.getInt("Course2"));
+				student.setMarks(2,rs.getInt("Course3"));
+				student.setMarks(3,rs.getInt("Course4"));
+			}
+			rs.close();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		} catch (NullPointerException e) {
+			logger.debug("No Record Found");
+		}
+		return student;
+		
+	}
+
+	public void setGrades(int ind, Student student) {
+		conn = DBUtils.getConnection();
+		try {
+			String sql = null;
+			switch (ind) {
+			case 0:
+				sql = SQLQueryConstant.MARKS_UPDATE_COURSE1;
+				break;
+			case 1:
+				sql = SQLQueryConstant.MARKS_UPDATE_COURSE2;
+				break;
+			case 2:
+				sql = SQLQueryConstant.MARKS_UPDATE_COURSE3;
+				break;
+			case 3:
+				sql = SQLQueryConstant.MARKS_UPDATE_COURSE4;
+				break;
+
+			default:
+				break;
+			}
+			stmt = conn.prepareStatement(sql);
+			stmt.setInt(1, student.getMarks().get(ind));
+
+			stmt.setString(2, student.getStudentID());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		
 	}
 
 

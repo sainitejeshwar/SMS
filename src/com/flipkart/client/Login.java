@@ -1,6 +1,5 @@
 package com.flipkart.client;
 
-import java.time.LocalDateTime;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
@@ -14,8 +13,7 @@ import com.flipkart.utils.DateTimeUtil;
 public class Login{
 	private static  Logger logger = Logger.getLogger(Login.class);
 	public static void main (String[] args) {
-		// pass Scanner to each client and deep down the function Calls
-		
+
 		boolean exit = true;
 		logger.info("SMS");
 		Scanner input = new Scanner(System.in);
@@ -65,6 +63,7 @@ public class Login{
 		logger.info("Terminated.!");
 		
 		// TODO  -  Unique RegistrationNumber Generation - same for transacction number 
+		//TODO  - grades
 	}
 }
 

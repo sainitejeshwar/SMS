@@ -1,15 +1,17 @@
 package com.flipkart.service;
 
+
 import java.util.ArrayList;
+
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
-import com.flipkart.DAO.CourseDAO;
-import com.flipkart.DAO.ProfessorDAO;
-import com.flipkart.DAO.StudentDAO;
+
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Professor;
+import com.flipkart.bean.Student;
 import com.flipkart.exception.InvalidCourseException;
 import com.flipkart.helper.operationHelper;
 
@@ -18,16 +20,25 @@ public class ProfessorOperations implements operationHelper{
 	
 	
 	public void getStudentINCourse(int courseCode){
-		//Student list
-		studentDAO.listAll()
+		StudentList
 		.stream()
-		.filter(student -> student.getStudentCourses().contains(String.valueOf(courseCode)))
+		.filter(student -> student.getStudentCourses().contains((courseCode)))
 		.forEach((student) -> logger.info(student.getName() +"\t"+student.getStudentID()));
-
 		
 	}
-	public String uploadGrades(int id) {
-		return null;  // list all updates made
+	public void uploadGrades(int courseCode , Scanner input) {
+		ArrayList<Integer> marks = new ArrayList<Integer>();
+		int ind = 0;
+		logger.info("Enter Marks for : ");
+		for (Student student : StudentList
+				.stream()
+				.filter(student -> student.getStudentCourses().contains((courseCode)))
+				.collect(Collectors.toList())) {
+			logger.info(student.getName()+"\t"+student.getStudentID()+" :");
+			int grade = input.nextInt();
+			student.setMarks(ind, grade);
+			studentDAO.setGrades(ind,student);
+		}
 	}
 	public Professor getProfessor(String emailid) {
 		return professorDAO.listByID(emailid);

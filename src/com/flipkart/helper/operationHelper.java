@@ -2,12 +2,14 @@ package com.flipkart.helper;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
 import com.flipkart.DAO.AdminDAO;
 import com.flipkart.DAO.AuthorCredentialDAO;
 import com.flipkart.DAO.CourseDAO;
+import com.flipkart.DAO.MarksDAO;
 import com.flipkart.DAO.ProfessorDAO;
 import com.flipkart.DAO.RegistrationDAO;
 import com.flipkart.DAO.StudentDAO;
@@ -26,6 +28,9 @@ public interface operationHelper {
 	StudentDAO studentDAO = new StudentDAO();
 	ProfessorDAO professorDAO = new ProfessorDAO();
 	RegistrationDAO registrationDAO = new RegistrationDAO();
+	MarksDAO marksDAO = new MarksDAO();
+	
+	public final ArrayList<Student> StudentList = studentDAO.listAll();
 	
 	default public  void viewCourseCatalog(){
 		ArrayList<Course> allCourses = new ArrayList<Course>();
@@ -33,17 +38,12 @@ public interface operationHelper {
 		if(allCourses != null)
 			allCourses
 			.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()+"\t"
-					+ course.getProf()+"\t"+course.getNumberofStudents()));
-		
+					+ course.getProf()+"\t"+course.getNumberofStudents()));	
 	}
-	
 	default public  ArrayList<Course> returnCourseCatalog(){
 		return courseDAO.listAll();
 	}
-	default public String viewReportCard(String string) {
-		return null;
-	}
-	
+
 	default public ArrayList<Student> getAllStudents(){
 		return studentDAO.listAll();
 	}
@@ -60,7 +60,12 @@ public interface operationHelper {
 		}
 		throw new InvalidCourseException(courseCode);
 	}
-	
+	default public String getCourseName(int courseCode) {
+		return returnCourseCatalog()
+		.stream()
+		.filter((course) -> course.getCourseCode() == courseCode)
+		.collect(Collectors.toList()).get(0).getName();
+	}
 	default public User addNewUser(Scanner input) {
 		User user = new User();
 		logger.info("Enter Name : ");

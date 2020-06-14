@@ -5,21 +5,26 @@ import java.util.HashMap;
 
 public class Student extends User {
 	
-	private ArrayList<String> studentCourses = new ArrayList<String>();
+	private ArrayList<Integer> studentCourses = new ArrayList<Integer>();
 	private int RegistrationNumber ;
 	private int semester;
 	private String Branch;  //TODO remove
 	private String StudentID;
+	private  ArrayList<Integer> marks = new ArrayList<Integer>();
 	
-	
+
 	public int getRegistrationNumber() {
 		return RegistrationNumber;
 	}
 	public void setRegistrationNumber(int registrationNumber) {
 		RegistrationNumber = registrationNumber;
 	}
-	
-	
+	public void setMarks(int index ,int grade) {
+		marks.add(index, grade);
+	}
+	public ArrayList<Integer> getMarks(){
+		return marks;
+	}
 	public String getStudentID() {
 		return StudentID;
 	}
@@ -40,22 +45,22 @@ public class Student extends User {
 	}
 	public String getAllCourses() {
 		String res="";
-		for(String itrCourse : this.studentCourses)
+		for(Integer itrCourse : this.studentCourses)
 			res = res + itrCourse +",";
 		return res;
 	}
-	public ArrayList<String> getStudentCourses() {
+	public ArrayList<Integer> getStudentCourses() {
 		return studentCourses;
 	}
 
-	public void setStudentCourses(ArrayList<String> newCourses) {
+	public void setStudentCourses(ArrayList<Integer> newCourses) {
 		this.studentCourses.addAll(newCourses);
 	}
-	public void setStudentCourses(String course) {
+	public void setStudentCourses(Integer course) {
 		this.studentCourses.add(course);
 	}
 	
-	public String dropStudentCourse(String excludeCourse) {
+	public String dropStudentCourse(int excludeCourse) {
 		this.studentCourses.remove(excludeCourse);
 		return getAllCourses();
 	}

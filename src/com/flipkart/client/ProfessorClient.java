@@ -1,11 +1,9 @@
 package com.flipkart.client;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
-import com.flipkart.bean.Course;
 import com.flipkart.bean.Professor;
 import com.flipkart.bean.User;
 import com.flipkart.helper.clientHelper;
@@ -24,7 +22,7 @@ public class ProfessorClient implements clientHelper{
 		
 		int choice  = 4;
 		do {
-			int id = 0;
+
 			// view catalog
 			logger.info("\nChoices\n1.View Students in a Course\n2.View My Courses\n3.Upload Grades\n4."
 					+ "Add courses to teach\n5.Logout");
@@ -39,18 +37,25 @@ public class ProfessorClient implements clientHelper{
 				profOperations.returnCourseCatalog()
 					.stream()
 					.filter(course -> course.getProf() == prof.getProfessorID())
-					.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()+"\n"));
+					.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()));
 				break;
 			case 3:
-				logger.info(profOperations.uploadGrades(id));
+				logger.info("Your Courses");
+				profOperations.returnCourseCatalog()
+				.stream()
+				.filter(course -> course.getProf() == prof.getProfessorID())
+				.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()+"\n"));
+				logger.info("Enter Course Code to Upload Marks");
+				int courseCode1 = input.nextInt();
+				profOperations.uploadGrades(courseCode1,input);
 				break;
 			case 4:
 				profOperations.returnCourseCatalog()
 				.stream()
 				.filter(course -> (course.getProf() == -1))
 				.forEach(course -> logger.info(course.getCourseCode()+"\t"+course.getName()));
-				int courseCode1 = input.nextInt();
-				logger.info(profOperations.addCourse(courseCode1 , prof.getProfessorID()));
+				int courseCode11 = input.nextInt();
+				logger.info(profOperations.addCourse(courseCode11 , prof.getProfessorID()));
 				break;
 			default:
 				break;
