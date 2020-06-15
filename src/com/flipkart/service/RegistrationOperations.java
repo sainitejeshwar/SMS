@@ -16,6 +16,7 @@ import com.flipkart.exception.CourseFilledException;
 import com.flipkart.exception.NotificationMessage;
 import com.flipkart.exception.RegistrationEndedException;
 import com.flipkart.helper.operationHelper;
+import com.mysql.cj.util.StringUtils;
 
 public class RegistrationOperations implements operationHelper {
 	private static  Logger logger = Logger.getLogger(RegistrationOperations.class);
@@ -34,7 +35,7 @@ public class RegistrationOperations implements operationHelper {
 				.stream()
 				.filter(course -> course.getSemester() == student.getSemester())
 				.collect(Collectors.toList()))) {
-				logger.info(course.getCourseCode()+"\t"+course.getName());
+				logger.info(course.getCourseCode()+"\t"+course.getName()+"\t"+course.getFees());
 		}
 		
 		ArrayList<Integer> tempCourses = new ArrayList<Integer>();
@@ -59,7 +60,7 @@ public class RegistrationOperations implements operationHelper {
 						final_courses.add(course);
 					}
 					catch (CourseFilledException e) {
-						logger.error(e.getMessage());
+						logger.error(getCourseName(e.Message()) +" is already filled");
 					}
 				}
 			}
@@ -71,20 +72,24 @@ public class RegistrationOperations implements operationHelper {
 		if(final_courses.size()<4) {
 			throw new NotificationMessage();
 		}
+		int TotalFees = 0;
 		if(flag == true) {
 			logger.info("There is a change in your Primary Course \n Final Courses are :");
 			for(Course fCourse:final_courses) {
 				logger.info(fCourse.getName());
+				TotalFees = TotalFees + fCourse.getFees();
 			}
 		}
 		
+		
 		Registration newRegistration = new Registration(final_courses , student.getStudentID());
 		student.setRegistrationNumber(newRegistration.getRegistrationNumber());
-		
+		newRegistration.setAmount(TotalFees);
+
 		registrationDAO.addRegistration(newRegistration, student);
-		studentDAO.UpdateStudentRegistration(final_courses, student);
+		studentDAO.UpdateStudentRegistration(final_courses, student); //studentCourseDao
 		courseDAO.updateStudents(final_courses);
-		marksDAO.createStudent(student.getStudentID());
+		marksDAO.createStudent(student.getStudentID());   //no use ,  studentCourse will store 
 		return "Registration Completed";
 	}
 	

@@ -25,10 +25,9 @@ public class SQLQueryConstant {
 	public static final String COURSE_RESET = "update course set ProfessorInfo = ? , NumberOfStudent = ? where CourseCode = ?";
 	
 	
-	public static final String INSERT_REGISTRATION = "insert into registrations (RegNo , StudentID , TimeStamp , feespaid) values(?,?,?,?)";
+	public static final String INSERT_REGISTRATION = "insert into registrations (RegNo , StudentID , TimeStamp , feespaid , TotalFees) values(?,?,?,?,?)";
 	public static final String UPDATE_REGISTRATION = "update registrations set feespaid = true , TransacID = ? , TimeStampPayment = ? where RegNo = ?";
-	public static final String PAYMENT_STATUS = "select * from registrations where RegNo = ?";
-
+	
 	public static final String PROFESSOR_SELECT_BY_ID = "select * from professor where EmailID=?";
 	public static final String PROFESSOR_SELECT_ALL = "select * from professor";
 	public static final String PROF_INSERT = "insert into professor (EmailID , Name) values (?,?)";
@@ -46,9 +45,14 @@ public class SQLQueryConstant {
 	public static final String MARKS_UPDATE_COURSE3 = "update marks set Course3 = ?  where StudentID = ?";
 	public static final String MARKS_UPDATE_COURSE4 = "update marks set Course4 = ?  where StudentID = ?";
 	public static final String MARKS_INSERT = "insert into marks (StudentID) values (?)";
+	public static final String SELECT_REGISTRATION_BY_SID = "select * from registrations where RegNo = ?";
+	public static final String INSERT_PAYMENT = "insert into payment values (?,?,?,?,?)";
 	
 	
-	
+	public static final String PAYMENT_STATUS = "select * from payment where RegNo = ?";
+	public static final String PAYMENT_STATUS_R = "select * from registrations where RegNo = ?";
+	public static final String UPDATE_FEESPAID = "update registrations set feespaid = true , TransacID = ? where RegNo = ?";
+
 	
 		
 	

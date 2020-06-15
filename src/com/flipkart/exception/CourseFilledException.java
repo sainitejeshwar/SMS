@@ -2,11 +2,11 @@ package com.flipkart.exception;
 
 
 public class CourseFilledException extends Exception {
-	private String message;
+	private int message;
 	public CourseFilledException(int courseCode) {
-		this.message = courseCode + "is filled";
+		this.message = courseCode;
 	}
-	public String getMessage() {
+	public int Message() {
 		return this.message;
 	}
 

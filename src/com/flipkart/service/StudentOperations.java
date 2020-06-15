@@ -14,23 +14,25 @@ public class StudentOperations implements operationHelper{;
 	DateTimeUtil dTimeUtil = new DateTimeUtil();
 	
 	public String payFees(int registrationID) {
-		logger.info(registrationID);
 		try {
-			if(registrationDAO.getPaymentStatus(registrationID).isStatus()) {
-				return "Fees Already Paid on :" +dTimeUtil.systemDateTime(registrationDAO.getPaymentStatus(registrationID).getTimeStamp());
+			if(registrationDAO.getPaymentStatus(registrationID).isFeespaid()) {
+				return "Fees Already Paid on :" +dTimeUtil.systemDateTime(paymentDAO.getPaymentStatus(registrationID).getTimeStamp());
 			}
 		}
 		catch (Exception e) {
-			e.printStackTrace();
-			return "Do registration First"+e.getMessage();
+			return ("Do Registration First");
 		}
+		int fees = registrationDAO.getRegistrationFees(registrationID);
+		logger.info("Amount to be Paid : " + fees);
 		logger.info("Paying Fees for Registration ID : "+registrationID);
 		Payment payment = new Payment();
 		payment.setTimeStamp(dTimeUtil.SQLdatetime());
-		payment.setStatus(true);   //Assuming True from payment Gateway
+		payment.setStatus("Completed");   //Assuming True from payment Gateway
 		payment.setTransactionID(registrationID);
 		payment.setRegNO(registrationID);
-		registrationDAO.updateFeesStatus(payment);
+		payment.setAmount(fees);
+		paymentDAO.updatePayment(payment);
+		registrationDAO.updatePayment(payment);
 		return "Fees paid on : "+dTimeUtil.systemDateTime(payment.getTimeStamp())+" with Transacction ID : "+ payment.getTransactionID();
 	}
 	

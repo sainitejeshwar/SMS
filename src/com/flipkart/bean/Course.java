@@ -22,12 +22,19 @@ public class Course {
 	private int Semester;
 	private int Prof;
 	private int NumberofStudents;
+	private int Fees;
 	
 	
 	/*
 	 * GETTERS AND SETTERS
 	 */
 	
+	public int getFees() {
+		return Fees;
+	}
+	public void setFees(int fees) {
+		Fees = fees;
+	}
 	public int getNumberofStudents() {
 		return NumberofStudents;
 	}

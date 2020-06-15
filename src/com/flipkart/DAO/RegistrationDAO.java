@@ -26,43 +26,63 @@ public class RegistrationDAO {
 			stmt.setInt(2, student.getStudentID());
 			stmt.setString(3, newRegistration.getRegistrationTime());
 			stmt.setBoolean(4, newRegistration.isFeespaid());
-			logger.info(stmt.executeUpdate());
-		} catch (SQLException e) {
-			logger.debug(e.getMessage());
-		}
-	}
-	
-	public void updateFeesStatus(Payment payment) {
-		conn = DBUtils.getConnection();
-		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_REGISTRATION);
-			stmt.setInt(1, payment.getTransactionID());
-			stmt.setString(2, payment.getTimeStamp());
-			stmt.setInt(3, payment.getRegNO());
+			stmt.setInt(5, newRegistration.getAmount());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
 	}
-
-	public Payment getPaymentStatus(int registrationID) {
+	
+	public Registration getPaymentStatus(int registrationID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
-		Payment payment = new Payment();
+		Registration checkRegistration = new Registration();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.PAYMENT_STATUS);
+			stmt = conn.prepareStatement(SQLQueryConstant.PAYMENT_STATUS_R);
 			stmt.setInt(1, registrationID);
 			rs = stmt.executeQuery();
 			while(rs.next()) {
-				payment.setStatus(rs.getBoolean("feespaid"));
-				payment.setTimeStamp(rs.getString("TimeStampPayment"));
+				checkRegistration.setFeespaid(rs.getBoolean("feespaid"));
+				return checkRegistration;
 			}
-			
 			rs.close();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
-		return payment;
+		return null;
+		
+	}
+
+
+	public int getRegistrationFees(int registrationID) {
+		conn = DBUtils.getConnection();
+		ResultSet rs = null;
+		int fees = 0;
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.SELECT_REGISTRATION_BY_SID);
+			stmt.setInt(1, registrationID);
+			rs = stmt.executeQuery();
+			while(rs.next()) {
+				fees = (rs.getInt("TotalFees"));
+			}
+			rs.close();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		return fees;
+		
+	}
+
+	public void updatePayment(Payment payment) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_FEESPAID);
+			stmt.setInt(1, payment.getTransactionID());
+			stmt.setInt(2, payment.getRegNO());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
 		
 	}
 

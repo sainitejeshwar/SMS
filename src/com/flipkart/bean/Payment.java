@@ -15,9 +15,11 @@ import com.flipkart.utils.DateTimeUtil;
 
 public class Payment {
 	private int TransactionID;
-	private boolean Status;
+	private String Status;
 	private String timeStamp;
 	private int RegNO ;
+	private int amount;
+	
 	
 	
 	//To Get time Stamp
@@ -28,6 +30,13 @@ public class Payment {
 	/*
 	 * GETTERS AND SETTERS
 	 */
+	
+	public int getAmount() {
+		return amount;
+	}
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
 	public int getRegNO() {
 		return RegNO;
 	}
@@ -41,11 +50,10 @@ public class Payment {
 		
 		TransactionID = DTUtil.getUniqueNumber(ID);
 	}
-	
-	public boolean isStatus() {
+	public String getStatus() {
 		return Status;
 	}
-	public void setStatus(boolean status) {
+	public void setStatus(String status) {
 		Status = status;
 	}
 	public String getTimeStamp() {

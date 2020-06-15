@@ -12,6 +12,7 @@ import com.flipkart.DAO.AdminDAO;
 import com.flipkart.DAO.AuthorCredentialDAO;
 import com.flipkart.DAO.CourseDAO;
 import com.flipkart.DAO.MarksDAO;
+import com.flipkart.DAO.PaymentDAO;
 import com.flipkart.DAO.ProfessorDAO;
 import com.flipkart.DAO.RegistrationDAO;
 import com.flipkart.DAO.StudentDAO;
@@ -32,6 +33,7 @@ public interface operationHelper {
 	ProfessorDAO professorDAO = new ProfessorDAO();
 	RegistrationDAO registrationDAO = new RegistrationDAO();
 	MarksDAO marksDAO = new MarksDAO();
+	PaymentDAO paymentDAO = new PaymentDAO();
 	LocalDate RegistrationEndDate = LocalDate.of(2020, 7, 1);
 	
 	public final ArrayList<Student> StudentList = studentDAO.listAll();

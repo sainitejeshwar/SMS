@@ -26,8 +26,15 @@ import com.flipkart.utils.DateTimeUtil;
 public class Registration {
 	private int RegistrationNumber;
 	private String  RegistrationTime;
+	private int amount;
 	private boolean feespaid;
 	
+	public boolean isFeespaid() {
+		return feespaid;
+	}
+	public void setFeespaid(boolean feespaid) {
+		this.feespaid = feespaid;
+	}
 	private static  Logger logger = Logger.getLogger(Registration.class);
 	private DateTimeUtil DTUtil = new DateTimeUtil();
 	
@@ -37,8 +44,8 @@ public class Registration {
 	 */
 	public Registration(ArrayList<Course> studentCourses , int studentID) {
 		this.RegistrationNumber = DTUtil.getUniqueNumber(studentID);
-		this.setFeespaid(false);
 		this.setRegistrationTime();
+		this.setFeespaid(false);
 		logger.info("Registration number : " + this.getRegistrationNumber()
 		+"\n Registration Time : "+DTUtil.systemDateTime(this.getRegistrationTime()));
 	}
@@ -48,12 +55,6 @@ public class Registration {
 	/*
 	 * GETTERS AND SETTER
 	 */
-	public boolean isFeespaid() {
-		return feespaid;
-	}
-	public void setFeespaid(boolean feespaid) {
-		this.feespaid = feespaid;
-	}
 	public int getRegistrationNumber() {
 		return RegistrationNumber;
 	}
@@ -63,5 +64,10 @@ public class Registration {
 	public void setRegistrationTime() {
 		RegistrationTime = DTUtil.SQLdatetime();
 	}
-
+	public int getAmount() {
+		return amount;
+	}
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
 }

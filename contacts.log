@@ -11126,3 +11126,639 @@ Choices
 09:54:55,056  INFO StudentClient,main:80 - Logging Out at 9:54    15-JUNE    MONDAY
 09:54:55,056  INFO Login,main:28 - Enter ID 
 09:54:57,417  INFO Login,main:65 - Terminated.!
+11:53:07,670  INFO Login,main:18 - SMS
+11:53:07,686  INFO Login,main:28 - Enter ID 
+11:53:10,206  INFO Login,main:34 - Enter Password
+11:53:14,485  INFO Login,main:39 - Last Login : 2020-06-15 09:54:43    MONDAY
+11:53:14,530 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+11:53:14,530  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:53:17,070  INFO StudentOperations,main:17 - 1009156
+11:53:17,074  INFO StudentOperations,main:28 - Amount to be Paid : 0
+11:53:17,075  INFO StudentOperations,main:29 - Paying Fees for Registration ID : 1009156
+11:53:17,087  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 11:53:17    MONDAY with Transacction ID : 1009156156
+11:53:17,087  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:53:26,849  INFO StudentOperations,main:17 - 1009156
+11:53:26,855  INFO StudentClient,main:67 - Fees Already Paid on :2020-06-15 11:53:17    MONDAY
+11:53:26,856  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:53:29,243  INFO StudentClient,main:80 - Logging Out at 11:53    15-JUNE    MONDAY
+11:53:29,243  INFO Login,main:28 - Enter ID 
+11:53:31,267  INFO Login,main:65 - Terminated.!
+14:13:40,025  INFO Login,main:18 - SMS
+14:13:40,045  INFO Login,main:28 - Enter ID 
+14:13:43,018  INFO Login,main:34 - Enter Password
+14:13:46,562  INFO Login,main:39 - Last Login : 2020-06-15 11:53:14    MONDAY
+14:13:46,610 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+14:13:46,611  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+14:13:48,588  INFO RegistrationOperations,main:32 - Courses Available for you : 
+14:13:48,610  INFO RegistrationOperations,main:37 - 101	DAA	100
+14:13:48,611  INFO RegistrationOperations,main:37 - 102	Computer Networks	200
+14:13:48,611  INFO RegistrationOperations,main:37 - 103	Math	300
+14:13:48,612  INFO RegistrationOperations,main:37 - 104	English	400
+14:13:48,612  INFO RegistrationOperations,main:37 - 105	Graph Theory	500
+14:13:48,612  INFO RegistrationOperations,main:37 - 106	Chemistry	600
+14:13:48,612  INFO RegistrationOperations,main:37 - 107	Physics	700
+14:13:48,612  INFO RegistrationOperations,main:37 - 108	SCM	80
+14:13:48,612  INFO RegistrationOperations,main:37 - 109	Software Engineering	100
+14:13:48,612  INFO RegistrationOperations,main:37 - 110	DM	200
+14:13:48,613  INFO RegistrationOperations,main:37 - 112	EDC	500
+14:13:48,613  INFO RegistrationOperations,main:41 - Enter 4 Primary Course and 2 Secondary Course
+14:14:00,311 ERROR RegistrationOperations,main:62 - 102is filled
+14:14:00,326  INFO RegistrationOperations,main:76 - There is a change in your Primary Course 
+ Final Courses are :
+14:14:00,326  INFO RegistrationOperations,main:78 - EDC
+14:14:00,326  INFO RegistrationOperations,main:78 - DM
+14:14:00,327  INFO RegistrationOperations,main:78 - Software Engineering
+14:14:00,327  INFO RegistrationOperations,main:78 - Graph Theory
+14:14:00,328  INFO Registration,main:43 - Registration number : 1009156
+ Registration Time : 2020-6-15 14:14:0    MONDAY
+14:14:00,352 DEBUG RegistrationDAO,main:32 - Duplicate entry '1009156' for key 'registrations.PRIMARY'
+14:14:00,443 DEBUG MarksDAO,main:23 - Duplicate entry '1009' for key 'marks.PRIMARY'
+14:14:00,443  INFO StudentClient,main:58 - Registration Completed
+14:14:00,443  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+14:14:45,606  INFO Login,main:18 - SMS
+14:14:45,618  INFO Login,main:28 - Enter ID 
+14:14:48,126  INFO Login,main:34 - Enter Password
+14:14:50,684  INFO Login,main:39 - Last Login : 2020-06-15 14:13:46    MONDAY
+14:14:50,716 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+14:14:50,716  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+14:14:52,658  INFO RegistrationOperations,main:32 - Courses Available for you : 
+14:14:52,660  INFO RegistrationOperations,main:37 - 101	DAA	100
+14:14:52,660  INFO RegistrationOperations,main:37 - 102	Computer Networks	200
+14:14:52,661  INFO RegistrationOperations,main:37 - 103	Math	300
+14:14:52,661  INFO RegistrationOperations,main:37 - 104	English	400
+14:14:52,661  INFO RegistrationOperations,main:37 - 105	Graph Theory	500
+14:14:52,661  INFO RegistrationOperations,main:37 - 106	Chemistry	600
+14:14:52,661  INFO RegistrationOperations,main:37 - 107	Physics	700
+14:14:52,661  INFO RegistrationOperations,main:37 - 108	SCM	80
+14:14:52,662  INFO RegistrationOperations,main:37 - 109	Software Engineering	100
+14:14:52,662  INFO RegistrationOperations,main:37 - 110	DM	200
+14:14:52,662  INFO RegistrationOperations,main:37 - 112	EDC	500
+14:14:52,662  INFO RegistrationOperations,main:41 - Enter 4 Primary Course and 2 Secondary Course
+14:15:12,335 ERROR RegistrationOperations,main:62 - 102is filled
+14:15:12,348  INFO RegistrationOperations,main:76 - There is a change in your Primary Course 
+ Final Courses are :
+14:15:12,348  INFO RegistrationOperations,main:78 - DAA
+14:15:12,348  INFO RegistrationOperations,main:78 - DM
+14:15:12,349  INFO RegistrationOperations,main:78 - EDC
+14:15:12,349  INFO RegistrationOperations,main:78 - Software Engineering
+14:15:12,350  INFO Registration,main:43 - Registration number : 1009156
+ Registration Time : 2020-6-15 14:15:12    MONDAY
+14:15:12,379  INFO RegistrationDAO,main:30 - 1
+14:15:12,470  INFO StudentClient,main:58 - Registration Completed
+14:15:12,471  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+14:15:42,737  INFO StudentOperations,main:17 - 1009156
+14:15:42,741  INFO StudentOperations,main:28 - Amount to be Paid : 900
+14:15:42,741  INFO StudentOperations,main:29 - Paying Fees for Registration ID : 1009156
+14:15:42,764  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 14:15:42    MONDAY with Transacction ID : 1009156156
+14:15:42,766  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+14:15:46,391  INFO StudentOperations,main:17 - 1009156
+14:15:46,395  INFO StudentClient,main:67 - Fees Already Paid on :2020-06-15 14:15:42    MONDAY
+14:15:46,395  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+14:17:10,213  INFO StudentClient,main:80 - Logging Out at 14:17    15-JUNE    MONDAY
+14:17:10,213  INFO Login,main:28 - Enter ID 
+14:17:12,818  INFO Login,main:65 - Terminated.!
+15:06:05,259  INFO Login,main:18 - SMS
+15:06:05,282  INFO Login,main:28 - Enter ID 
+15:06:09,266  INFO Login,main:34 - Enter Password
+15:06:13,790  INFO Login,main:39 - Last Login : 2020-06-15 14:14:50    MONDAY
+15:06:13,858 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:06:13,858  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:06:16,301  INFO StudentClient,main:58 - Registration Already Done 
+ Pay fees (if not paid yet)
+15:06:16,302  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:06:19,324  INFO StudentClient,main:67 - Do registration Firstnull
+15:06:19,324  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:11:40,595  INFO Login,main:18 - SMS
+15:11:40,628  INFO Login,main:28 - Enter ID 
+15:11:44,556  INFO Login,main:34 - Enter Password
+15:11:47,576  INFO Login,main:39 - Last Login : 2020-06-15 15:06:13    MONDAY
+15:11:47,645 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:11:47,646  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:11:49,120  INFO StudentOperations,main:24 - Amount to be Paid : 900
+15:11:49,121  INFO StudentOperations,main:25 - Paying Fees for Registration ID : 1009156
+15:11:49,464  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:11:49    MONDAY with Transacction ID : 1009156156
+15:11:49,464  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:12:07,437  INFO StudentClient,main:67 - Fees Already Paid on :2020-06-15 15:11:49    MONDAY
+15:12:07,437  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:12:24,999  INFO StudentClient,main:80 - Logging Out at 15:12    15-JUNE    MONDAY
+15:12:25,000  INFO Login,main:28 - Enter ID 
+15:12:26,606  INFO Login,main:65 - Terminated.!
+15:21:39,337  INFO Login,main:18 - SMS
+15:21:39,360  INFO Login,main:28 - Enter ID 
+15:21:49,848  INFO Login,main:34 - Enter Password
+15:21:52,749  INFO Login,main:39 - Last Login : 2020-06-15 15:11:47    MONDAY
+15:21:52,797 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:21:52,798  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:21:54,649  INFO StudentOperations,main:23 - Do Registration First
+15:21:54,652  INFO StudentOperations,main:26 - Amount to be Paid : 0
+15:21:54,653  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 0
+15:21:54,675  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:21:54    MONDAY with Transacction ID : 156
+15:21:54,676  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:22:51,257  INFO StudentClient,main:67 - Fees Already Paid on :2020-06-15 15:21:54    MONDAY
+15:22:51,257  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:23:25,471  INFO StudentOperations,main:23 - Do Registration First
+15:23:25,473  INFO StudentOperations,main:26 - Amount to be Paid : 0
+15:23:25,473  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 0
+15:23:25,481  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:23:25    MONDAY with Transacction ID : 156
+15:23:25,482  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:23:53,737  INFO Login,main:18 - SMS
+15:23:53,750  INFO Login,main:28 - Enter ID 
+15:23:56,139  INFO Login,main:34 - Enter Password
+15:23:58,739  INFO Login,main:39 - Last Login : 2020-06-15 15:21:52    MONDAY
+15:23:58,772 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:23:58,773  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:24:11,603  INFO StudentClient,main:67 - Do Registration First
+15:24:11,603  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:24:14,008  INFO RegistrationOperations,main:33 - Courses Available for you : 
+15:24:14,029  INFO RegistrationOperations,main:38 - 101	DAA	100
+15:24:14,029  INFO RegistrationOperations,main:38 - 102	Computer Networks	200
+15:24:14,029  INFO RegistrationOperations,main:38 - 103	Math	300
+15:24:14,029  INFO RegistrationOperations,main:38 - 104	English	400
+15:24:14,029  INFO RegistrationOperations,main:38 - 105	Graph Theory	500
+15:24:14,030  INFO RegistrationOperations,main:38 - 106	Chemistry	600
+15:24:14,030  INFO RegistrationOperations,main:38 - 107	Physics	700
+15:24:14,030  INFO RegistrationOperations,main:38 - 108	SCM	80
+15:24:14,030  INFO RegistrationOperations,main:38 - 109	Software Engineering	100
+15:24:14,030  INFO RegistrationOperations,main:38 - 110	DM	200
+15:24:14,031  INFO RegistrationOperations,main:38 - 112	EDC	500
+15:24:14,031  INFO RegistrationOperations,main:42 - Enter 4 Primary Course and 2 Secondary Course
+15:24:23,124 ERROR RegistrationOperations,main:63 - 102is filled
+15:24:23,135  INFO RegistrationOperations,main:77 - There is a change in your Primary Course 
+ Final Courses are :
+15:24:23,136  INFO RegistrationOperations,main:79 - DAA
+15:24:23,136  INFO RegistrationOperations,main:79 - Math
+15:24:23,136  INFO RegistrationOperations,main:79 - English
+15:24:23,136  INFO RegistrationOperations,main:79 - Graph Theory
+15:24:23,137  INFO Registration,main:49 - Registration number : 1009156
+ Registration Time : 2020-6-15 15:24:23    MONDAY
+15:24:23,247 DEBUG MarksDAO,main:23 - Duplicate entry '1009' for key 'marks.PRIMARY'
+15:24:23,248  INFO StudentClient,main:58 - Registration Completed
+15:24:23,248  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:24:57,738  INFO StudentClient,main:67 - Do Registration First
+15:24:57,738  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:25:18,316  INFO StudentClient,main:80 - Logging Out at 15:25    15-JUNE    MONDAY
+15:25:18,316  INFO Login,main:28 - Enter ID 
+15:25:19,979  INFO Login,main:65 - Terminated.!
+15:30:48,888  INFO Login,main:18 - SMS
+15:30:48,900  INFO Login,main:28 - Enter ID 
+15:30:52,887  INFO Login,main:34 - Enter Password
+15:30:55,705  INFO Login,main:39 - Last Login : 2020-06-15 15:23:58    MONDAY
+15:30:55,768 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:30:55,768  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:31:00,121  INFO StudentClient,main:44 - ID :1009
+Name:pratik
+Branch:CS
+Semester:1
+15:31:00,122  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:31:04,198  INFO StudentClient,main:48 - ID : 1009
+ Name : pratik
+ Courses :101,103,104,105,
+15:31:04,198  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:31:08,893  INFO StudentOperations,main:26 - Amount to be Paid : 0
+15:31:08,894  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 0
+15:31:08,910  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:31:8    MONDAY with Transacction ID : 156
+15:31:08,910  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:31:18,905  INFO StudentClient,main:80 - Logging Out at 15:31    15-JUNE    MONDAY
+15:31:18,906  INFO Login,main:28 - Enter ID 
+15:31:21,020  INFO Login,main:65 - Terminated.!
+15:35:53,478  INFO Login,main:18 - SMS
+15:35:53,492  INFO Login,main:28 - Enter ID 
+15:35:57,226  INFO Login,main:34 - Enter Password
+15:36:00,243  INFO Login,main:39 - Last Login : 2020-06-15 15:30:55    MONDAY
+15:36:00,296 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:36:00,296  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:36:04,130  INFO StudentOperations,main:26 - Amount to be Paid : 0
+15:36:04,130  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 0
+15:36:04,153  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:36:4    MONDAY with Transacction ID : 156
+15:36:04,154  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:36:49,552  INFO Login,main:18 - SMS
+15:36:49,569  INFO Login,main:28 - Enter ID 
+15:36:54,310  INFO Login,main:34 - Enter Password
+15:36:56,826  INFO Login,main:39 - Last Login : 2020-06-15 15:36:00    MONDAY
+15:36:56,867 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:36:56,868  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:36:59,248  INFO StudentClient,main:67 - Do Registration First
+15:36:59,248  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:37:03,447  INFO RegistrationOperations,main:33 - Courses Available for you : 
+15:37:03,452  INFO RegistrationOperations,main:38 - 101	DAA	100
+15:37:03,452  INFO RegistrationOperations,main:38 - 102	Computer Networks	200
+15:37:03,452  INFO RegistrationOperations,main:38 - 103	Math	300
+15:37:03,452  INFO RegistrationOperations,main:38 - 104	English	400
+15:37:03,453  INFO RegistrationOperations,main:38 - 105	Graph Theory	500
+15:37:03,453  INFO RegistrationOperations,main:38 - 106	Chemistry	600
+15:37:03,453  INFO RegistrationOperations,main:38 - 107	Physics	700
+15:37:03,454  INFO RegistrationOperations,main:38 - 108	SCM	80
+15:37:03,454  INFO RegistrationOperations,main:38 - 109	Software Engineering	100
+15:37:03,454  INFO RegistrationOperations,main:38 - 110	DM	200
+15:37:03,455  INFO RegistrationOperations,main:38 - 112	EDC	500
+15:37:03,455  INFO RegistrationOperations,main:42 - Enter 4 Primary Course and 2 Secondary Course
+15:37:17,786 ERROR RegistrationOperations,main:63 - Computer Networks is already filled
+15:37:17,796  INFO RegistrationOperations,main:77 - There is a change in your Primary Course 
+ Final Courses are :
+15:37:17,796  INFO RegistrationOperations,main:79 - DAA
+15:37:17,796  INFO RegistrationOperations,main:79 - SCM
+15:37:17,796  INFO RegistrationOperations,main:79 - Software Engineering
+15:37:17,797  INFO RegistrationOperations,main:79 - Physics
+15:37:17,797  INFO Registration,main:49 - Registration number : 1009156
+ Registration Time : 2020-6-15 15:37:17    MONDAY
+15:37:17,909  INFO StudentClient,main:58 - Registration Completed
+15:37:17,909  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:37:30,148  INFO StudentOperations,main:26 - Amount to be Paid : 980
+15:37:30,149  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 1009156
+15:37:30,157  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:37:30    MONDAY with Transacction ID : 1009156156
+15:37:30,157  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:37:35,037  INFO StudentOperations,main:26 - Amount to be Paid : 980
+15:37:35,037  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 1009156
+15:37:35,048 DEBUG PaymentDAO,main:54 - Duplicate entry '1009156156' for key 'payment.PRIMARY'
+15:37:35,048  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:37:35    MONDAY with Transacction ID : 1009156156
+15:37:35,049  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:37:36,217  INFO StudentOperations,main:26 - Amount to be Paid : 980
+15:37:36,217  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 1009156
+15:37:36,218 DEBUG PaymentDAO,main:54 - Duplicate entry '1009156156' for key 'payment.PRIMARY'
+15:37:36,218  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:37:36    MONDAY with Transacction ID : 1009156156
+15:37:36,218  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:37:43,376  INFO StudentClient,main:80 - Logging Out at 15:37    15-JUNE    MONDAY
+15:37:43,376  INFO Login,main:28 - Enter ID 
+15:37:46,629  INFO Login,main:65 - Terminated.!
+15:40:48,771  INFO Login,main:18 - SMS
+15:40:48,783  INFO Login,main:28 - Enter ID 
+15:40:52,440  INFO Login,main:34 - Enter Password
+15:40:55,196  INFO Login,main:39 - Last Login : 2020-06-15 15:36:56    MONDAY
+15:40:55,233 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:40:55,235  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:40:56,734  INFO StudentOperations,main:26 - Amount to be Paid : 980
+15:40:56,734  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 1009156
+15:40:56,744 DEBUG PaymentDAO,main:54 - Duplicate entry '1009156156' for key 'payment.PRIMARY'
+15:40:56,763  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:40:56    MONDAY with Transacction ID : 1009156156
+15:40:56,764  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:40:58,739  INFO StudentClient,main:67 - Fees Already Paid on :2020-06-15 15:37:30    MONDAY
+15:40:58,739  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:41:14,919  INFO StudentClient,main:80 - Logging Out at 15:41    15-JUNE    MONDAY
+15:41:14,920  INFO Login,main:28 - Enter ID 
+15:41:16,868  INFO Login,main:65 - Terminated.!
+15:43:17,656  INFO Login,main:18 - SMS
+15:43:17,668  INFO Login,main:28 - Enter ID 
+15:43:30,683  INFO Login,main:34 - Enter Password
+15:43:33,358  INFO Login,main:39 - Last Login : 2020-06-15 15:40:55    MONDAY
+15:43:33,403 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:43:33,403  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:43:35,534  INFO StudentOperations,main:26 - Amount to be Paid : 980
+15:43:35,535  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 1009156
+15:43:35,547 DEBUG PaymentDAO,main:54 - Duplicate entry '1009156156' for key 'payment.PRIMARY'
+15:43:35,566  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:43:35    MONDAY with Transacction ID : 1009156156
+15:43:35,567  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:43:44,238  INFO StudentClient,main:67 - Fees Already Paid on :2020-06-15 15:37:30    MONDAY
+15:43:44,238  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:44:02,353  INFO StudentOperations,main:26 - Amount to be Paid : 980
+15:44:02,354  INFO StudentOperations,main:27 - Paying Fees for Registration ID : 1009156
+15:44:02,396  INFO StudentClient,main:67 - Fees paid on : 2020-6-15 15:44:2    MONDAY with Transacction ID : 1009156156
+15:44:02,396  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:44:07,413  INFO StudentClient,main:67 - Fees Already Paid on :2020-06-15 15:44:02    MONDAY
+15:44:07,414  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:44:11,519  INFO StudentClient,main:80 - Logging Out at 15:44    15-JUNE    MONDAY
+15:44:11,520  INFO Login,main:28 - Enter ID 
+15:44:13,196  INFO Login,main:65 - Terminated.!

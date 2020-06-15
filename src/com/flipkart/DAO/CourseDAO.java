@@ -36,6 +36,7 @@ public class CourseDAO{
 				course.setSemester(rs.getInt("Sem"));
 				course.setProf(rs.getInt("ProfessorInfo"));
 				course.setNumberofStudents(rs.getInt("NumberOfStudent"));
+				course.setFees(rs.getInt("Fees"));
 				allCourses.add(course);
 			}
 			rs.close();
