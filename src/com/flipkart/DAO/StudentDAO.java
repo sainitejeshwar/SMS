@@ -16,8 +16,8 @@ import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
 
 public class StudentDAO{
-	Connection conn = null;
-	PreparedStatement stmt = null;
+	private static Connection conn = null;
+	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(StudentDAO.class);
 
 
@@ -33,8 +33,6 @@ public class StudentDAO{
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
-		
-		
 	}
 
 	public ArrayList<Student> listAll() {
@@ -64,8 +62,6 @@ public class StudentDAO{
 		}
 		return students;
 	}
-
-
 	public Student listByID(String emailid) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -93,8 +89,6 @@ public class StudentDAO{
 		return null;
 	}
 	public void UpdateStudentRegistration(ArrayList<Course> courses , Student student) {
-		
-		//	TODO  make column in marks table
 		conn = DBUtils.getConnection();
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_STUDENT_REGISTRATION);
@@ -108,7 +102,6 @@ public class StudentDAO{
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
-		
 	}
 
 	public Student getGrade(String emailID) {
@@ -121,10 +114,10 @@ public class StudentDAO{
 			stmt.setInt(1, student.getStudentID());
 			rs = stmt.executeQuery();
 			while(rs.next()) {
-				student.setMarks(0 , rs.getInt("Course1"));
-				student.setMarks(1,rs.getInt("Course2"));
-				student.setMarks(2,rs.getInt("Course3"));
-				student.setMarks(3,rs.getInt("Course4"));
+				student.setMarks(0, rs.getInt("Course1"));
+				student.setMarks(1, rs.getInt("Course2"));
+				student.setMarks(2, rs.getInt("Course3"));
+				student.setMarks(3, rs.getInt("Course4"));
 			}
 			rs.close();
 		} catch (SQLException e) {
@@ -133,7 +126,6 @@ public class StudentDAO{
 			logger.debug("No Record Found");
 		}
 		return student;
-		
 	}
 
 	public void setGrades(int ind, Student student) {
@@ -153,22 +145,15 @@ public class StudentDAO{
 			case 3:
 				sql = SQLQueryConstant.MARKS_UPDATE_COURSE4;
 				break;
-
 			default:
 				break;
 			}
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, student.getMarks().get(ind));
-
 			stmt.setInt(2, student.getStudentID());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
-		
 	}
-
-
-
-
 }

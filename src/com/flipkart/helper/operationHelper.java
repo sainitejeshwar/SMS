@@ -26,17 +26,18 @@ import com.flipkart.exception.InvalidUserException;
 
 public interface operationHelper {
 	static  Logger logger = Logger.getLogger(operationHelper.class);
-	AuthorCredentialDAO authorCredentialDAO = new AuthorCredentialDAO();
-	CourseDAO courseDAO = new CourseDAO();
-	AdminDAO adminDAO = new AdminDAO();
-	StudentDAO studentDAO = new StudentDAO();
-	ProfessorDAO professorDAO = new ProfessorDAO();
-	RegistrationDAO registrationDAO = new RegistrationDAO();
-	MarksDAO marksDAO = new MarksDAO();
-	PaymentDAO paymentDAO = new PaymentDAO();
-	LocalDate RegistrationEndDate = LocalDate.of(2020, 7, 1);
 	
-	public final ArrayList<Student> StudentList = studentDAO.listAll();
+	static AuthorCredentialDAO authorCredentialDAO = new AuthorCredentialDAO();
+	static CourseDAO courseDAO = new CourseDAO();
+	static AdminDAO adminDAO = new AdminDAO();
+	static StudentDAO studentDAO = new StudentDAO();
+	static ProfessorDAO professorDAO = new ProfessorDAO();
+	static RegistrationDAO registrationDAO = new RegistrationDAO();
+	static MarksDAO marksDAO = new MarksDAO();
+	static PaymentDAO paymentDAO = new PaymentDAO();
+	
+	static LocalDate RegistrationEndDate = LocalDate.of(2020, 7, 1);
+	static AuthorCredentialDAO checker = new AuthorCredentialDAO();
 	
 	default public  void viewCourseCatalog(){
 		ArrayList<Course> allCourses = new ArrayList<Course>();
@@ -49,7 +50,6 @@ public interface operationHelper {
 	default public  ArrayList<Course> returnCourseCatalog(){
 		return courseDAO.listAll();
 	}
-
 	default public ArrayList<Student> getAllStudents(){
 		return studentDAO.listAll();
 	}
@@ -59,18 +59,25 @@ public interface operationHelper {
 	default public ArrayList<Admin> getAllAdmins(){
 		return adminDAO.listAll();
 	}
-	default public boolean isCourseContained(int courseCode , ArrayList<Course> courseList) throws InvalidCourseException{
+	default public Course isCourseContained(int courseCode , ArrayList<Course> courseList) throws InvalidCourseException{
 		for (Course course : courseList) {
 			if(course.getCourseCode() == courseCode)
-				return true;
+				return course;
 		}
 		throw new InvalidCourseException(courseCode);
 	}
 	default public String getCourseName(int courseCode) {
-		return returnCourseCatalog()
-		.stream()
-		.filter((course) -> course.getCourseCode() == courseCode)
-		.collect(Collectors.toList()).get(0).getName();
+		String name = "";
+		try {
+			name = returnCourseCatalog()
+			.stream()
+			.filter((course) -> course.getCourseCode() == courseCode)
+			.collect(Collectors.toList()).get(0).getName();
+		}
+		catch (IndexOutOfBoundsException e) {
+			name = "Not Available";
+		}
+		return name;
 	}
 	default public User addNewUser(Scanner input) {
 		User user = new User();
@@ -98,7 +105,6 @@ public interface operationHelper {
 		logger.info("Enter Gender (M/F)");
 		user.setGender(input.next());
 		return user;
-		
 	}
 	default public boolean isAfterDateRegistrationDate() {
 		LocalDate localDate1 = LocalDate.now();

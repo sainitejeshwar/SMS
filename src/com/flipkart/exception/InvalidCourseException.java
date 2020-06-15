@@ -1,12 +1,11 @@
 package com.flipkart.exception;
 
 public class InvalidCourseException extends Exception {
-	private String message;
+	private int message;
 	public InvalidCourseException(int courseCode) {
-		this.message = courseCode + "is not valid for you";
+		this.message = courseCode ;
 	}
-	public String getMessage() {
+	public int Message() {
 		return this.message;
 	}
-
 }

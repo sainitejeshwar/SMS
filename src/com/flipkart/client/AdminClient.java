@@ -16,7 +16,6 @@ public class AdminClient implements clientHelper {
 	private static  Logger logger = Logger.getLogger(AdminClient.class);
 	private static DateTimeUtil  DTUtils= new DateTimeUtil();
 	
-	
 	public void landingPage(User user, Scanner input) {
 		
 		AdminOperations adminOperations = new AdminOperations();
@@ -27,17 +26,21 @@ public class AdminClient implements clientHelper {
 		
 		int choice  = 7;
 		do {
-			// view catalog
 			logger.info("\nChoices\n"
-					+ "1.Add User\n2.Update User\n3.View All Users\n"
-					+ "4.Add Course\n5.Reset Course\n6.View Courses\n7.Logout");
+						+ "1.Add User\n"
+						+ "2.Update User\n"
+						+ "3.View All Users\n"
+						+ "4.Add Course\n"
+						+ "5.Reset Course\n"
+						+ "6.View Courses\n"
+						+ "7.Logout");
 			choice = input.nextInt();
+			
 			switch (choice) {
 			case 1:
 				adminOperations.addUser(input);
 				break;
 			case 2:
-				logger.info("Can only update Password");
 				adminOperations.updateUser(input);
 				break;
 			case 3:

@@ -12,12 +12,25 @@ import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
 
 public class PaymentDAO {
-	Connection conn = null;
-	PreparedStatement stmt = null;
+	private static Connection conn = null;
+	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(PaymentDAO.class);
 	
 	
-	
+	public void updatePayment(Payment payment) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.INSERT_PAYMENT);
+			stmt.setInt(1, payment.getTransactionID());
+			stmt.setInt(2, payment.getRegNO());
+			stmt.setString(3, payment.getTimeStamp());
+			stmt.setInt(4,payment.getAmount());
+			stmt.setString(5, payment.getStatus());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+	}
 	public Payment getPaymentStatus(int registrationID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -37,21 +50,5 @@ public class PaymentDAO {
 			logger.debug(e.getMessage());
 		}
 		return payment;
-		
-	}
-	
-	public void updatePayment(Payment payment) {
-		conn = DBUtils.getConnection();
-		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.INSERT_PAYMENT);
-			stmt.setInt(1, payment.getTransactionID());
-			stmt.setInt(2, payment.getRegNO());
-			stmt.setString(3, payment.getTimeStamp());
-			stmt.setInt(4,payment.getAmount());
-			stmt.setString(5, payment.getStatus());
-			stmt.executeUpdate();
-		} catch (SQLException e) {
-			logger.debug(e.getMessage());
-		}
 	}
 }

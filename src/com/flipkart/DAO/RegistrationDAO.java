@@ -14,8 +14,8 @@ import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
 
 public class RegistrationDAO {
-	Connection conn = null;
-	PreparedStatement stmt = null;
+	private static Connection conn = null;
+	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(RegistrationDAO.class);
 	
 	public void addRegistration(Registration newRegistration, Student student) {
@@ -32,7 +32,6 @@ public class RegistrationDAO {
 			logger.debug(e.getMessage());
 		}
 	}
-	
 	public Registration getPaymentStatus(int registrationID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -50,10 +49,7 @@ public class RegistrationDAO {
 			logger.debug(e.getMessage());
 		}
 		return null;
-		
 	}
-
-
 	public int getRegistrationFees(int registrationID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -72,7 +68,6 @@ public class RegistrationDAO {
 		return fees;
 		
 	}
-
 	public void updatePayment(Payment payment) {
 		conn = DBUtils.getConnection();
 		try {

@@ -9,14 +9,13 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Admin;
-import com.flipkart.bean.Student;
 import com.flipkart.bean.User;
 import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
 
 public class AdminDAO{
-	Connection conn = null;
-	PreparedStatement stmt = null;
+	private static Connection conn = null;
+	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(AdminDAO.class);
 	
 	
@@ -41,11 +40,11 @@ public class AdminDAO{
 		}
 		return null;
 	}
+	
 	public ArrayList<Admin> listAll(){
+		ArrayList<Admin> admins = new ArrayList<Admin>();
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
-		ArrayList<Admin> admins = new ArrayList<Admin>();
-		
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.ADMIN_SELECT_ALL);
 			rs = stmt.executeQuery();
@@ -76,10 +75,6 @@ public class AdminDAO{
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
-		
 	}
-
-
-	
 }
 

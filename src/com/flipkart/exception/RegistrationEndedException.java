@@ -1,8 +1,6 @@
 package com.flipkart.exception;
 
-
 import java.time.LocalDate;
-
 
 public class RegistrationEndedException extends Exception {
 	private String message;

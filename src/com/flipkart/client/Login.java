@@ -12,19 +12,17 @@ import com.flipkart.utils.DateTimeUtil;
 
 public class Login{
 	private static  Logger logger = Logger.getLogger(Login.class);
+	private static AuthorCredentialDAO checker = new AuthorCredentialDAO();
+	private static DateTimeUtil DTutil = new DateTimeUtil();
+	private static User user = new User();
+	
 	public static void main (String[] args) {
-
-		boolean exit = true;
 		logger.info("SMS");
 		Scanner input = new Scanner(System.in);
-		String emailid = "";
-		String password ="";
-		AuthorCredentialDAO checker = new AuthorCredentialDAO();
-		DateTimeUtil DTutil = new DateTimeUtil();
-		User user = new User();
+		String emailid = "" , password ="";
+		boolean exit = true;
 		
 		while(exit) {
-			
 			logger.info("Enter ID ");
 			emailid = input.next();
 			if(emailid.equals("exit")) {
@@ -38,6 +36,7 @@ public class Login{
 				user = checker.checkIdentity(emailid, password);
 				logger.info("Last Login : "+ DTutil.systemDateTime(checker.getLastLoginTimeStamp(emailid)));
 				checker.updateLoginTimeStamp(emailid, DTutil.SQLdatetime() );
+				
 				switch(user.getType()) {
 				
 					case 1:
@@ -55,16 +54,11 @@ public class Login{
 						professorClient.landingPage(user,input);
 						break;
 				}
-			}
-			catch (InvalidUserException e) {
-				logger.error(e.getMessage());
-			} catch (NullPointerException e) {
+			} catch (InvalidUserException e) {
 				logger.error(e.getMessage());
 			}
 		}
 		logger.info("Terminated.!");
-		
-
 	}
 }
 

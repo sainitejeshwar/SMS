@@ -13,6 +13,7 @@ import org.apache.log4j.Logger;
 public class DBUtils {
 	private static  Logger logger = Logger.getLogger(DBUtils.class);
 	private static Connection connection = null;
+	
 	public static Connection getConnection() {
         if (connection != null)
             return connection;
@@ -38,8 +39,5 @@ public class DBUtils {
             }
             return connection;
         }
-
     }
-
-
 }

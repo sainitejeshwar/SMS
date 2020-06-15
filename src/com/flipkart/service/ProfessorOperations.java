@@ -19,32 +19,43 @@ public class ProfessorOperations implements operationHelper{
 	private static  Logger logger = Logger.getLogger(ProfessorOperations.class);
 	
 	
-	public void getStudentINCourse(int courseCode){
-		StudentList
-		.stream()
-		.filter(student -> student.getStudentCourses().contains((courseCode)))
-		.forEach((student) -> logger.info(student.getName() +"\t"+student.getStudentID()));
-		
+	public void getStudentINCourse(Scanner input){
+		logger.info("Enter Course Code");
+		int courseCode = input.nextInt();
+		getAllStudents()
+			.stream()
+			.filter(student -> student.getStudentCourses().contains((courseCode)))
+			.forEach((student) -> logger.info(student.getName() +"\t"+student.getStudentID()));
 	}
-	public void uploadGrades(int courseCode , Scanner input) {
-		ArrayList<Integer> marks = new ArrayList<Integer>();
-		int ind = 0;
+	
+	public void uploadGrades(Scanner input , int ProfID) {
+		logger.info("Your Courses");
+		returnCourseCatalog()
+			.stream()
+			.filter(course -> course.getProf() == ProfID)
+			.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()));
+		logger.info("Enter Course Code to Upload Marks");
+		int courseCode = input.nextInt();
+		int index = 0;
 		logger.info("Enter Marks for : ");
-		for (Student student : StudentList
+		for (Student student : getAllStudents()
 				.stream()
 				.filter(student -> student.getStudentCourses().contains((courseCode)))
 				.collect(Collectors.toList())) {
 			logger.info(student.getName()+"\t"+student.getStudentID()+" :");
+			index = student.getStudentCourses().indexOf(courseCode);
 			int grade = input.nextInt();
-			student.setMarks(ind, grade);
-			studentDAO.setGrades(ind,student);
+			student.setMarks(index, grade);
+			studentDAO.setGrades(index,student);
 		}
 	}
+	
+	
 	public Professor getProfessor(String emailid) {
 		return professorDAO.listByID(emailid);
 	}
 	
-	public String addCourse(int courseCode1 , int profID) {
+	public String addCourseforTeaching(int courseCode1 , int profID) {
 		try {
 			isCourseContained(courseCode1, (ArrayList<Course>) returnCourseCatalog()
 					.stream()
@@ -53,10 +64,8 @@ public class ProfessorOperations implements operationHelper{
 			courseDAO.addCourseProf(courseCode1,profID);
 			return "Course Added";
 		} catch (InvalidCourseException e) {
-			return e.getMessage();
+			return (getCourseName(e.Message()) + "  is not valid for you");
 		}
-		
-		
 	}
 	
 }

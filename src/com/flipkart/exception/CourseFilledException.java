@@ -9,5 +9,4 @@ public class CourseFilledException extends Exception {
 	public int Message() {
 		return this.message;
 	}
-
 }

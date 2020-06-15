@@ -13,6 +13,7 @@ import com.flipkart.bean.Course;
 import com.flipkart.bean.Registration;
 import com.flipkart.bean.Student;
 import com.flipkart.exception.CourseFilledException;
+import com.flipkart.exception.InvalidCourseException;
 import com.flipkart.exception.NotificationMessage;
 import com.flipkart.exception.RegistrationEndedException;
 import com.flipkart.helper.operationHelper;
@@ -21,8 +22,6 @@ import com.mysql.cj.util.StringUtils;
 public class RegistrationOperations implements operationHelper {
 	private static  Logger logger = Logger.getLogger(RegistrationOperations.class);
 
-	
-	
 	public String doRegistration(Student student , Scanner input) throws NotificationMessage , RegistrationEndedException {
 		if(student.getRegistrationNumber() != 0) {
 			return "Registration Already Done \n Pay fees (if not paid yet)";
@@ -31,10 +30,14 @@ public class RegistrationOperations implements operationHelper {
 			throw new RegistrationEndedException(RegistrationEndDate);
 		}
 		logger.info("Courses Available for you : ");
-		for(Course course : (returnCourseCatalog()
+		
+		ArrayList<Course> avaiableCourses = new ArrayList<Course>();
+		avaiableCourses.addAll((returnCourseCatalog()
 				.stream()
 				.filter(course -> course.getSemester() == student.getSemester())
-				.collect(Collectors.toList()))) {
+				.collect(Collectors.toList())));
+		
+		for(Course course : avaiableCourses) {
 				logger.info(course.getCourseCode()+"\t"+course.getName()+"\t"+course.getFees());
 		}
 		
@@ -53,19 +56,16 @@ public class RegistrationOperations implements operationHelper {
 			if(final_courses.size()==4) {
 				break;
 			}
-			for(Course course : returnCourseCatalog()) {
-				if(course.getCourseCode() == tempCourses.get(ind)) {
-					try {
-						checkCourseConstraints(tempCourses.get(ind));
-						final_courses.add(course);
-					}
-					catch (CourseFilledException e) {
-						logger.error(getCourseName(e.Message()) +" is already filled");
-					}
+			try {
+				checkCourseConstraints(tempCourses.get(ind));
+				final_courses.add(isCourseContained(tempCourses.get(ind), avaiableCourses));
+				}
+				catch (CourseFilledException e) {
+					logger.error(getCourseName(e.Message()) +" is already filled");
+				} catch (InvalidCourseException e) {
+					logger.info(getCourseName(e.Message())+" - "+e.Message()+ "-  is not available for you");
 				}
 			}
-		}
-		
 		if(ind>=4) {
 			flag = true;
 		}
@@ -80,7 +80,6 @@ public class RegistrationOperations implements operationHelper {
 				TotalFees = TotalFees + fCourse.getFees();
 			}
 		}
-		
 		
 		Registration newRegistration = new Registration(final_courses , student.getStudentID());
 		student.setRegistrationNumber(newRegistration.getRegistrationNumber());
@@ -104,7 +103,6 @@ public class RegistrationOperations implements operationHelper {
 		if(no_of_students>=10)
 			throw new CourseFilledException(courseCode);	
 	}
-		
 }
 
 

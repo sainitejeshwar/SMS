@@ -10,9 +10,10 @@ import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
 
 public class MarksDAO {
-	Connection conn = null;
-	PreparedStatement stmt = null;
+	private static Connection conn = null;
+	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(MarksDAO.class);
+	
 	public void createStudent(int studentID) {
 		conn = DBUtils.getConnection();
 		try {
@@ -21,8 +22,6 @@ public class MarksDAO {
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
-		}
-		
+		}	
 	}
-
 }

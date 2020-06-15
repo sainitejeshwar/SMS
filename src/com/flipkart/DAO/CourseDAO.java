@@ -9,19 +9,38 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Course;
-import com.flipkart.bean.Student;
 import com.flipkart.constants.SQLQueryConstant;
-import com.flipkart.helper.DBOperations;
 import com.flipkart.utils.DBUtils;
 
 public class CourseDAO{
-	Connection conn = null;
-	PreparedStatement stmt = null;
+	private static Connection conn = null;
+	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(CourseDAO.class);
-	Course course = new Course();
 	
+	public void addCourse(Course course2) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_INSERT);
+			stmt.setString(1, course2.getName());
+			stmt.setInt(2, course2.getSemester());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+	}
 
-
+	public void resetCourse(int courseCode) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_RESET);
+			stmt.setInt(1, -1);
+			stmt.setInt(2, 0);
+			stmt.setInt(3, courseCode);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+	}
 	public ArrayList<Course> listAll() {
 		ArrayList<Course> allCourses = new ArrayList<Course>();
 		conn = DBUtils.getConnection();
@@ -45,7 +64,6 @@ public class CourseDAO{
 		}
 		return allCourses;
 	}
-
 	public void updateStudents(ArrayList<Course> final_courses) {
 		conn = DBUtils.getConnection();
 		for(Course course : final_courses) {
@@ -59,7 +77,6 @@ public class CourseDAO{
 			}
 		}
 	}
-
 	public void addCourseProf(int courseCode1, int profID) {
 		conn = DBUtils.getConnection();
 		try {
@@ -70,35 +87,5 @@ public class CourseDAO{
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
-		
-	}
-
-	public void addCourse(Course course2) {
-		conn = DBUtils.getConnection();
-		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_INSERT);
-			stmt.setString(1, course2.getName());
-			stmt.setInt(2, course2.getSemester());
-			stmt.executeUpdate();
-		} catch (SQLException e) {
-			logger.debug(e.getMessage());
-		}
-		
-		
-	}
-
-	public void resetCourse(int courseCode) {
-		conn = DBUtils.getConnection();
-		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_RESET);
-			stmt.setInt(1, -1);
-			stmt.setInt(2, 0);
-			stmt.setInt(3, courseCode);
-			stmt.executeUpdate();
-		} catch (SQLException e) {
-			logger.debug(e.getMessage());
-		}
-		
-	}
-		
+	}	
 }

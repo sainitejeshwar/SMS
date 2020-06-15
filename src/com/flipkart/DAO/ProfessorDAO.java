@@ -9,18 +9,26 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Professor;
-import com.flipkart.bean.Student;
 import com.flipkart.bean.User;
 import com.flipkart.constants.SQLQueryConstant;
-import com.flipkart.helper.DBOperations;
 import com.flipkart.utils.DBUtils;
 
 public class ProfessorDAO {
-	Connection conn = null;
-	PreparedStatement stmt = null;
+	private static Connection conn = null;
+	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(ProfessorDAO.class);
 	
-	
+	public void addProf(User user) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.PROF_INSERT);
+			stmt.setString(1, user.getemailID());
+			stmt.setString(2, user.getName());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+	}
 	public Professor listByID(String emailid) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -40,9 +48,6 @@ public class ProfessorDAO {
 		}
 		return null;
 	}
-	
-	
-	
 	public ArrayList<Professor> listAll() {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -63,27 +68,4 @@ public class ProfessorDAO {
 		}
 		return professors;
 	}
-
-	public String getAllCourse(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-		
-	}
-
-
-	public void addProf(User user) {
-		conn = DBUtils.getConnection();
-		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.PROF_INSERT);
-			stmt.setString(1, user.getemailID());
-			stmt.setString(2, user.getName());
-			stmt.executeUpdate();
-		} catch (SQLException e) {
-			logger.debug(e.getMessage());
-		}
-		
-	}
-	
-	 
-
 }

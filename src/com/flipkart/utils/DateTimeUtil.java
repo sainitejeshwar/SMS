@@ -3,8 +3,6 @@ package com.flipkart.utils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.Month;
-
 
 
 public class DateTimeUtil {
@@ -35,14 +33,8 @@ public class DateTimeUtil {
 		return localDateTime.getHour() + ":"+localDateTime.getMinute()+"    "+localDateTime.getDayOfMonth()+"-"+localDateTime.getMonth()+"    "
 				+ localDateTime.getDayOfWeek();
 	}
-	
 	public int getUniqueNumber(int ID) {
 		LocalDateTime localDateTime = LocalDateTime.now();
 		return Integer.valueOf(Integer.toString(ID)+Integer.toString(localDateTime.getDayOfMonth())+Integer.toString(localDateTime.getMonthValue()));
 	}
-	
-	
 }
-
-//sql datetime
-//datetime with day

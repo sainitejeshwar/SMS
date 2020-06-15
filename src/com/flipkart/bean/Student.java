@@ -1,6 +1,8 @@
 package com.flipkart.bean;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.stream.Collectors;
 
 
 /*
@@ -27,8 +29,11 @@ public class Student extends User {
 	private int semester;
 	private String Branch;  
 	private int StudentID;
-	private  ArrayList<Integer> marks = new ArrayList<Integer>();
+	private  ArrayList<Integer> marks = new ArrayList<Integer>(Collections.nCopies(4, 0));
 	
+	public Student(){
+		marks.clear();
+	}
 
 	public int getRegistrationNumber() {
 		return RegistrationNumber;
@@ -36,8 +41,9 @@ public class Student extends User {
 	public void setRegistrationNumber(int registrationNumber) {
 		RegistrationNumber = registrationNumber;
 	}
-	public void setMarks(int index ,int grade) {
-		marks.add(index, grade);
+
+	public void setMarks(int index , int grade) {
+		marks.add(index,grade);
 	}
 	public ArrayList<Integer> getMarks(){
 		return marks;
