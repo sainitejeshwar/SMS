@@ -55,7 +55,12 @@ public class ProfessorOperations implements operationHelper{
 		return professorDAO.listByID(emailid);
 	}
 	
-	public String addCourseforTeaching(int courseCode1 , int profID) {
+	public String addCourseforTeaching(Scanner input , int profID) {
+		returnCourseCatalog()
+		.stream()
+			.filter(course -> (course.getProf() == -1))
+			.forEach(course -> logger.info(course.getCourseCode()+"\t"+course.getName()));
+		int courseCode1 = input.nextInt();
 		try {
 			isCourseContained(courseCode1, (ArrayList<Course>) returnCourseCatalog()
 					.stream()

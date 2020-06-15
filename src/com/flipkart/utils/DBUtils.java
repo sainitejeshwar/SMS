@@ -10,6 +10,12 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
+
+/*
+ * CLASS DESCRIPTION
+ * Util for establishing connection with Database
+ * 
+ */
 public class DBUtils {
 	private static  Logger logger = Logger.getLogger(DBUtils.class);
 	private static Connection connection = null;

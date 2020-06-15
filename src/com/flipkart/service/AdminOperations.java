@@ -63,7 +63,7 @@ public class AdminOperations implements operationHelper,clientHelper {
 			logger.info("Enter previous Password");
 			password = input.next();
 			try {
-				checker.checkIdentity(emailID, password);
+				authorCredentialDAO.checkIdentity(emailID, password);
 				flag = true;
 			} catch (InvalidUserException e) {
 				logger.error(e.getMessage());

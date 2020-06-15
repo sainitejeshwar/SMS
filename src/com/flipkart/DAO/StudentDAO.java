@@ -91,7 +91,7 @@ public class StudentDAO{
 	public void UpdateStudentRegistration(ArrayList<Course> courses , Student student) {
 		conn = DBUtils.getConnection();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_STUDENT_REGISTRATION);
+			stmt = conn.prepareStatement(SQLQueryConstant.STUDENT_UPDATE_REGISTRATION);
 			stmt.setInt(1, courses.get(0).getCourseCode());
 			stmt.setInt(2, courses.get(1).getCourseCode());
 			stmt.setInt(3, courses.get(2).getCourseCode());

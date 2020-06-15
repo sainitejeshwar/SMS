@@ -9,17 +9,22 @@ import com.flipkart.bean.User;
 import com.flipkart.helper.clientHelper;
 import com.flipkart.service.ProfessorOperations;
 import com.flipkart.utils.DateTimeUtil;
-
+/*
+ * CLASS DESCRIPTIONS
+ * 
+ * Landing page for the professor
+ * Professor can chose from number of functionalities avaliable
+ */
 
 public class ProfessorClient implements clientHelper{
 	private static  Logger logger = Logger.getLogger(ProfessorClient.class);
-	private static DateTimeUtil  DTUtils= new DateTimeUtil();
-	private static  ProfessorOperations profOperations = new ProfessorOperations();
 	 
 	public void landingPage(User user , Scanner input) {
-		Professor prof =  profOperations.getProfessor(user.getEmailID());
-		logger.debug("Logged in as Professor : "+getSalutation(user.getGender())+prof.getName());
 		
+		Professor prof =  profOperations.getProfessor(user.getEmailID());								//get professor details from DB
+		logger.debug("Logged in as Professor : "+getSalutation(user.getGender())+prof.getName());		// Printing professor name with salutation
+		
+		//PROFESSOR FUNCTIONALITIES
 		int choice;
 		do {
 			logger.info("\nChoices\n"
@@ -30,35 +35,31 @@ public class ProfessorClient implements clientHelper{
 							+ "5.Logout");
 			choice = input.nextInt();
 			switch (choice) {
-			case 1:
-				profOperations.getStudentINCourse(input);
-				break;
-				
-			case 2:
-				profOperations.returnCourseCatalog()
-					.stream()
-					.filter(course -> course.getProf() == prof.getProfessorID())
-					.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()));
-				break;
-				
-			case 3:
-				profOperations.uploadGrades(input , prof.getProfessorID());
-				break;
-				
-			case 4:
-				profOperations.returnCourseCatalog()
-				.stream()
-				.filter(course -> (course.getProf() == -1))
-				.forEach(course -> logger.info(course.getCourseCode()+"\t"+course.getName()));
-				int courseCode11 = input.nextInt();
-				logger.info(profOperations.addCourseforTeaching(courseCode11 , prof.getProfessorID()));
-				break;
-				
-			default:
-				break;
-			}
+				case 1:
+					profOperations.getStudentINCourse(input);
+					break;
+					
+				case 2:
+					profOperations.returnCourseCatalog()													// returns list of all courses	
+						.stream()																			// converting to stream
+						.filter(course -> course.getProf() == prof.getProfessorID())						//getting courses of professor
+						.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()));	//printing courses
+					break;
+					
+				case 3:
+					profOperations.uploadGrades(input , prof.getProfessorID());
+					break;
+					
+				case 4:
+					logger.info(profOperations.addCourseforTeaching(input , prof.getProfessorID()));
+					break;
+					
+				default:
+					break;
+				}
 		}
 		while(choice == 1 || choice == 2|| choice == 3|| choice == 4);
-		logger.info("Logging Out at "+ DTUtils.currDateandTime());		
+		
+		logger.info("Logging Out at "+ DTUtils.currDateandTime());					// prinitng logging out timestamp
 	}
 }

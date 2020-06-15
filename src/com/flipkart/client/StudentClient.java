@@ -12,22 +12,17 @@ import com.flipkart.exception.NotificationMessage;
 import com.flipkart.exception.RegistrationEndedException;
 import com.flipkart.helper.clientHelper;
 import com.flipkart.helper.operationHelper;
-import com.flipkart.service.RegistrationOperations;
-import com.flipkart.service.StudentOperations;
-import com.flipkart.utils.DateTimeUtil;
 
 public class StudentClient implements clientHelper , operationHelper{
 	private static  Logger logger = Logger.getLogger(StudentClient.class);
-	private static DateTimeUtil  DTUtils= new DateTimeUtil();
-	private static StudentOperations studOperations = new StudentOperations();
-	private static RegistrationOperations regOperations = new RegistrationOperations();
 	private static Student student = new Student();
 
 	public void landingPage(User user , Scanner studScanner) {
 		
-		student = studOperations.getStudent(user.getEmailID());
-		logger.debug("Logged in as Student :  "+getSalutation(user.getGender())+student.getName());
+		student = studOperations.getStudent(user.getEmailID());					// get student details from database
+		logger.debug("Logged in as Student :  "+getSalutation(user.getGender())+student.getName());   // getting salutation based on gender and concating with name
 		
+		//Functionalities for Student
 		int choice;
 		do {
 			logger.info("\nChoices\n"
@@ -58,9 +53,9 @@ public class StudentClient implements clientHelper , operationHelper{
 				case 4:
 					try {
 						logger.info(regOperations.doRegistration(student,studScanner));
-					} catch (NotificationMessage e) {
+					} catch (NotificationMessage e) {			// throws this exception when registration cannot be completed
 						logger.error(e.getMessage());
-					} catch (RegistrationEndedException e) {
+					} catch (RegistrationEndedException e) { 	// Throws this when registration is ended
 						logger.error(e.getMessage());
 					}
 					break;
@@ -78,6 +73,6 @@ public class StudentClient implements clientHelper , operationHelper{
 			}
 		}
 		while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6);
-	logger.info("Logging Out at "+ DTUtils.currDateandTime());
+	logger.info("Logging Out at "+ DTUtils.currDateandTime());			// printing logging out Timestamp
 	}
 }

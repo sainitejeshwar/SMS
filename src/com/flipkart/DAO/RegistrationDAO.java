@@ -21,7 +21,7 @@ public class RegistrationDAO {
 	public void addRegistration(Registration newRegistration, Student student) {
 		conn = DBUtils.getConnection();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.INSERT_REGISTRATION);
+			stmt = conn.prepareStatement(SQLQueryConstant.REGISTRATION_INSERT);
 			stmt.setInt(1, newRegistration.getRegistrationNumber());
 			stmt.setInt(2, student.getStudentID());
 			stmt.setString(3, newRegistration.getRegistrationTime());
@@ -37,7 +37,7 @@ public class RegistrationDAO {
 		ResultSet rs = null;
 		Registration checkRegistration = new Registration();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.PAYMENT_STATUS_R);
+			stmt = conn.prepareStatement(SQLQueryConstant.REGISTRATION_PAYMENT_STATUS);
 			stmt.setInt(1, registrationID);
 			rs = stmt.executeQuery();
 			while(rs.next()) {
@@ -55,7 +55,7 @@ public class RegistrationDAO {
 		ResultSet rs = null;
 		int fees = 0;
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.SELECT_REGISTRATION_BY_SID);
+			stmt = conn.prepareStatement(SQLQueryConstant.REGISTRATION_SELECT_BY_SID);
 			stmt.setInt(1, registrationID);
 			rs = stmt.executeQuery();
 			while(rs.next()) {
@@ -71,7 +71,7 @@ public class RegistrationDAO {
 	public void updatePayment(Payment payment) {
 		conn = DBUtils.getConnection();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_FEESPAID);
+			stmt = conn.prepareStatement(SQLQueryConstant.REGISTRATION_UPDATE_FEESPAID);
 			stmt.setInt(1, payment.getTransactionID());
 			stmt.setInt(2, payment.getRegNO());
 			stmt.executeUpdate();

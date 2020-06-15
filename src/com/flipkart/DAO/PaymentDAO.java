@@ -20,7 +20,7 @@ public class PaymentDAO {
 	public void updatePayment(Payment payment) {
 		conn = DBUtils.getConnection();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.INSERT_PAYMENT);
+			stmt = conn.prepareStatement(SQLQueryConstant.PAYMENT_INSERT);
 			stmt.setInt(1, payment.getTransactionID());
 			stmt.setInt(2, payment.getRegNO());
 			stmt.setString(3, payment.getTimeStamp());

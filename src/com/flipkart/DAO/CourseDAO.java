@@ -68,7 +68,7 @@ public class CourseDAO{
 		conn = DBUtils.getConnection();
 		for(Course course : final_courses) {
 			try {
-				stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_COURSE_COUNT);
+				stmt = conn.prepareStatement(SQLQueryConstant.COURSE_UPDATE_COUNT);
 				stmt.setInt(2, course.getCourseCode());
 				stmt.setInt(1, (course.getNumberofStudents()+1));
 				stmt.executeUpdate();
@@ -80,7 +80,7 @@ public class CourseDAO{
 	public void addCourseProf(int courseCode1, int profID) {
 		conn = DBUtils.getConnection();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.UPDATE_COURSE_PROF);
+			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_UPDATE_PROF);
 			stmt.setInt(1, profID);
 			stmt.setInt(2, courseCode1);
 			stmt.executeUpdate();

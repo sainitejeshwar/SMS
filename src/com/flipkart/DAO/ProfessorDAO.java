@@ -21,7 +21,7 @@ public class ProfessorDAO {
 	public void addProf(User user) {
 		conn = DBUtils.getConnection();
 		try {
-			stmt = conn.prepareStatement(SQLQueryConstant.PROF_INSERT);
+			stmt = conn.prepareStatement(SQLQueryConstant.PROFESSOR_INSERT);
 			stmt.setString(1, user.getemailID());
 			stmt.setString(2, user.getName());
 			stmt.executeUpdate();

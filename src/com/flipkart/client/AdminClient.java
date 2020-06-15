@@ -7,23 +7,26 @@ import org.apache.log4j.Logger;
 import com.flipkart.bean.Admin;
 import com.flipkart.bean.User;
 import com.flipkart.helper.clientHelper;
-import com.flipkart.service.AdminOperations;
-import com.flipkart.service.StudentOperations;
-import com.flipkart.utils.DateTimeUtil;
+
+/*
+ * CLASS DESCRIPTION
+ * Manages all Admin Functionalities that he can perform
+ * 
+ */
 
 public class AdminClient implements clientHelper {
 	
 	private static  Logger logger = Logger.getLogger(AdminClient.class);
-	private static DateTimeUtil  DTUtils= new DateTimeUtil();
+	private static Admin admin = new Admin();
 	
 	public void landingPage(User user, Scanner input) {
 		
-		AdminOperations adminOperations = new AdminOperations();
-		Admin admin = new Admin();
-		
+		//Fetching admin details from database
 		admin = adminOperations.getAdmin(user.getemailID());
+		//Printing admin name with salutation
 		logger.debug("Logged in as Admin: "+getSalutation(user.getGender())+admin.getName());
 		
+		//ADMIN FUNCTIONALITIES
 		int choice  = 7;
 		do {
 			logger.info("\nChoices\n"
