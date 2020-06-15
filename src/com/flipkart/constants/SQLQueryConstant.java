@@ -25,7 +25,7 @@ public class SQLQueryConstant {
 	public static final String COURSE_RESET = "update course set ProfessorInfo = ? , NumberOfStudent = ? where CourseCode = ?";
 	
 	
-	public static final String INSERT_REGISTRATION = "insert into registrations values(?,?,?,?)";
+	public static final String INSERT_REGISTRATION = "insert into registrations (RegNo , StudentID , TimeStamp , feespaid) values(?,?,?,?)";
 	public static final String UPDATE_REGISTRATION = "update registrations set feespaid = true , TransacID = ? , TimeStampPayment = ? where RegNo = ?";
 	public static final String PAYMENT_STATUS = "select * from registrations where RegNo = ?";
 

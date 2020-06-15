@@ -61,7 +61,6 @@ public class StudentClient implements clientHelper{
 				} catch (RegistrationEndedException e) {
 					logger.error(e.getMessage());
 				}
-				
 				break;
 				
 			case 5:

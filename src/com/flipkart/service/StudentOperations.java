@@ -14,8 +14,15 @@ public class StudentOperations implements operationHelper{;
 	DateTimeUtil dTimeUtil = new DateTimeUtil();
 	
 	public String payFees(int registrationID) {
-		if(registrationDAO.getPaymentStatus(registrationID).isStatus()) {
-			return "Fees Already Paid on :" +dTimeUtil.systemDateTime(registrationDAO.getPaymentStatus(registrationID).getTimeStamp());
+		logger.info(registrationID);
+		try {
+			if(registrationDAO.getPaymentStatus(registrationID).isStatus()) {
+				return "Fees Already Paid on :" +dTimeUtil.systemDateTime(registrationDAO.getPaymentStatus(registrationID).getTimeStamp());
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return "Do registration First"+e.getMessage();
 		}
 		logger.info("Paying Fees for Registration ID : "+registrationID);
 		Payment payment = new Payment();
@@ -23,9 +30,7 @@ public class StudentOperations implements operationHelper{;
 		payment.setStatus(true);   //Assuming True from payment Gateway
 		payment.setTransactionID(registrationID);
 		payment.setRegNO(registrationID);
-		if(payment.isStatus()) {
-			registrationDAO.updateFeesStatus(payment);
-		}
+		registrationDAO.updateFeesStatus(payment);
 		return "Fees paid on : "+dTimeUtil.systemDateTime(payment.getTimeStamp())+" with Transacction ID : "+ payment.getTransactionID();
 	}
 	

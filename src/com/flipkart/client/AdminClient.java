@@ -36,7 +36,6 @@ public class AdminClient implements clientHelper {
 			case 1:
 				adminOperations.addUser(input);
 				break;
-				
 			case 2:
 				logger.info("Can only update Password");
 				adminOperations.updateUser(input);
@@ -46,8 +45,10 @@ public class AdminClient implements clientHelper {
 				break;
 			case 4:
 				adminOperations.addCourse(input);
+				break;
 			case 5:
 				adminOperations.updateCourse(input);
+				break;
 			case 6:
 				adminOperations.viewCourseCatalog();
 			default:

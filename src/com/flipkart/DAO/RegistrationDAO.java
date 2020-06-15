@@ -26,7 +26,7 @@ public class RegistrationDAO {
 			stmt.setInt(2, student.getStudentID());
 			stmt.setString(3, newRegistration.getRegistrationTime());
 			stmt.setBoolean(4, newRegistration.isFeespaid());
-			stmt.executeUpdate();
+			logger.info(stmt.executeUpdate());
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
@@ -56,7 +56,6 @@ public class RegistrationDAO {
 			while(rs.next()) {
 				payment.setStatus(rs.getBoolean("feespaid"));
 				payment.setTimeStamp(rs.getString("TimeStampPayment"));
-				payment.setTransactionID(rs.getInt("TransacID"));
 			}
 			
 			rs.close();

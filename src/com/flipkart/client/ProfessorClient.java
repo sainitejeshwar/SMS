@@ -44,7 +44,7 @@ public class ProfessorClient implements clientHelper{
 				profOperations.returnCourseCatalog()
 				.stream()
 				.filter(course -> course.getProf() == prof.getProfessorID())
-				.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()+"\n"));
+				.forEach((course) -> logger.info(course.getCourseCode()+"\t"+course.getName()));
 				logger.info("Enter Course Code to Upload Marks");
 				int courseCode1 = input.nextInt();
 				profOperations.uploadGrades(courseCode1,input);

@@ -41,6 +41,7 @@ public class Payment {
 		
 		TransactionID = DTUtil.getUniqueNumber(ID);
 	}
+	
 	public boolean isStatus() {
 		return Status;
 	}
