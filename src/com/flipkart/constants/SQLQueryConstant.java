@@ -7,7 +7,7 @@ public class SQLQueryConstant {
 	public static final String STUDENT_SELECT_ALL = "select * from student";
 	public static final String STUDENT_SELECT_BY_ID = "select * from student where EmailID=?";
 	public static final String UPDATE_STUDENT_REGISTRATION = "update student set Course1 = ? , Course2 = ? , Course3 = ? , Course4 = ? , RegNo = ? where StudentID = ?";
-	public static final String STUDENT_INSERT = "insert into student (EmailID , StudentID , Name , Semester , Branch)  values (?,?,?,?,?)";
+	public static final String STUDENT_INSERT = "insert into student (EmailID , Name , Semester , Branch)  values (?,?,?,?)";
 
 	public static final String USER_SELECT_BY_ID = "select * from users where EmailID=?";
 	public static final String USER_UPDATE_TIMESTAMP = "update users set LastLogin = ? where EmailID=?";

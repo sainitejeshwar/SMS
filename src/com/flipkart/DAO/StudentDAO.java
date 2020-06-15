@@ -26,10 +26,9 @@ public class StudentDAO{
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.STUDENT_INSERT);
 			stmt.setString(1, user.getemailID());
-			stmt.setInt(2, student.getStudentID());
-			stmt.setString(3, user.getName());
-			stmt.setInt(4, student.getSemester());
-			stmt.setString(5, student.getBranch());
+			stmt.setString(2, user.getName());
+			stmt.setInt(3, student.getSemester());
+			stmt.setString(4, student.getBranch());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());

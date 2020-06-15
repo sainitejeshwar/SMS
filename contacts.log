@@ -11762,3 +11762,143 @@ Choices
 15:44:11,519  INFO StudentClient,main:80 - Logging Out at 15:44    15-JUNE    MONDAY
 15:44:11,520  INFO Login,main:28 - Enter ID 
 15:44:13,196  INFO Login,main:65 - Terminated.!
+15:56:10,024  INFO Login,main:18 - SMS
+15:56:10,038  INFO Login,main:28 - Enter ID 
+15:56:13,784  INFO Login,main:34 - Enter Password
+15:56:16,528  INFO Login,main:39 - Last Login : 2020-06-15 15:43:33    MONDAY
+15:56:16,776 DEBUG StudentClient,main:30 - Logged in as Student :  Mr. pratik
+15:56:16,777  INFO StudentClient,main:36 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+15:56:19,076  INFO StudentClient,main:80 - Logging Out at 15:56    15-JUNE    MONDAY
+15:56:19,076  INFO Login,main:28 - Enter ID 
+15:56:20,526  INFO Login,main:34 - Enter Password
+15:56:22,152  INFO Login,main:39 - Last Login : 2020-06-15 09:37:27    MONDAY
+15:56:22,182 DEBUG ProfessorClient,main:21 - Logged in as Professor : Mr. Amit
+15:56:22,182  INFO ProfessorClient,main:27 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+15:56:25,669  INFO ProfessorClient,main:65 - Logging Out at 15:56    15-JUNE    MONDAY
+15:56:25,669  INFO Login,main:28 - Enter ID 
+15:56:27,855  INFO Login,main:34 - Enter Password
+15:56:29,839  INFO Login,main:39 - Last Login : 2020-06-15 09:04:25    MONDAY
+15:56:29,853 DEBUG AdminClient,main:26 - Logged in as Admin: Mr. Tejas
+15:56:29,853  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+15:56:32,879  INFO operationHelper,main:77 - Enter Name : 
+15:56:41,310  INFO operationHelper,main:82 - Enter EmailID : 
+15:56:43,347  INFO operationHelper,main:89 - Email ID available
+15:56:43,347  INFO operationHelper,main:94 - Enter Password
+15:56:49,329  INFO operationHelper,main:96 - Enter Type 
+Choices	 1.admin	2.student	3.professor)
+15:56:57,573  INFO operationHelper,main:98 - Enter Gender (M/F)
+15:56:59,332  INFO AdminOperations,main:26 - Enter Student ID : 
+15:57:04,473  INFO AdminOperations,main:28 - Enter Student Semester :
+15:57:11,757  INFO AdminOperations,main:30 - Enter Branch : 
+15:57:15,285  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+15:57:19,696  INFO AdminOperations,main:69 - Enter User Type (student/admin/professor)
+15:57:26,374  INFO AdminOperations,main:72 - Name	Student ID	Courses
+15:57:26,377  INFO AdminOperations,main:74 - gaurav	1025	0,0,0,0,
+15:57:26,377  INFO AdminOperations,main:74 - pratik	1009	101,108,109,107,
+15:57:26,377  INFO AdminOperations,main:74 - rohan	2004	101,102,103,105,
+15:57:26,377  INFO AdminOperations,main:74 - Tejeshwar Saini	1003	103,104,105,106,
+15:57:26,377  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+15:57:43,896  INFO AdminClient,main:40 - Can only update Password
+15:57:43,897  INFO AdminOperations,main:61 - Enter ID to Update Password : 
+15:57:53,204  INFO AdminOperations,main:63 - Enter new Password : 
+15:57:56,336  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+15:58:00,211  INFO AdminClient,main:60 - Logging Out at 15:58    15-JUNE    MONDAY
+15:58:00,211  INFO Login,main:28 - Enter ID 
+15:58:01,948  INFO Login,main:65 - Terminated.!
+16:04:05,367  INFO Login,main:18 - SMS
+16:04:05,380  INFO Login,main:28 - Enter ID 
+16:04:11,299  INFO Login,main:34 - Enter Password
+16:04:14,279  INFO Login,main:39 - Last Login : 2020-06-15 15:56:29    MONDAY
+16:04:14,327 DEBUG AdminClient,main:26 - Logged in as Admin: Mr. Tejas
+16:04:14,327  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+16:04:15,514  INFO operationHelper,main:77 - Enter Name : 
+16:04:20,418  INFO operationHelper,main:82 - Enter EmailID : 
+16:04:22,566  INFO operationHelper,main:89 - Email ID available
+16:04:22,567  INFO operationHelper,main:94 - Enter Password
+16:04:25,941  INFO operationHelper,main:96 - Enter Type 
+Choices	 1.admin	2.student	3.professor
+16:04:28,220  INFO operationHelper,main:98 - Enter Gender (M/F)
+16:04:30,245  INFO AdminOperations,main:26 - Enter Student Semester :
+16:04:31,918  INFO AdminOperations,main:28 - Enter Branch : 
+16:04:34,001  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+16:04:36,874  INFO AdminOperations,main:67 - Enter User Type (student/admin/professor)
+16:04:39,609  INFO AdminOperations,main:70 - Name	Student ID	Courses
+16:04:39,611  INFO AdminOperations,main:72 - Tejeshwar Saini		1003		103,104,105,106,
+16:04:39,612  INFO AdminOperations,main:72 - pratik		1009		101,108,109,107,
+16:04:39,612  INFO AdminOperations,main:72 - gaurav		1025		0,0,0,0,
+16:04:39,612  INFO AdminOperations,main:72 - rohan		2004		101,102,103,105,
+16:04:39,613  INFO AdminOperations,main:72 - apoorv		2005		0,0,0,0,
+16:04:39,613  INFO AdminClient,main:31 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Add Course
+5.Reset Course
+6.View Courses
+7.Logout
+16:04:55,686  INFO AdminClient,main:60 - Logging Out at 16:4    15-JUNE    MONDAY
+16:04:55,686  INFO Login,main:28 - Enter ID 
+16:04:57,291  INFO Login,main:65 - Terminated.!

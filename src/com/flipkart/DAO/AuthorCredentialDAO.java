@@ -29,7 +29,7 @@ public class AuthorCredentialDAO  {
 				rs = stmt.executeQuery();
 				while(rs.next()) {
 					user.setPassword(rs.getString("Password"));
-					user.setType(rs.getString("Type"));
+					user.setType(rs.getInt("Type"));
 					user.setGender(rs.getString("Gender"));
 					user.setEmailID(rs.getString("EmailID"));
 				}
@@ -94,7 +94,7 @@ public class AuthorCredentialDAO  {
 			stmt = conn.prepareStatement(SQLQueryConstant.USER_INSERT);
 			stmt.setString(1, user2.getemailID());
 			stmt.setString(2, user2.getPassword());
-			stmt.setString(3, user2.getType());
+			stmt.setInt(3, user2.getType());
 			stmt.setString(4, user2.getGender());
 			stmt.executeUpdate();
 		} catch (SQLException e) {

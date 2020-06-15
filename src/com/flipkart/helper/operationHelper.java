@@ -1,6 +1,6 @@
 package com.flipkart.helper;
 
-import java.sql.SQLException;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -93,8 +93,8 @@ public interface operationHelper {
 		user.setEmailID(emailID);
 		logger.info("Enter Password");
 		user.setPassword(input.next());
-		logger.info("Enter Type(student/admin/professor)");
-		user.setType(input.next());
+		logger.info("Enter Type \nChoices\t 1.admin\t2.student\t3.professor");
+		user.setType(input.nextInt());
 		logger.info("Enter Gender (M/F)");
 		user.setGender(input.next());
 		return user;

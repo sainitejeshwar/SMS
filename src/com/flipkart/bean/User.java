@@ -22,7 +22,7 @@ public class User {
 	private String Name;
 	private String emailID;
 	private String Password;
-	private String Type;
+	private int Type;
 	private String Gender;
 	
 	
@@ -41,10 +41,11 @@ public class User {
 	public void setGender(String gender) {
 		Gender = gender;
 	}
-	public String getType() {
+	
+	public int getType() {
 		return Type;
 	}
-	public void setType(String type) {
+	public void setType(int type) {
 		Type = type;
 	}
 	public String getName() {

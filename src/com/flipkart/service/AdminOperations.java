@@ -21,10 +21,8 @@ public class AdminOperations implements operationHelper,clientHelper {
 		user = addNewUser(input);
 		authorCredentialDAO.addUser(user);
 		switch (user.getType()) {
-		case "student":
+		case 2:
 			Student student = new Student();
-			logger.info("Enter Student ID : ");
-			student.setStudentID(input.nextInt());  // Change to int and auto increment
 			logger.info("Enter Student Semester :");
 			student.setSemester(input.nextInt());
 			logger.info("Enter Branch : ");
@@ -32,7 +30,7 @@ public class AdminOperations implements operationHelper,clientHelper {
 			studentDAO.addStudent(user,student);
 			
 			break;
-		case "admin":
+		case 1:
 			Admin admin = new Admin();
 			logger.info("Enter Admin Level");
 			admin.setLevel(input.next());
@@ -41,7 +39,7 @@ public class AdminOperations implements operationHelper,clientHelper {
 
 			break;
 			
-		case "professor":
+		case 3:
 			professorDAO.addProf(user);
 
 			break;
@@ -71,18 +69,18 @@ public class AdminOperations implements operationHelper,clientHelper {
 		case "student":
 			logger.info("Name\tStudent ID\tCourses");
 			getAllStudents()
-			.forEach((student) -> logger.info( student.getName()+"\t"+student.getStudentID()+"\t"+student.getAllCourses()));
+			.forEach((student) -> logger.info( student.getName()+"\t\t"+student.getStudentID()+"\t\t"+student.getAllCourses()));
 			break;
 		case "admin":
 			logger.info("Name\tAdmin ID\tLevel");
 			getAllAdmins()
-			.forEach((admin) -> logger.info(admin.getName()+"\t"+admin.getAdminID()+"\t"+admin.getLevel()));
+			.forEach((admin) -> logger.info(admin.getName()+"\t\t"+admin.getAdminID()+"\t\t"+admin.getLevel()));
 			break;
 			
 		case "professor":
 			logger.info("Name\tProfessor ID");
 			getAllProfessors()
-			.forEach((professor) ->logger.info(professor.getName()+"\t"+professor.getProfessorID()));
+			.forEach((professor) ->logger.info(professor.getName()+"\t\t"+professor.getProfessorID()));
 			break;
 			
 		default:

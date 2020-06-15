@@ -40,17 +40,17 @@ public class Login{
 				checker.updateLoginTimeStamp(emailid, DTutil.SQLdatetime() );
 				switch(user.getType()) {
 				
-					case "student":
-						StudentClient studentLogin = new StudentClient();
-						studentLogin.landingPage(user,input);
-						break;
-						
-					case "admin":
+					case 1:
 						AdminClient adminClient = new AdminClient();
 						adminClient.landingPage(user,input);
 						break;
 						
-					case "professor":
+					case 2:
+						StudentClient studentLogin = new StudentClient();
+						studentLogin.landingPage(user,input);
+						break;
+						
+					case 3:
 						ProfessorClient professorClient = new ProfessorClient();
 						professorClient.landingPage(user,input);
 						break;
