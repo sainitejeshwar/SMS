@@ -56,6 +56,7 @@ public class ProfessorOperations implements operationHelper{
 	}
 	
 	public String addCourseforTeaching(Scanner input , int profID) {
+		logger.info("Avaliable Courses for you");
 		returnCourseCatalog()
 		.stream()
 			.filter(course -> (course.getProf() == -1))
@@ -69,7 +70,7 @@ public class ProfessorOperations implements operationHelper{
 			courseDAO.addCourseProf(courseCode1,profID);
 			return "Course Added";
 		} catch (InvalidCourseException e) {
-			return (getCourseName(e.Message()) + "  is not valid for you");
+			return (getCourseName(e.Message()) + " Or this course is not valid for you");
 		}
 	}
 	

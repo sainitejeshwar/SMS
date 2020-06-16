@@ -11,12 +11,22 @@ import com.flipkart.bean.User;
 import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.exception.InvalidUserException;
 import com.flipkart.utils.DBUtils;
-
+/*
+ * CLASS DESCRIPTION
+ * 
+ * Performs SQL query to fetch and store data from User Table
+ * 
+ */
 public class AuthorCredentialDAO  {
+	
+	//DATABASE CONNECTION OBJECTS
 	private static Connection conn = null;
 	private static PreparedStatement stmt = null;
+	
+	//LOGGER OBJECT(S)
 	private static Logger logger = Logger.getLogger(AuthorCredentialDAO.class);
 	
+	//Add user to table
 	public void addUser(User user2) {
 		conn = DBUtils.getConnection();
 		try {
@@ -30,7 +40,8 @@ public class AuthorCredentialDAO  {
 			logger.debug(e.getMessage());
 		}
 	}
-
+	
+	//updates user Password
 	public void updateUser(String emailID, String password) {
 		conn = DBUtils.getConnection();
 		try {
@@ -43,6 +54,8 @@ public class AuthorCredentialDAO  {
 		}
 	}
 	
+	
+	//Check whether emailID and Password is in Database or not 
 	public User checkIdentity(String emailid , String password) throws InvalidUserException{
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -62,9 +75,18 @@ public class AuthorCredentialDAO  {
 			logger.debug(e.getMessage());
 			return null;
 		}
-		if(user.getPassword().length() == 0) {
-			return null;
+		
+		// If no password is feteched then user is not available so throws exception
+		try {
+			if(user.getPassword().length() == 0) {
+				return null;
+			}
 		}
+		catch (NullPointerException e) {
+			throw new InvalidUserException();
+		}
+		
+		//Trying to match user entered password for the email id in User table if not matched throws exception
 		try {
 			if(user.getPassword().equals(password)) {
 				return user;
@@ -78,6 +100,7 @@ public class AuthorCredentialDAO  {
 		}
 	}
 	
+	//Update login timestamp every time the user logs in
 	public void updateLoginTimeStamp(String emailid , String currDateTime) {
 		conn = DBUtils.getConnection();
 		try {
@@ -90,6 +113,7 @@ public class AuthorCredentialDAO  {
 		}
 	}
 	
+	//Fetches user last login timestamp
 	public String getLastLoginTimeStamp(String emailid) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;

@@ -1,7 +1,9 @@
 package com.flipkart.service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
@@ -48,7 +50,7 @@ public class RegistrationOperations implements operationHelper {
 		
 		boolean flag = false;
 		int ind = 0;
-		ArrayList<Course> final_courses = new ArrayList<Course>();
+		Set<Course> final_courses = new HashSet<Course>();
 		for(ind = 0 ; ind < 6 ; ind++) {
 			if(final_courses.size()==4) {
 				break;
@@ -60,7 +62,7 @@ public class RegistrationOperations implements operationHelper {
 				catch (CourseFilledException e) {
 					logger.error(getCourseName(e.Message()) +" is already filled");
 				} catch (InvalidCourseException e) {
-					logger.info(getCourseName(e.Message())+" - "+e.Message()+ "-  is not available for you");
+					logger.info(getCourseName(e.Message())+" - "+e.Message()+ " - or it is not available for you");
 				}
 			}
 		if(ind>=4) {
@@ -78,19 +80,23 @@ public class RegistrationOperations implements operationHelper {
 			}
 		}
 		
-		Registration newRegistration = new Registration(final_courses , student.getStudentID());
+		ArrayList<Course> final_course = new ArrayList<Course>();
+		final_course.addAll(final_courses);
+		
+		Registration newRegistration = new Registration(final_course , student.getStudentID());
 		student.setRegistrationNumber(newRegistration.getRegistrationNumber());
 		newRegistration.setAmount(TotalFees);
 
 		registrationDAO.addRegistration(newRegistration, student);
-		studentDAO.UpdateStudentRegistration(final_courses, student); //studentCourseDao
-		courseDAO.updateStudents(final_courses);
+		studentDAO.UpdateStudentRegistration(final_course, student); //studentCourseDao
+		courseDAO.updateStudents(final_course);
 		marksDAO.createStudent(student.getStudentID());   //no use ,  studentCourse will store 
 		return "Registration Completed";
 	}
 	
-	public void checkCourseConstraints(int courseCode) throws CourseFilledException{
-		int no_of_students = (
+	public void checkCourseConstraints(int courseCode) throws CourseFilledException , InvalidCourseException{
+		try{
+			int no_of_students = (
 			returnCourseCatalog()
 			.stream()
 			.filter(course -> course.getCourseCode() == courseCode)
@@ -98,7 +104,11 @@ public class RegistrationOperations implements operationHelper {
 			.get(0))
 			.getNumberofStudents();
 		if(no_of_students>=10)
-			throw new CourseFilledException(courseCode);	
+			throw new CourseFilledException(courseCode);
+		}
+		catch (IndexOutOfBoundsException e) {
+			throw new InvalidCourseException(courseCode);
+		}
 	}
 }
 

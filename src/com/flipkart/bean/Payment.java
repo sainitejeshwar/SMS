@@ -19,12 +19,11 @@ public class Payment {
 	private String timeStamp;
 	private int RegNO ;
 	private int amount;
-	
+	private String Mode;
 	
 	
 	//To Get time Stamp
 	private DateTimeUtil DTUtil = new DateTimeUtil();
-	
 	
 	
 	/*
@@ -62,6 +61,11 @@ public class Payment {
 	public void setTimeStamp(String timeStamp) {
 		this.timeStamp = timeStamp;
 	}
-
+	public String getMode() {
+		return Mode;
+	}
+	public void setMode(String mode) {
+		Mode = mode;
+	}
 
 }

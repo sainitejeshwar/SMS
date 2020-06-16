@@ -12766,3 +12766,464 @@ Choices
 22:56:06,848  INFO StudentClient,main:76 - Logging Out at 22:56    15-JUNE    MONDAY
 22:56:06,848  INFO Login,main:31 - Enter ID 
 22:56:11,864  INFO Login,main:66 - Terminated.!
+09:14:44,112  INFO Login,main:25 - SMS
+09:14:44,129  INFO Login,main:31 - Enter ID 
+09:14:47,894  INFO Login,main:37 - Enter Password
+09:15:13,980  INFO Login,main:25 - SMS
+09:15:13,991  INFO Login,main:31 - Enter ID 
+09:15:16,807  INFO Login,main:37 - Enter Password
+09:15:22,933  INFO Login,main:42 - Last Login : 2020-06-14 20:50:15  SUNDAY
+09:15:22,961 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. Tejeshwar 
+09:15:22,961  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:15:28,286  INFO StudentOperations,main:51 - 101	DAA
+09:15:28,287  INFO StudentOperations,main:51 - 102	CN
+09:15:28,287  INFO StudentOperations,main:51 - 103	Math
+09:15:28,287  INFO StudentOperations,main:51 - 104	English
+09:15:28,288  INFO StudentOperations,main:51 - 105	Graph
+09:15:28,288  INFO StudentOperations,main:51 - 106	Chemistry
+09:15:28,289  INFO StudentOperations,main:51 - 107	Physics
+09:15:28,290  INFO StudentOperations,main:51 - 108	SCM
+09:15:28,290  INFO StudentOperations,main:51 - 109	SE
+09:15:28,291  INFO StudentOperations,main:51 - 110	DM
+09:15:28,291  INFO StudentOperations,main:51 - 112	EDC
+09:15:28,291  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:15:35,159  INFO RegistrationOperations,main:29 - Courses Available for you : 
+09:15:35,161  INFO RegistrationOperations,main:38 - 101	DAA	100
+09:15:35,162  INFO RegistrationOperations,main:38 - 102	CN	200
+09:15:35,162  INFO RegistrationOperations,main:38 - 103	Math	300
+09:15:35,163  INFO RegistrationOperations,main:38 - 104	English	400
+09:15:35,163  INFO RegistrationOperations,main:38 - 105	Graph	500
+09:15:35,163  INFO RegistrationOperations,main:38 - 106	Chemistry	600
+09:15:35,163  INFO RegistrationOperations,main:38 - 107	Physics	700
+09:15:35,163  INFO RegistrationOperations,main:38 - 108	SCM	80
+09:15:35,164  INFO RegistrationOperations,main:38 - 109	SE	100
+09:15:35,164  INFO RegistrationOperations,main:38 - 110	DM	200
+09:15:35,164  INFO RegistrationOperations,main:38 - 112	EDC	500
+09:15:35,165  INFO RegistrationOperations,main:42 - Enter 4 Primary Course and 2 Secondary Course
+09:15:47,209 ERROR RegistrationOperations,main:61 - CN is already filled
+09:15:47,215  INFO RegistrationOperations,main:74 - There is a change in your Primary Course 
+ Final Courses are :
+09:15:47,216  INFO RegistrationOperations,main:76 - DAA
+09:15:47,216  INFO RegistrationOperations,main:76 - Math
+09:15:47,217  INFO RegistrationOperations,main:76 - English
+09:15:47,217  INFO RegistrationOperations,main:76 - Graph
+09:15:47,217  INFO Registration,main:49 - Registration number : 1003166
+ Registration Time : 2020-6-16 9:15:47  TUESDAY
+09:15:47,355 DEBUG MarksDAO,main:24 - Duplicate entry '1003' for key 'grades.PRIMARY'
+09:15:47,356  INFO StudentClient,main:55 - Registration Completed
+09:15:47,356  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:15:52,238  INFO StudentClient,main:55 - Registration Already Done 
+ Pay fees (if not paid yet)
+09:15:52,238  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:15:55,459  INFO StudentOperations,main:27 - Amount to be Paid : 1300
+09:15:55,460  INFO StudentOperations,main:28 - Paying Fees for Registration ID : 1003166
+09:15:55,501  INFO StudentClient,main:64 - Fees paid on : 2020-6-16 9:15:55  TUESDAY with Transacction ID : 1003166166
+09:15:55,501  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+09:16:04,714  INFO StudentClient,main:76 - Logging Out at 9:16    16-JUNE    TUESDAY
+09:16:04,714  INFO Login,main:31 - Enter ID 
+09:16:06,642  INFO Login,main:66 - Terminated.!
+09:17:40,925  INFO Login,main:25 - SMS
+09:17:40,937  INFO Login,main:31 - Enter ID 
+09:17:50,560  INFO Login,main:37 - Enter Password
+09:18:44,135  INFO Login,main:25 - SMS
+09:18:44,157  INFO Login,main:31 - Enter ID 
+09:18:46,309  INFO Login,main:37 - Enter Password
+09:19:45,047  INFO Login,main:25 - SMS
+09:19:45,061  INFO Login,main:31 - Enter ID 
+09:19:48,943  INFO Login,main:37 - Enter Password
+09:19:50,548 ERROR Login,main:63 - ID or Password is incoorect
+09:19:50,548  INFO Login,main:31 - Enter ID 
+09:19:58,989  INFO Login,main:37 - Enter Password
+09:20:00,277 ERROR Login,main:63 - ID or Password is incoorect
+09:20:00,278  INFO Login,main:31 - Enter ID 
+09:20:05,347  INFO Login,main:37 - Enter Password
+09:20:08,052 ERROR Login,main:63 - ID or Password is incoorect
+09:20:08,052  INFO Login,main:31 - Enter ID 
+09:20:10,792  INFO Login,main:66 - Terminated.!
+11:40:53,494  INFO Login,main:25 - SMS
+11:40:53,505  INFO Login,main:31 - Enter ID 
+11:41:02,269  INFO Login,main:37 - Enter Password
+11:41:05,134  INFO Login,main:42 - Last Login : 2020-06-15 22:55:58  MONDAY
+11:41:05,197 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+11:41:05,198  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:41:08,366  INFO RegistrationOperations,main:31 - Courses Available for you : 
+11:41:08,372  INFO RegistrationOperations,main:40 - 101	DAA	100
+11:41:08,373  INFO RegistrationOperations,main:40 - 102	CN	200
+11:41:08,374  INFO RegistrationOperations,main:40 - 103	Math	300
+11:41:08,374  INFO RegistrationOperations,main:40 - 104	English	400
+11:41:08,375  INFO RegistrationOperations,main:40 - 105	Graph	500
+11:41:08,375  INFO RegistrationOperations,main:40 - 106	Chemistry	600
+11:41:08,375  INFO RegistrationOperations,main:40 - 107	Physics	700
+11:41:08,375  INFO RegistrationOperations,main:40 - 108	SCM	80
+11:41:08,375  INFO RegistrationOperations,main:40 - 109	SE	100
+11:41:08,375  INFO RegistrationOperations,main:40 - 110	DM	200
+11:41:08,375  INFO RegistrationOperations,main:40 - 112	EDC	500
+11:41:08,375  INFO RegistrationOperations,main:44 - Enter 4 Primary Course and 2 Secondary Course
+11:41:21,923 ERROR StudentClient,main:57 - Registration cannot be done as 4 primary courses cannot be selected
+11:41:21,924  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:41:33,016  INFO StudentClient,main:76 - Logging Out at 11:41    16-JUNE    TUESDAY
+11:41:33,016  INFO Login,main:31 - Enter ID 
+11:41:37,867  INFO Login,main:37 - Enter Password
+11:41:39,466  INFO Login,main:42 - Last Login : 2020-06-16 11:41:05  TUESDAY
+11:41:39,492 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+11:41:39,492  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:41:46,611  INFO RegistrationOperations,main:31 - Courses Available for you : 
+11:41:46,612  INFO RegistrationOperations,main:40 - 101	DAA	100
+11:41:46,612  INFO RegistrationOperations,main:40 - 102	CN	200
+11:41:46,613  INFO RegistrationOperations,main:40 - 103	Math	300
+11:41:46,613  INFO RegistrationOperations,main:40 - 104	English	400
+11:41:46,613  INFO RegistrationOperations,main:40 - 105	Graph	500
+11:41:46,613  INFO RegistrationOperations,main:40 - 106	Chemistry	600
+11:41:46,613  INFO RegistrationOperations,main:40 - 107	Physics	700
+11:41:46,613  INFO RegistrationOperations,main:40 - 108	SCM	80
+11:41:46,613  INFO RegistrationOperations,main:40 - 109	SE	100
+11:41:46,614  INFO RegistrationOperations,main:40 - 110	DM	200
+11:41:46,614  INFO RegistrationOperations,main:40 - 112	EDC	500
+11:41:46,614  INFO RegistrationOperations,main:44 - Enter 4 Primary Course and 2 Secondary Course
+11:43:46,619  INFO Login,main:25 - SMS
+11:43:46,637  INFO Login,main:31 - Enter ID 
+11:43:50,651  INFO Login,main:37 - Enter Password
+11:43:53,187  INFO Login,main:42 - Last Login : 2020-06-16 11:41:39  TUESDAY
+11:43:53,237 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+11:43:53,238  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:43:54,070  INFO RegistrationOperations,main:31 - Courses Available for you : 
+11:43:54,073  INFO RegistrationOperations,main:40 - 101	DAA	100
+11:43:54,074  INFO RegistrationOperations,main:40 - 102	CN	200
+11:43:54,074  INFO RegistrationOperations,main:40 - 103	Math	300
+11:43:54,074  INFO RegistrationOperations,main:40 - 104	English	400
+11:43:54,075  INFO RegistrationOperations,main:40 - 105	Graph	500
+11:43:54,075  INFO RegistrationOperations,main:40 - 106	Chemistry	600
+11:43:54,075  INFO RegistrationOperations,main:40 - 107	Physics	700
+11:43:54,076  INFO RegistrationOperations,main:40 - 108	SCM	80
+11:43:54,077  INFO RegistrationOperations,main:40 - 109	SE	100
+11:43:54,078  INFO RegistrationOperations,main:40 - 110	DM	200
+11:43:54,078  INFO RegistrationOperations,main:40 - 112	EDC	500
+11:43:54,078  INFO RegistrationOperations,main:44 - Enter 4 Primary Course and 2 Secondary Course
+11:44:01,608  INFO RegistrationOperations,main:65 - Not Available - 4-  is not available for you
+11:44:01,613  INFO RegistrationOperations,main:65 - Not Available - 4-  is not available for you
+11:44:01,616  INFO RegistrationOperations,main:65 - Not Available - 23-  is not available for you
+11:44:01,620  INFO RegistrationOperations,main:65 - Not Available - 5-  is not available for you
+11:44:01,626  INFO RegistrationOperations,main:65 - Not Available - 6-  is not available for you
+11:44:01,629  INFO RegistrationOperations,main:65 - Not Available - 2-  is not available for you
+11:44:01,630 ERROR StudentClient,main:57 - Registration cannot be done as 4 primary courses cannot be selected
+11:44:01,630  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:44:23,365  INFO StudentClient,main:76 - Logging Out at 11:44    16-JUNE    TUESDAY
+11:44:23,366  INFO Login,main:31 - Enter ID 
+11:44:26,144  INFO Login,main:66 - Terminated.!
+11:47:07,562  INFO Login,main:25 - SMS
+11:47:07,578  INFO Login,main:31 - Enter ID 
+11:47:11,994  INFO Login,main:37 - Enter Password
+11:47:14,077  INFO Login,main:42 - Last Login : 2020-06-15 18:14:11  MONDAY
+11:47:14,110 DEBUG ProfessorClient,main:25 - Logged in as Professor : Mr. Amit
+11:47:14,110  INFO ProfessorClient,main:30 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+11:47:17,092  INFO ProfessorClient,main:46 - 101	DAA
+11:47:17,092  INFO ProfessorClient,main:46 - 102	CN
+11:47:17,092  INFO ProfessorClient,main:46 - 103	Math
+11:47:17,092  INFO ProfessorClient,main:30 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+11:47:19,691  INFO ProfessorOperations,main:62 - 111	SQL
+11:47:19,691  INFO ProfessorOperations,main:62 - 112	EDC
+11:47:23,098  INFO ProfessorClient,main:54 - No Such Course with course code  is not valid for you
+11:47:23,098  INFO ProfessorClient,main:30 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+11:49:03,761  INFO Login,main:25 - SMS
+11:49:03,771  INFO Login,main:31 - Enter ID 
+11:49:06,670  INFO Login,main:37 - Enter Password
+11:49:08,770  INFO Login,main:42 - Last Login : 2020-06-16 11:47:14  TUESDAY
+11:49:08,809 DEBUG ProfessorClient,main:25 - Logged in as Professor : Mr. Amit
+11:49:08,810  INFO ProfessorClient,main:30 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+11:49:10,944  INFO ProfessorOperations,main:62 - 111	SQL
+11:49:10,945  INFO ProfessorOperations,main:62 - 112	EDC
+11:49:17,314  INFO ProfessorClient,main:54 - No Such Course with course code Or this course is not valid for you
+11:49:17,315  INFO ProfessorClient,main:30 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+11:49:23,675  INFO ProfessorClient,main:63 - Logging Out at 11:49    16-JUNE    TUESDAY
+11:49:23,675  INFO Login,main:31 - Enter ID 
+11:49:25,844  INFO Login,main:66 - Terminated.!
+11:52:32,773  INFO Login,main:25 - SMS
+11:52:32,788  INFO Login,main:31 - Enter ID 
+11:52:43,306  INFO Login,main:37 - Enter Password
+11:52:45,925  INFO Login,main:42 - Last Login : 2020-06-16 11:43:53  TUESDAY
+11:52:46,447 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+11:52:46,448  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:52:48,199  INFO RegistrationOperations,main:31 - Courses Available for you : 
+11:52:48,203  INFO RegistrationOperations,main:40 - 101	DAA	100
+11:52:48,203  INFO RegistrationOperations,main:40 - 102	CN	200
+11:52:48,203  INFO RegistrationOperations,main:40 - 103	Math	300
+11:52:48,203  INFO RegistrationOperations,main:40 - 104	English	400
+11:52:48,203  INFO RegistrationOperations,main:40 - 105	Graph	500
+11:52:48,204  INFO RegistrationOperations,main:40 - 106	Chemistry	600
+11:52:48,204  INFO RegistrationOperations,main:40 - 107	Physics	700
+11:52:48,204  INFO RegistrationOperations,main:40 - 108	SCM	80
+11:52:48,205  INFO RegistrationOperations,main:40 - 109	SE	100
+11:52:48,205  INFO RegistrationOperations,main:40 - 110	DM	200
+11:52:48,205  INFO RegistrationOperations,main:40 - 112	EDC	500
+11:52:48,206  INFO RegistrationOperations,main:44 - Enter 4 Primary Course and 2 Secondary Course
+11:52:57,261  INFO RegistrationOperations,main:65 - No Such Course with course code - 4-  is not available for you
+11:52:57,265  INFO RegistrationOperations,main:65 - No Such Course with course code - 32-  is not available for you
+11:52:57,274 ERROR RegistrationOperations,main:63 - CN is already filled
+11:52:57,280 ERROR StudentClient,main:57 - Registration cannot be done as 4 primary courses cannot be selected
+11:52:57,281  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:54:17,216  INFO StudentClient,main:68 - 
+DAA	55
+Chemistry	67
+Physics	89
+SCM	98
+
+11:54:17,216  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:54:19,820  INFO StudentClient,main:76 - Logging Out at 11:54    16-JUNE    TUESDAY
+11:54:19,821  INFO Login,main:31 - Enter ID 
+11:54:21,465  INFO Login,main:66 - Terminated.!
+11:54:41,614  INFO Login,main:25 - SMS
+11:54:41,624  INFO Login,main:31 - Enter ID 
+11:54:43,653  INFO Login,main:37 - Enter Password
+11:54:46,111  INFO Login,main:42 - Last Login : 2020-06-16 11:52:45  TUESDAY
+11:54:46,152 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+11:54:46,152  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:54:47,953  INFO StudentClient,main:68 - 
+DAA	0
+Chemistry	0
+Physics	0
+SCM	0
+
+11:54:47,954  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:56:06,825  INFO StudentClient,main:76 - Logging Out at 11:56    16-JUNE    TUESDAY
+11:56:06,826  INFO Login,main:31 - Enter ID 
+11:56:08,324  INFO Login,main:66 - Terminated.!
+11:56:10,910  INFO Login,main:25 - SMS
+11:56:10,921  INFO Login,main:31 - Enter ID 
+11:56:13,384  INFO Login,main:37 - Enter Password
+11:56:15,862  INFO Login,main:42 - Last Login : 2020-06-16 11:54:46  TUESDAY
+11:56:15,894 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+11:56:15,894  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:56:28,036  INFO StudentClient,main:68 - 
+DAA	0
+Chemistry	0
+Physics	0
+SCM	0
+
+11:56:28,036  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:56:56,162  INFO Login,main:25 - SMS
+11:56:56,172  INFO Login,main:31 - Enter ID 
+11:57:01,645  INFO Login,main:37 - Enter Password
+11:57:05,047  INFO Login,main:42 - Last Login : 2020-06-16 11:56:15  TUESDAY
+11:57:05,075 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+11:57:05,075  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:57:07,613  INFO StudentClient,main:68 - 
+DAA	0
+Chemistry	0
+Physics	55
+SCM	0
+
+11:57:07,613  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:58:12,609  INFO Login,main:25 - SMS
+11:58:12,623  INFO Login,main:31 - Enter ID 
+11:58:16,575  INFO Login,main:37 - Enter Password
+11:58:19,197  INFO Login,main:42 - Last Login : 2020-06-16 11:57:05  TUESDAY
+11:58:19,233 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+11:58:19,233  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+11:58:22,114  INFO StudentClient,main:68 - 
+DAA	0
+Chemistry	0
+Physics	55
+SCM	0
+
+11:58:22,114  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+12:00:26,676  INFO StudentClient,main:76 - Logging Out at 12:0    16-JUNE    TUESDAY
+12:00:26,676  INFO Login,main:31 - Enter ID 
+12:00:28,173  INFO Login,main:66 - Terminated.!
