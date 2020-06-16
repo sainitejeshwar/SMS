@@ -44,8 +44,12 @@ public class StudentOperations implements operationHelper{;
 		return studentDAO.listByID(emailid);
 	}
 
-	public void showCourse() {
-		viewCourseCatalog();
+	public void showCourse(int CatalogID) {
+		returnCourseCatalog()
+		.stream()
+		.filter(course -> course.getCatalogID() == CatalogID)
+		.forEach(course -> logger.info(course.getCourseCode()+"\t"+course.getName()));
+		;
 	}
 	public String viewReportCard(String emailID) {
 		student = studentDAO.getGrade(emailID);

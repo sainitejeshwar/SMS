@@ -19,7 +19,7 @@ package com.flipkart.bean;
 public class Course {
 	private int CourseCode;
 	private String Name;
-	private int Semester;
+	private int CatalogID;
 	private int Prof;
 	private int NumberofStudents;
 	private int Fees;
@@ -53,11 +53,11 @@ public class Course {
 	public void setName(String name) {
 		Name = name;
 	}
-	public int getSemester() {
-		return Semester;
+	public int getCatalogID() {
+		return CatalogID;
 	}
-	public void setSemester(int semester) {
-		Semester = semester;
+	public void setCatalogID(int catalogID) {
+		CatalogID = catalogID;
 	}
 	public int getProf() {
 		return Prof;

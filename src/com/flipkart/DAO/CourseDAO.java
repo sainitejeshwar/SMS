@@ -22,7 +22,7 @@ public class CourseDAO{
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_INSERT);
 			stmt.setString(1, course2.getName());
-			stmt.setInt(2, course2.getSemester());
+			stmt.setInt(2, course2.getCatalogID());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
@@ -52,7 +52,7 @@ public class CourseDAO{
 				Course course = new Course();
 				course.setCourseCode(rs.getInt("CourseCode"));
 				course.setName(rs.getString("Name"));
-				course.setSemester(rs.getInt("Sem"));
+				course.setCatalogID(rs.getInt("CatalogID"));
 				course.setProf(rs.getInt("ProfessorInfo"));
 				course.setNumberofStudents(rs.getInt("NumberOfStudent"));
 				course.setFees(rs.getInt("Fees"));

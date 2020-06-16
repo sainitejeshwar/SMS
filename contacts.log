@@ -12705,3 +12705,64 @@ Choices
 18:46:05,647  INFO StudentClient,main:81 - Logging Out at 18:46    15-JUNE    MONDAY
 18:46:05,648  INFO Login,main:26 - Enter ID 
 18:46:07,879  INFO Login,main:61 - Terminated.!
+22:55:11,685  INFO Login,main:25 - SMS
+22:55:11,701  INFO Login,main:31 - Enter ID 
+22:55:15,879  INFO Login,main:37 - Enter Password
+22:55:18,313  INFO Login,main:42 - Last Login : 2020-06-15 18:45:51  MONDAY
+22:55:18,337 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+22:55:18,338  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+22:55:20,082 DEBUG CourseDAO,main:63 - Column 'CatalogID' not found.
+22:55:20,083  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+22:55:51,914  INFO Login,main:25 - SMS
+22:55:51,924  INFO Login,main:31 - Enter ID 
+22:55:56,101  INFO Login,main:37 - Enter Password
+22:55:58,551  INFO Login,main:42 - Last Login : 2020-06-15 22:55:18  MONDAY
+22:55:58,568 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+22:55:58,568  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+22:56:01,893  INFO StudentOperations,main:51 - 101	DAA
+22:56:01,894  INFO StudentOperations,main:51 - 102	CN
+22:56:01,894  INFO StudentOperations,main:51 - 103	Math
+22:56:01,895  INFO StudentOperations,main:51 - 104	English
+22:56:01,895  INFO StudentOperations,main:51 - 105	Graph
+22:56:01,895  INFO StudentOperations,main:51 - 106	Chemistry
+22:56:01,895  INFO StudentOperations,main:51 - 107	Physics
+22:56:01,895  INFO StudentOperations,main:51 - 108	SCM
+22:56:01,895  INFO StudentOperations,main:51 - 109	SE
+22:56:01,896  INFO StudentOperations,main:51 - 110	DM
+22:56:01,896  INFO StudentOperations,main:51 - 112	EDC
+22:56:01,896  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+22:56:06,848  INFO StudentClient,main:76 - Logging Out at 22:56    15-JUNE    MONDAY
+22:56:06,848  INFO Login,main:31 - Enter ID 
+22:56:11,864  INFO Login,main:66 - Terminated.!

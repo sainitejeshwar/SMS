@@ -6,9 +6,6 @@ import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
-import com.flipkart.DAO.CourseDAO;
-import com.flipkart.DAO.RegistrationDAO;
-import com.flipkart.DAO.StudentDAO;
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Registration;
 import com.flipkart.bean.Student;
@@ -17,7 +14,7 @@ import com.flipkart.exception.InvalidCourseException;
 import com.flipkart.exception.NotificationMessage;
 import com.flipkart.exception.RegistrationEndedException;
 import com.flipkart.helper.operationHelper;
-import com.mysql.cj.util.StringUtils;
+
 
 public class RegistrationOperations implements operationHelper {
 	private static  Logger logger = Logger.getLogger(RegistrationOperations.class);
@@ -34,7 +31,7 @@ public class RegistrationOperations implements operationHelper {
 		ArrayList<Course> avaiableCourses = new ArrayList<Course>();
 		avaiableCourses.addAll((returnCourseCatalog()
 				.stream()
-				.filter(course -> course.getSemester() == student.getSemester())
+				.filter(course -> course.getCatalogID() == student.getSemester())
 				.collect(Collectors.toList())));
 		
 		for(Course course : avaiableCourses) {

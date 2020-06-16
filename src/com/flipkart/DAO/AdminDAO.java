@@ -13,12 +13,22 @@ import com.flipkart.bean.User;
 import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
 
+/*
+ * DAO OPERATIONS on admin table 
+ * Includes :
+ * 			listByID
+ * 			listAll 
+ * 			addAdmin 
+ */
+
 public class AdminDAO{
 	private static Connection conn = null;
 	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(AdminDAO.class);
 	
 	
+	//Get the admin using the emailID of the admin
+	// Returns admin object with details fetched from database
 	public Admin listByID(String emailID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -41,6 +51,8 @@ public class AdminDAO{
 		return null;
 	}
 	
+	//Get all the admins form the admin table
+	// Returns Array List of admin object with details fetched from database
 	public ArrayList<Admin> listAll(){
 		ArrayList<Admin> admins = new ArrayList<Admin>();
 		conn = DBUtils.getConnection();
@@ -64,6 +76,7 @@ public class AdminDAO{
 		return null;
 	}
 
+	//Add admin in the admin table corresponding to the emailID
 	public void addAdmin(User user , Admin admin) {
 		conn = DBUtils.getConnection();
 		try {

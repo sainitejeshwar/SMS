@@ -47,7 +47,7 @@ public class StudentClient implements clientHelper , operationHelper{
 					break;
 					
 				case 3:
-					studOperations.showCourse();
+					studOperations.showCourse(student.getSemester());
 					break;
 					
 				case 4:

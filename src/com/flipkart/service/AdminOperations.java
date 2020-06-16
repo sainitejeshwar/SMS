@@ -100,8 +100,8 @@ public class AdminOperations implements operationHelper,clientHelper {
 		Course course = new Course();
 		logger.info("Enter Course Name");
 		course.setName(input.next());
-		logger.info("Enter course teaching semester");
-		course.setSemester(input.nextInt());
+		logger.info("Enter CatalogID in which course will be added");
+		course.setCatalogID(input.nextInt());
 		courseDAO.addCourse(course);
 	}
 	public void updateCourse(Scanner input) {
