@@ -42,6 +42,8 @@ public class Login implements clientHelper{
 				logger.info("Last Login : "+ DTUtils.systemDateTime(checker.getLastLoginTimeStamp(emailid)));  // prints last login time stamp
 				checker.updateLoginTimeStamp(emailid, DTUtils.SQLdatetime() );    		// Updating last login timestamp in database for the user
 				
+				
+				//enterin different landing page based on type of user
 				switch(user.getType()) {
 				
 					case 1:

@@ -12,12 +12,18 @@ import com.flipkart.bean.Professor;
 import com.flipkart.bean.User;
 import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
-
+/*
+ * CLASS DESCIPTION
+ * 
+ * For perfomring oprations on Professor Table
+ * And also doing professor related DAO operations
+ */
 public class ProfessorDAO {
 	private static Connection conn = null;
 	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(ProfessorDAO.class);
 	
+	//Add a professor in Professor Tabel
 	public void addProf(User user) {
 		conn = DBUtils.getConnection();
 		try {
@@ -29,6 +35,8 @@ public class ProfessorDAO {
 			logger.debug(e.getMessage());
 		}
 	}
+	
+	//Get details about particular professor using his email ID
 	public Professor listByID(String emailid) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -48,6 +56,8 @@ public class ProfessorDAO {
 		}
 		return null;
 	}
+	
+	// For listing all the professors and returning an ArrayList of professor objects
 	public ArrayList<Professor> listAll() {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -62,7 +72,6 @@ public class ProfessorDAO {
 				professors.add(professor);
 			}
 			rs.close();
-			
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}

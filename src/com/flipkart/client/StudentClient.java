@@ -42,7 +42,7 @@ public class StudentClient implements clientHelper , operationHelper{
 					
 				case 2:
 					for(Integer itr : student.getStudentCourses()) {
-						logger.info(getCourseName(itr)+" - "+itr);
+						logger.info(getCourseName(itr)+" - ");
 					}
 					break;
 					

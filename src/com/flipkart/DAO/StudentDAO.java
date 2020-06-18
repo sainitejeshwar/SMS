@@ -14,13 +14,18 @@ import com.flipkart.bean.User;
 import com.flipkart.constants.SQLQueryConstant;
 
 import com.flipkart.utils.DBUtils;
-
+/*
+ * CLASS DESCRIPTION
+ * 
+ * For performing the Studuent DAO operations
+ * 
+ */
 public class StudentDAO{
 	private static Connection conn = null;
 	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(StudentDAO.class);
 
-
+	//Add student in Student Table
 	public void addStudent(User user, Student student) {
 		conn = DBUtils.getConnection();
 		try {
@@ -34,7 +39,8 @@ public class StudentDAO{
 			logger.debug(e.getMessage());
 		}
 	}
-
+	
+	// Listing all the students
 	public ArrayList<Student> listAll() {
 		ArrayList<Student> students = new ArrayList<Student>();
 		conn = DBUtils.getConnection();
@@ -62,6 +68,8 @@ public class StudentDAO{
 		}
 		return students;
 	}
+	
+	//Listing student by ID
 	public Student listByID(String emailid) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -88,6 +96,8 @@ public class StudentDAO{
 		}
 		return null;
 	}
+	
+	//Update Student courses when registration Completes
 	public void UpdateStudentRegistration(ArrayList<Course> courses , Student student) {
 		conn = DBUtils.getConnection();
 		try {
@@ -103,7 +113,8 @@ public class StudentDAO{
 			logger.debug(e.getMessage());
 		}
 	}
-
+	
+	//Get the grades of student
 	public Student getGrade(String emailID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -127,7 +138,8 @@ public class StudentDAO{
 		}
 		return student;
 	}
-
+	
+	//Set the grades of a particular course for the student
 	public void setGrades(int ind, Student student) {
 		conn = DBUtils.getConnection();
 		try {
@@ -156,4 +168,5 @@ public class StudentDAO{
 			logger.debug(e.getMessage());
 		}
 	}
+	
 }

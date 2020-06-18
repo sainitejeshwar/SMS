@@ -101,7 +101,7 @@ public interface operationHelper {
 																			//first element is our answer
 		}
 		catch (IndexOutOfBoundsException e) {								// if now such course the throws exception
-			name = "No Such Course with course code";
+			name = "No Such Course";
 		}
 		return name;
 	}

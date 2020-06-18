@@ -14,6 +14,7 @@ public class MarksDAO {
 	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(MarksDAO.class);
 	
+	//for creating a recording in Grades table corresponding to student id
 	public void createStudent(int studentID) {
 		conn = DBUtils.getConnection();
 		try {
@@ -24,4 +25,5 @@ public class MarksDAO {
 			logger.debug(e.getMessage());
 		}	
 	}
+	
 }

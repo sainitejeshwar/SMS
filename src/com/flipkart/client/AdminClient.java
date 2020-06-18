@@ -33,10 +33,11 @@ public class AdminClient implements clientHelper {
 						+ "1.Add User\n"
 						+ "2.Update User\n"
 						+ "3.View All Users\n"
-						+ "4.Add Course\n"
-						+ "5.Reset Course\n"
-						+ "6.View Courses\n"
-						+ "7.Logout");
+						+ "4.Delete User\n"
+						+ "5.Add Course\n"
+						+ "6.Reset Course\n"
+						+ "7.View Courses\n"
+						+ "8.Logout");
 			choice = input.nextInt();
 			
 			switch (choice) {
@@ -49,19 +50,24 @@ public class AdminClient implements clientHelper {
 			case 3:
 				adminOperations.viewUsers(input);
 				break;
-			case 4:
+			case 5:
 				adminOperations.addCourse(input);
 				break;
-			case 5:
+			case 6:
 				adminOperations.updateCourse(input);
 				break;
-			case 6:
+			case 7:
 				adminOperations.viewCourseCatalog();
+				break;
+			case 4:
+				adminOperations.deleteUser(input);
+				break;
+				
 			default:
 				break;
 			}
 		}
-		while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6);
+		while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6 || choice == 7);
 
 	logger.info("Logging Out at "+ DTUtils.currDateandTime());
 	

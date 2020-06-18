@@ -25,7 +25,7 @@ public class SQLQueryConstant {
 	public static final String COURSE_SELECT_ALL = "select * from course";
 	public static final String COURSE_UPDATE_COUNT = "update course set NumberOfStudent = ? where CourseCode = ?";
 	public static final String COURSE_UPDATE_PROF = "update course set ProfessorInfo = ? where CourseCode = ?";
-	public static final String COURSE_INSERT = "insert into course (Name,Sem) values (?,?)";
+	public static final String COURSE_INSERT = "insert into course (Name,CatalogID,Fees) values (?,?,?)";
 	public static final String COURSE_RESET = "update course set ProfessorInfo = ? , NumberOfStudent = ? where CourseCode = ?";
 	
 	//REGISTRATION TABLE QUERIES
@@ -56,5 +56,7 @@ public class SQLQueryConstant {
 	//PAYMENT TABLE QUERIES
 	public static final String PAYMENT_INSERT = "insert into payment values (?,?,?,?,?)";
 	public static final String PAYMENT_STATUS = "select * from payment where RegNo = ?";
+	
+	public static final String DELETE_USER = "delete from users where EmailID = ?";
 
 }

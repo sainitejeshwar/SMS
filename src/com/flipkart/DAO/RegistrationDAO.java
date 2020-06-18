@@ -13,11 +13,24 @@ import com.flipkart.bean.Student;
 import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
 
+/*
+ * Do Registration related DAO operations
+ * 
+ * Includes 
+ * 		- Add Registration
+ * 		- Get Payment Status
+ * 		- Get Registration Fees for a Registration
+ * 		- update Payment details
+ */
+
+
 public class RegistrationDAO {
 	private static Connection conn = null;
 	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(RegistrationDAO.class);
 	
+	
+	//Add new registration
 	public void addRegistration(Registration newRegistration, Student student) {
 		conn = DBUtils.getConnection();
 		try {
@@ -32,6 +45,8 @@ public class RegistrationDAO {
 			logger.debug(e.getMessage());
 		}
 	}
+	
+	//Get payment status for a registration
 	public Registration getPaymentStatus(int registrationID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -50,6 +65,7 @@ public class RegistrationDAO {
 		}
 		return null;
 	}
+	//Get registration fees for a payment
 	public int getRegistrationFees(int registrationID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
@@ -66,8 +82,9 @@ public class RegistrationDAO {
 			logger.debug(e.getMessage());
 		}
 		return fees;
-		
 	}
+	
+	//Update the payment status
 	public void updatePayment(Payment payment) {
 		conn = DBUtils.getConnection();
 		try {

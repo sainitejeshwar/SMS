@@ -83,7 +83,7 @@ public class AuthorCredentialDAO  {
 			}
 		}
 		catch (NullPointerException e) {
-			throw new InvalidUserException();
+			throw new NullPointerException();
 		}
 		
 		//Trying to match user entered password for the email id in User table if not matched throws exception
@@ -130,5 +130,16 @@ public class AuthorCredentialDAO  {
 			logger.debug(e.getMessage());
 		}
 		return res;
+	}
+
+	public void deleteUser(String emailID) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.DELETE_USER);
+			stmt.setString(1, emailID);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
 	}
 }

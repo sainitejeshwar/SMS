@@ -10,13 +10,17 @@ import org.apache.log4j.Logger;
 import com.flipkart.bean.Payment;
 import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
-
+/*
+ * CLASS DECRIPTION
+ * 
+ * For saving payment details of registration fees payment
+ */
 public class PaymentDAO {
 	private static Connection conn = null;
 	private static PreparedStatement stmt = null;
 	private static Logger logger = Logger.getLogger(PaymentDAO.class);
 	
-	
+	//For inserting a new payment in the database
 	public void updatePayment(Payment payment) {
 		conn = DBUtils.getConnection();
 		try {
@@ -31,6 +35,8 @@ public class PaymentDAO {
 			logger.debug(e.getMessage());
 		}
 	}
+	
+	//For fetching the details about a particular payment
 	public Payment getPaymentStatus(int registrationID) {
 		conn = DBUtils.getConnection();
 		ResultSet rs = null;
