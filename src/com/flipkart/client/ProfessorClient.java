@@ -7,8 +7,7 @@ import org.apache.log4j.Logger;
 import com.flipkart.bean.Professor;
 import com.flipkart.bean.User;
 import com.flipkart.helper.clientHelper;
-import com.flipkart.service.ProfessorOperations;
-import com.flipkart.utils.DateTimeUtil;
+
 /*
  * CLASS DESCRIPTIONS
  * 
@@ -26,6 +25,7 @@ public class ProfessorClient implements clientHelper{
 		
 		//PROFESSOR FUNCTIONALITIES
 		int choice;
+		boolean flag = true;
 		do {
 			logger.info("\nChoices\n"
 							+ "1.View Students in a Course\n"
@@ -54,11 +54,15 @@ public class ProfessorClient implements clientHelper{
 					logger.info(profOperations.addCourseforTeaching(input , prof.getProfessorID()));
 					break;
 					
+				case 5:
+					flag = false;
+					break;
+				
 				default:
 					break;
 				}
 		}
-		while(choice == 1 || choice == 2|| choice == 3|| choice == 4);
+		while(flag);
 		
 		logger.info("Logging Out at "+ DTUtils.currDateandTime());					// prinitng logging out timestamp
 	}

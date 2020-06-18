@@ -73,4 +73,16 @@ public class StudentCourseDAO {
 		}
 		return tempCourses;
 	}
+
+	public void clearCourses(int studentID) {
+		conn = DBUtils.getConnection();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.STUDENT_COURSE_DELETE_ALL);
+			stmt.setInt(1, studentID);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		
+	}
 }

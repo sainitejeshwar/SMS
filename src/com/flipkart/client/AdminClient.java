@@ -28,6 +28,7 @@ public class AdminClient implements clientHelper {
 		
 		//ADMIN FUNCTIONALITIES
 		int choice  = 7;
+		boolean flag = false;
 		do {
 			logger.info("\nChoices\n"
 						+ "1.Add User\n"
@@ -62,12 +63,14 @@ public class AdminClient implements clientHelper {
 			case 4:
 				adminOperations.deleteUser(input);
 				break;
-				
+			case 8:
+				flag = false;
+				break;
 			default:
 				break;
 			}
 		}
-		while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6 || choice == 7);
+		while(flag);
 
 	logger.info("Logging Out at "+ DTUtils.currDateandTime());
 	

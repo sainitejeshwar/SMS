@@ -24,6 +24,7 @@ public class StudentClient implements clientHelper , operationHelper{
 		
 		//Functionalities for Student
 		int choice;
+		boolean flag = true;
 		do {
 			logger.info("\nChoices\n"
 							+ "1.Show My Details\n"
@@ -84,11 +85,14 @@ public class StudentClient implements clientHelper , operationHelper{
 				case 8:
 					studOperations.viewReportCard(user.getEmailID());
 					break;
+				case 9:
+					flag = false;
+					break;
 				default:
 					break;
 			}
 		}
-		while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6 || choice == 7 || choice == 8);
+		while(flag);
 	logger.info("Logging Out at "+ DTUtils.currDateandTime());			// printing logging out Timestamp
 	}
 }

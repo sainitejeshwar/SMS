@@ -58,4 +58,5 @@ public class SQLQueryConstant {
 	public static final String STUDENT_COURSE_INSERT = "insert into studentcourses values (?,?)";
 	public static final String STUDENT_COURSE_DELETE = "delete from studentcourses where StudentID = ? and CourseCode = ?";
 	public static final String STUDENT_COURSE_SELECT = "select * from studentcourses where StudentID = ?";
+	public static final String STUDENT_COURSE_DELETE_ALL = "delete from studentcourses where StudentID = ?";
 }
