@@ -8,18 +8,29 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
-import com.flipkart.bean.Course;
 import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
 
+/*
+ * CLASS DESCRIPTION
+ * 
+ * For managing the temporary courses of the student added or dropped before registering
+ * 
+ * Includes
+ * 		- add course
+ * 		- drop course
+ * 		- get course 
+ */
 public class StudentCourseDAO {
 	
+	//CONNECTION OBJECT(S)
 	private static Connection conn = null;
 	private static PreparedStatement stmt = null;
+	//LOGGER OBJECT(S)
 	private static Logger logger = Logger.getLogger(StudentCourseDAO.class);
 
+	//Add course of the student
 	public void addCourse(int studentID, int courseID) {
-		// TODO Auto-generated method stub
 		conn = DBUtils.getConnection();
 		try {
 			stmt = conn.prepareStatement(SQLQueryConstant.STUDENT_COURSE_INSERT);
@@ -29,9 +40,9 @@ public class StudentCourseDAO {
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
-		
 	}
-
+	
+	//drop student course
 	public void dropCourse(int studentID, int courseCode) {
 		conn = DBUtils.getConnection();
 		try {
@@ -42,9 +53,9 @@ public class StudentCourseDAO {
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
-		
 	}
-
+	
+	//Fetch all the courses of the student
 	public ArrayList<Integer> getCourse(int studentID) {
 		ArrayList<Integer> tempCourses = new ArrayList<Integer>();
 		conn = DBUtils.getConnection();
@@ -61,7 +72,5 @@ public class StudentCourseDAO {
 			logger.debug(e.getMessage());
 		}
 		return tempCourses;
-		
 	}
-
 }

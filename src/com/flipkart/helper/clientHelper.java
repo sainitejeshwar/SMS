@@ -34,7 +34,8 @@ public interface clientHelper{
 	//LOGGER OBJECT(S)
 	static  Logger logger = Logger.getLogger(clientHelper.class);
 	
-	default String getSalutation(String Gender) {				// returns salutation based on gender of the Gender
+	// returns salutation based on gender of the Gender
+	default String getSalutation(String Gender) {				
 		if(Gender.equals("M"))
 			return "Mr. ";
 		return "Miss. ";

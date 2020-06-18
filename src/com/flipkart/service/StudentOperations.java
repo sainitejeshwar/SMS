@@ -2,14 +2,12 @@ package com.flipkart.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
-import com.flipkart.DAO.StudentCourseDAO;
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Payment;
 import com.flipkart.bean.Student;
@@ -80,11 +78,13 @@ public class StudentOperations implements operationHelper{
 	
 	//Showing courses in a particular catalog
 	public void showCourse(int CatalogID) {
+		
 		returnCourseCatalog()
 		.stream()
 		.filter(course -> course.getCatalogID() == CatalogID)
 		.forEach(course -> logger.info(course.getCourseCode()+"\t"+course.getName()));
 	}
+	//returning courses in a particular catalog
 	public ArrayList<Course> getCourse(int CatalogID) {
 		return (ArrayList<Course>) returnCourseCatalog()
 		.stream()
@@ -99,37 +99,45 @@ public class StudentOperations implements operationHelper{
 		map.putAll(marksDAO.fetchGrades(student.getStudentID()));
 		for (Map.Entry<Integer,Integer> entry : map.entrySet())  
             logger.info(getCourseName(entry.getKey()) + 
-                             "\t" + entry.getValue());	
-		
+                             "\t" + entry.getValue());		
 	}
 	
-	//helper funtion to print details
+	//helper function to print details
 	public String showDetails(Student student) {
 		return "ID :"+student.getStudentID()+"\nName:"+student.getName()+"\nBranch:"+student.getBranch()
 		+"\nSemester:"+student.getSemester();
 	}
 	
+	//add student course to student course table
 	public String addCourse(Student student , Scanner input) {
+		//cannot add after registration
 		if(student.getRegistrationNumber() != 0) {
 			return "Registration Already Done \n Cannot perform this operations now";
 		}
+		//displaying already added courses
 		logger.info("Already Added Courses  :");
-		for(Integer itr: studentCourseDAO.getCourse(student.getStudentID())) {
+		ArrayList<Integer> addedCourse = new ArrayList<Integer>();
+		addedCourse.addAll(studentCourseDAO.getCourse(student.getStudentID()));
+		for(Integer itr: addedCourse) {
 			logger.info(getCourseName(itr) + "  "+itr);
 		}
+		//list of all available courses
 		logger.info("Courses Available for you : ");
 		ArrayList<Course> avaiableCourses = new ArrayList<Course>();
 		avaiableCourses.addAll((returnCourseCatalog()
 				.stream()
-				.filter(course -> course.getCatalogID() == student.getSemester())
+				.filter(course -> ((course.getCatalogID() == student.getSemester()) &&  !addedCourse.contains(course.getCourseCode())))
 				.collect(Collectors.toList())));
 		
+		//displaying all course
 		for(Course course : avaiableCourses) {
 				logger.info(course.getCourseCode()+"\t"+course.getName()+"\t"+course.getFees());
 		}
 		
+		//adding new course
 		logger.info("\nEnter Course Code to add :");
 		int courseCode = input.nextInt();
+		//check if valid course is added or not
 		try {
 			if(isCourseContained(courseCode,avaiableCourses) != null){
 				studentCourseDAO.addCourse(student.getStudentID(), courseCode);
@@ -140,14 +148,18 @@ public class StudentOperations implements operationHelper{
 		return "Course " +getCourseName(courseCode) + "  added";
 	}
 	
+	//dropping course from student course table before 
 	public String  dropCourse(Student student , Scanner input) {
+		//cannot drop after registration
 		if(student.getRegistrationNumber() != 0) {
 			return "Registration Already Done \n Cannot perform this operations now";
 		}
+		//displaying added course that can be dropped
 		logger.info("Added Courses");
 		for(Integer itr: studentCourseDAO.getCourse(student.getStudentID())) {
 			logger.info(getCourseName(itr) + "  "+itr);
 		}
+		//getting course and check whether it is valid or not
 		logger.info("Enter Course Code to drop course");
 		int courseCode = input.nextInt();
 		if(studentCourseDAO.getCourse(student.getStudentID()).contains(courseCode))

@@ -44,6 +44,11 @@ public class StudentClient implements clientHelper , operationHelper{
 					
 				case 2:
 					student = studOperations.getStudent(user.getEmailID());
+					logger.info("Already Added Courses  :");
+					for(Integer itr: studentCourseDAO.getCourse(student.getStudentID())) {
+						logger.info(getCourseName(itr) + "  "+itr);
+					}
+					logger.info("\nRegistered Courses : ");
 					for(Integer itr : student.getStudentCourses()) {
 						logger.info(getCourseName(itr));}
 					break;

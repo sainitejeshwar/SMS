@@ -8,7 +8,6 @@ import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 
-import com.flipkart.bean.Student;
 import com.flipkart.constants.SQLQueryConstant;
 import com.flipkart.utils.DBUtils;
 

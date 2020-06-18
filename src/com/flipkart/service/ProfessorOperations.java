@@ -61,18 +61,14 @@ public class ProfessorOperations implements operationHelper{
 			logger.info("Course with Course code : "+e.Message()+" invalid for you");		//else throws exception
 			return;
 		}
-		int index = 0;
 		logger.info("Enter Marks for : ");
 		for (Student student : getAllStudents()
 				.stream()
 				.filter(student -> student.getStudentCourses().contains((courseCode)))		//from list all students getting student registered for that course
 				.collect(Collectors.toList())) {											
-			logger.info(student.getName()+"\t"+student.getStudentID()+" :");
-			index = student.getStudentCourses().indexOf(courseCode);						//getting the course code index to determine which course is that
-			int grade = input.nextInt();												//setting up marks
-			//studentDAO.setGrades(index,student);
-			marksDAO.uploadGrades(student.getStudentID(), courseCode, grade);
-			//updating the grades in student table
+			logger.info(student.getName()+"\t"+student.getStudentID()+" :");				//displaying one student at a time
+			int grade = input.nextInt();													//setting up marks
+			marksDAO.uploadGrades(student.getStudentID(), courseCode, grade);				//updating the grades in student table
 		}
 	}
 	
@@ -96,7 +92,7 @@ public class ProfessorOperations implements operationHelper{
 					.collect(Collectors.toList()));
 			courseDAO.addCourseProf(courseCode1,profID);									//adding the course if the course is not taken and is valid course code
 			return "Course Added";
-		} catch (InvalidCourseException e) {												//else throws exxception
+		} catch (InvalidCourseException e) {												//else throws exception
 			return (getCourseName(e.Message()) + " Or this course is not valid for you");
 		}
 	}

@@ -54,7 +54,6 @@ public class AuthorCredentialDAO  {
 		}
 	}
 	
-	
 	//Check whether emailID and Password is in Database or not 
 	public User checkIdentity(String emailid , String password) throws InvalidUserException{
 		conn = DBUtils.getConnection();
@@ -131,7 +130,7 @@ public class AuthorCredentialDAO  {
 		}
 		return res;
 	}
-
+	//Deleting the the user which has cascading that will delete coresponding student/professor/admin
 	public void deleteUser(String emailID) {
 		conn = DBUtils.getConnection();
 		try {

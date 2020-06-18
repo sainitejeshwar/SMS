@@ -23,7 +23,6 @@ import com.flipkart.utils.DBUtils;
  * 		- update Payment details
  */
 
-
 public class RegistrationDAO {
 	private static Connection conn = null;
 	private static PreparedStatement stmt = null;
@@ -95,7 +94,6 @@ public class RegistrationDAO {
 		} catch (SQLException e) {
 			logger.debug(e.getMessage());
 		}
-		
 	}
 
 }

@@ -71,7 +71,7 @@ public class RegistrationOperations implements operationHelper {
 		if(final_courses.size()<4) {
 			throw new NotificationMessage();
 		}
-		//showing final coureses and  calculating fees
+		//showing final courses and  calculating fees
 		int TotalFees = 0;
 		if(flag == true) {
 			logger.info("There is a change in your Primary Course \n Final Courses are :");

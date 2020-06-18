@@ -50,13 +50,12 @@ public class SQLQueryConstant {
 	public static final String REPORTCARD_INSERT = "insert into reportcard values (?,?,?)";
 	public static final String REPORTCARD_BY_ID = "select * from reportcard where StudentID = ?";
 
-		
 	//PAYMENT TABLE QUERIES
 	public static final String PAYMENT_INSERT = "insert into payment values (?,?,?,?,?)";
 	public static final String PAYMENT_STATUS = "select * from payment where RegNo = ?";
+	
+	//STUDENT COURSE TABLE QUERIES
 	public static final String STUDENT_COURSE_INSERT = "insert into studentcourses values (?,?)";
 	public static final String STUDENT_COURSE_DELETE = "delete from studentcourses where StudentID = ? and CourseCode = ?";
 	public static final String STUDENT_COURSE_SELECT = "select * from studentcourses where StudentID = ?";
-	
-	
 }

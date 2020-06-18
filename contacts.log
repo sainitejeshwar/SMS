@@ -16255,3 +16255,43 @@ Choices
 14:42:33,539  INFO ProfessorClient,main:63 - Logging Out at 14:42    18-JUNE    THURSDAY
 14:42:33,539  INFO Login,main:31 - Enter ID 
 14:42:35,269  INFO Login,main:68 - Terminated.!
+16:42:48,274  INFO Login,main:25 - SMS
+16:42:48,283  INFO Login,main:31 - Enter ID 
+16:42:58,477  INFO Login,main:37 - Enter Password
+16:43:01,792  INFO Login,main:42 - Last Login : 2020-06-18 14:39:30  THURSDAY
+16:43:01,841 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. Tejeshwar 
+16:43:01,842  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
+16:43:04,326  INFO StudentClient,main:47 - Already Added Courses  :
+16:43:04,348  INFO StudentClient,main:49 - JQUERY  114
+16:43:04,350  INFO StudentClient,main:49 - DM  110
+16:43:04,352  INFO StudentClient,main:49 - CN  102
+16:43:04,355  INFO StudentClient,main:49 - SE  109
+16:43:04,357  INFO StudentClient,main:49 - Physics  107
+16:43:04,362  INFO StudentClient,main:49 - Physics  107
+16:43:04,362  INFO StudentClient,main:51 - 
+Registered Courses : 
+16:43:04,365  INFO StudentClient,main:53 - DM
+16:43:04,367  INFO StudentClient,main:53 - Physics
+16:43:04,369  INFO StudentClient,main:53 - JQUERY
+16:43:04,372  INFO StudentClient,main:53 - SE
+16:43:04,373  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
