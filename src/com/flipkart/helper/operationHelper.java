@@ -14,6 +14,7 @@ import com.flipkart.DAO.MarksDAO;
 import com.flipkart.DAO.PaymentDAO;
 import com.flipkart.DAO.ProfessorDAO;
 import com.flipkart.DAO.RegistrationDAO;
+import com.flipkart.DAO.StudentCourseDAO;
 import com.flipkart.DAO.StudentDAO;
 import com.flipkart.bean.Admin;
 import com.flipkart.bean.Course;
@@ -46,6 +47,7 @@ public interface operationHelper {
 	static RegistrationDAO registrationDAO = new RegistrationDAO();
 	static MarksDAO marksDAO = new MarksDAO();
 	static PaymentDAO paymentDAO = new PaymentDAO();
+	static StudentCourseDAO studentCourseDAO = new StudentCourseDAO();
 	
 	//REGISTRATION END DATE
 	static LocalDate RegistrationEndDate = LocalDate.of(2020, 7, 1);

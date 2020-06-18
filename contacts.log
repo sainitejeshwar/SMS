@@ -15249,3 +15249,190 @@ Choices
 7.Logout
 10:12:02,070  INFO Login,main:25 - SMS
 10:12:02,106  INFO Login,main:31 - Enter ID 
+10:27:15,406  INFO Login,main:25 - SMS
+10:27:15,419  INFO Login,main:31 - Enter ID 
+10:27:20,368  INFO Login,main:37 - Enter Password
+10:27:24,659  INFO Login,main:42 - Last Login : 2020-06-18 09:57:33  THURSDAY
+10:27:24,768 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. Tejeshwar 
+10:27:24,769  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:27:32,230  INFO StudentClient,main:45 - DAA - 
+10:27:32,232  INFO StudentClient,main:45 - Math - 
+10:27:32,238  INFO StudentClient,main:45 - English - 
+10:27:32,240  INFO StudentClient,main:45 - Graph - 
+10:27:32,240  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:28:47,871  INFO Login,main:25 - SMS
+10:28:47,883  INFO Login,main:31 - Enter ID 
+10:28:52,091  INFO Login,main:37 - Enter Password
+10:28:57,689  INFO Login,main:42 - Last Login : 2020-06-18 10:27:24  THURSDAY
+10:28:57,732 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. Tejeshwar 
+10:28:57,732  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:29:00,542  INFO StudentClient,main:45 - DAA
+10:29:00,546  INFO StudentClient,main:45 - Math
+10:29:00,548  INFO StudentClient,main:45 - English
+10:29:00,551  INFO StudentClient,main:45 - No Such Course
+10:29:00,552  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+10:29:39,847  INFO StudentClient,main:76 - Logging Out at 10:29    18-JUNE    THURSDAY
+10:29:39,848  INFO Login,main:31 - Enter ID 
+10:29:43,491  INFO Login,main:68 - Terminated.!
+12:10:21,303  INFO Login,main:25 - SMS
+12:10:21,316  INFO Login,main:31 - Enter ID 
+12:10:25,384  INFO Login,main:37 - Enter Password
+12:10:28,997  INFO Login,main:42 - Last Login : 2020-06-18 10:28:57  THURSDAY
+12:10:29,034 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. Tejeshwar 
+12:10:29,035  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+12:10:32,882  INFO StudentOperations,main:86 - 101	DAA
+12:10:32,883  INFO StudentOperations,main:86 - 102	CN
+12:10:32,883  INFO StudentOperations,main:86 - 103	Math
+12:10:32,883  INFO StudentOperations,main:86 - 104	English
+12:10:32,883  INFO StudentOperations,main:86 - 105	Graph
+12:10:32,883  INFO StudentOperations,main:86 - 106	Chemistry
+12:10:32,884  INFO StudentOperations,main:86 - 107	Physics
+12:10:32,884  INFO StudentOperations,main:86 - 108	SCM
+12:10:32,884  INFO StudentOperations,main:86 - 109	SE
+12:10:32,884  INFO StudentOperations,main:86 - 110	DM
+12:10:32,884  INFO StudentOperations,main:86 - 113	REST
+12:10:32,884  INFO StudentOperations,main:86 - 114	JQUERY
+12:10:32,884  INFO StudentClient,main:72 - Enter Course Code to add
+12:10:36,962  INFO StudentOperations,main:113 - Already Added Courses
+12:10:36,985 DEBUG StudentCourseDAO,main:61 - Table 'smssystem.studentcoures' doesn't exist
+12:10:36,985  INFO StudentOperations,main:117 - Courses Available for you : 
+12:10:36,988  INFO StudentOperations,main:128 - 
+Enter Course Code to add :
+12:12:10,348  INFO Login,main:25 - SMS
+12:12:10,359  INFO Login,main:31 - Enter ID 
+12:12:25,326  INFO Login,main:37 - Enter Password
+12:12:28,201  INFO Login,main:42 - Last Login : 2020-06-18 12:10:29  THURSDAY
+12:12:28,233 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. Tejeshwar 
+12:12:28,233  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+12:12:34,312  INFO StudentOperations,main:101 - DAA	55
+12:12:34,315  INFO StudentOperations,main:101 - Math	66
+12:12:34,315  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+12:12:38,277  INFO StudentOperations,main:86 - 101	DAA
+12:12:38,277  INFO StudentOperations,main:86 - 102	CN
+12:12:38,277  INFO StudentOperations,main:86 - 103	Math
+12:12:38,277  INFO StudentOperations,main:86 - 104	English
+12:12:38,278  INFO StudentOperations,main:86 - 105	Graph
+12:12:38,278  INFO StudentOperations,main:86 - 106	Chemistry
+12:12:38,279  INFO StudentOperations,main:86 - 107	Physics
+12:12:38,279  INFO StudentOperations,main:86 - 108	SCM
+12:12:38,279  INFO StudentOperations,main:86 - 109	SE
+12:12:38,279  INFO StudentOperations,main:86 - 110	DM
+12:12:38,279  INFO StudentOperations,main:86 - 113	REST
+12:12:38,279  INFO StudentOperations,main:86 - 114	JQUERY
+12:12:38,280  INFO StudentClient,main:72 - Enter Course Code to add
+12:12:41,795  INFO StudentOperations,main:113 - Already Added Courses
+12:12:41,797  INFO StudentOperations,main:117 - Courses Available for you : 
+12:12:41,799  INFO StudentOperations,main:125 - 101	DAA	100
+12:12:41,799  INFO StudentOperations,main:125 - 102	CN	200
+12:12:41,799  INFO StudentOperations,main:125 - 103	Math	300
+12:12:41,799  INFO StudentOperations,main:125 - 104	English	400
+12:12:41,800  INFO StudentOperations,main:125 - 105	Graph	500
+12:12:41,800  INFO StudentOperations,main:125 - 106	Chemistry	600
+12:12:41,800  INFO StudentOperations,main:125 - 107	Physics	700
+12:12:41,800  INFO StudentOperations,main:125 - 108	SCM	80
+12:12:41,800  INFO StudentOperations,main:125 - 109	SE	100
+12:12:41,800  INFO StudentOperations,main:125 - 110	DM	200
+12:12:41,800  INFO StudentOperations,main:125 - 113	REST	0
+12:12:41,800  INFO StudentOperations,main:125 - 114	JQUERY	0
+12:12:41,800  INFO StudentOperations,main:128 - 
+Enter Course Code to add :
+12:13:06,421  INFO StudentClient,main:84 - Logging Out at 12:13    18-JUNE    THURSDAY
+12:13:06,421  INFO Login,main:31 - Enter ID 
+12:13:14,210  INFO Login,main:68 - Terminated.!
+12:14:30,582  INFO Login,main:25 - SMS
+12:14:30,592  INFO Login,main:31 - Enter ID 
+12:14:34,504  INFO Login,main:37 - Enter Password
+12:14:37,730  INFO Login,main:42 - Last Login : 2020-06-18 12:12:28  THURSDAY
+12:14:37,759 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. Tejeshwar 
+12:14:37,759  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+12:14:38,958  INFO StudentOperations,main:141 - Added Courses
+12:14:38,964  INFO StudentOperations,main:143 - DM  110
+12:14:38,965  INFO StudentOperations,main:145 - Enter Course Code to drop course
+12:14:44,384 DEBUG StudentCourseDAO,main:43 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', CourseCode = 110' at line 1
+12:14:44,387  INFO StudentClient,main:81 - Logging Out at 12:14    18-JUNE    THURSDAY
+12:14:44,387  INFO Login,main:31 - Enter ID 
+12:15:14,380  INFO Login,main:68 - Terminated.!
+12:15:46,074  INFO Login,main:25 - SMS
+12:15:46,086  INFO Login,main:31 - Enter ID 
+12:15:49,087  INFO Login,main:37 - Enter Password
+12:15:51,878  INFO Login,main:42 - Last Login : 2020-06-18 12:14:37  THURSDAY
+12:15:51,925 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. Tejeshwar 
+12:15:51,925  INFO StudentClient,main:28 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Start Registration
+5.Pay Semester Fees
+6.View Report card
+7.Logout
+12:16:08,498  INFO StudentOperations,main:141 - Added Courses
+12:16:08,503  INFO StudentOperations,main:143 - DM  110
+12:16:08,504  INFO StudentOperations,main:145 - Enter Course Code to drop course
+12:16:10,342  INFO StudentClient,main:81 - Logging Out at 12:16    18-JUNE    THURSDAY
+12:16:10,342  INFO Login,main:31 - Enter ID 
+12:16:19,942  INFO Login,main:68 - Terminated.!

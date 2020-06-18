@@ -39,6 +39,8 @@ public class RegistrationOperations implements operationHelper {
 			throw new RegistrationEndedException(RegistrationEndDate);
 		}
 		
+		
+		//-----
 		//feteched all courses and filtered course based on student semester
 		logger.info("Courses Available for you : ");
 		ArrayList<Course> avaiableCourses = new ArrayList<Course>();
@@ -59,7 +61,7 @@ public class RegistrationOperations implements operationHelper {
 			String str = input.next();
 			tempCourses.add(Integer.parseInt(str));}
 		
-		
+		//---
 		//checking whether courses are valid or not based on number of student and valid course code
 		boolean flag = false;
 		int ind = 0;

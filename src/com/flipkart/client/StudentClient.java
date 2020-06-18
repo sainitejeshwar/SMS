@@ -42,7 +42,7 @@ public class StudentClient implements clientHelper , operationHelper{
 					
 				case 2:
 					for(Integer itr : student.getStudentCourses()) {
-						logger.info(getCourseName(itr)+" - ");
+						logger.info(getCourseName(itr));
 					}
 					break;
 					
@@ -67,7 +67,12 @@ public class StudentClient implements clientHelper , operationHelper{
 				case 6:
 					studOperations.viewReportCard(user.getEmailID());
 					break;
-				
+				case 8:
+					studOperations.addCourse(student.getStudentID(), studScanner);
+					break;
+				case 9:
+					logger.info(studOperations.dropCourse(student, studScanner));
+					break;
 				default:
 					break;
 			}

@@ -1,12 +1,19 @@
 package com.flipkart.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
+import com.flipkart.DAO.StudentCourseDAO;
+import com.flipkart.bean.Course;
 import com.flipkart.bean.Payment;
 import com.flipkart.bean.Student;
+import com.flipkart.exception.InvalidCourseException;
 import com.flipkart.helper.operationHelper;
 import com.flipkart.utils.DateTimeUtil;
 
@@ -34,7 +41,6 @@ public class StudentOperations implements operationHelper{
 	
 	//Pay registration fees
 	public String payFees(int registrationID) {
-		
 		//First checks whether registration is done or not by checking fees paid status
 		try {
 			if(registrationDAO.getPaymentStatus(registrationID).isFeespaid()) {
@@ -44,10 +50,8 @@ public class StudentOperations implements operationHelper{
 		catch (Exception e) {
 			return ("Do Registration First");
 		}
-		
 		//If registration is done then fees is fetched and payment gateway opens
 		int fees = registrationDAO.getRegistrationFees(registrationID);
-		
 		/*
 		 * PAYMENT GATEWAY STARTS
 		 */
@@ -74,13 +78,18 @@ public class StudentOperations implements operationHelper{
 		return studentDAO.listByID(emailid);
 	}
 	
-	
 	//Showing courses in a particular catalog
 	public void showCourse(int CatalogID) {
 		returnCourseCatalog()
 		.stream()
 		.filter(course -> course.getCatalogID() == CatalogID)
 		.forEach(course -> logger.info(course.getCourseCode()+"\t"+course.getName()));
+	}
+	public ArrayList<Course> getCourse(int CatalogID) {
+		return (ArrayList<Course>) returnCourseCatalog()
+		.stream()
+		.filter(course -> course.getCatalogID() == CatalogID)
+		.collect(Collectors.toList());
 	}
 	
 	//For viewing the grades of the student
@@ -98,6 +107,51 @@ public class StudentOperations implements operationHelper{
 	public String showDetails(Student student) {
 		return "ID :"+student.getStudentID()+"\nName:"+student.getName()+"\nBranch:"+student.getBranch()
 		+"\nSemester:"+student.getSemester();
+	}
+	
+	public String addCourse(int studentID , Scanner input) {
+		logger.info("Already Added Courses");
+		for(Integer itr: studentCourseDAO.getCourse(student.getStudentID())) {
+			logger.info(getCourseName(itr) + "  "+itr);
+		}
+		logger.info("Courses Available for you : ");
+		ArrayList<Course> avaiableCourses = new ArrayList<Course>();
+		avaiableCourses.addAll((returnCourseCatalog()
+				.stream()
+				.filter(course -> course.getCatalogID() == student.getSemester())
+				.collect(Collectors.toList())));
+		
+		for(Course course : avaiableCourses) {
+				logger.info(course.getCourseCode()+"\t"+course.getName()+"\t"+course.getFees());
+		}
+		
+		logger.info("\nEnter Course Code to add :");
+		int courseCode = input.nextInt();
+		try {
+			if(isCourseContained(courseCode,avaiableCourses) != null){
+				studentCourseDAO.addCourse(studentID, courseCode);
+			}
+		} catch (InvalidCourseException e) {
+			return (e.Message()+" not valid for you");
+		}
+		return "Course" +getCourseName(courseCode) + "added";
+	}
+	
+	public String  dropCourse(Student student , Scanner input) {
+		logger.info("Added Courses");
+		for(Integer itr: studentCourseDAO.getCourse(student.getStudentID())) {
+			logger.info(getCourseName(itr) + "  "+itr);
+		}
+		logger.info("Enter Course Code to drop course");
+		int courseCode = input.nextInt();
+		if(studentCourseDAO.getCourse(student.getStudentID()).contains(courseCode))
+		{
+			studentCourseDAO.dropCourse(student.getStudentID(),courseCode);
+		}
+		else {
+			return "Invalid CourseCode";
+		}
+		return "Course" + getCourseName(courseCode) + " deleted";
 	}
 }
 

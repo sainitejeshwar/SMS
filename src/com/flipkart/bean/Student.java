@@ -19,7 +19,6 @@ import java.util.stream.Collectors;
  * 		- 	semester			: Semester in which student is studying
  * 		- 	Branch				: Branch in which student is enrolled
  * 		- 	StudentID			: Primary Key
- * 		- 	marks				: Arraylist of marks of student , courseCode can be taken from student course corresponding to same index
  * 									
  */
 

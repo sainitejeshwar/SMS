@@ -83,6 +83,28 @@ public class CourseDAO{
 		}
 		return allCourses;
 	}
+	
+	public Course listByID(int courseCode) {
+		conn = DBUtils.getConnection();
+		ResultSet rs = null;
+		Course course = new Course();
+		try {
+			stmt = conn.prepareStatement(SQLQueryConstant.COURSE_SELECT_BY_ID);
+			stmt.setInt(1, courseCode);
+			rs = stmt.executeQuery();
+			while(rs.next()) {
+				course.setName(rs.getString("Name"));
+				course.setCatalogID(rs.getInt("CatalogID"));
+				course.setProf(rs.getInt("ProfessorInfo"));
+				course.setNumberofStudents(rs.getInt("NumberOfStudent"));
+				course.setFees(rs.getInt("Fees"));
+			}
+			rs.close();
+		} catch (SQLException e) {
+			logger.debug(e.getMessage());
+		}
+		return course;
+	}
 	//update the number of student studying the course
 	public void updateStudents(ArrayList<Course> final_courses) {
 		conn = DBUtils.getConnection();
