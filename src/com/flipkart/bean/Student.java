@@ -31,24 +31,13 @@ public class Student extends User {
 	private int semester;
 	private String Branch;  
 	private int StudentID;
-	private  ArrayList<Integer> marks = new ArrayList<Integer>(Arrays.asList(new Integer[4]));
 	
-	public Student(){
-		Collections.fill(marks, 0);
-	}
 
 	public int getRegistrationNumber() {
 		return RegistrationNumber;
 	}
 	public void setRegistrationNumber(int registrationNumber) {
 		RegistrationNumber = registrationNumber;
-	}
-
-	public void setMarks(int index , int grade) {
-		marks.set(index, grade);
-	}
-	public ArrayList<Integer> getMarks(){
-		return marks;
 	}
 	public int getStudentID() {
 		return StudentID;

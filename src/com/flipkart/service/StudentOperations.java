@@ -1,5 +1,8 @@
 package com.flipkart.service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Payment;
@@ -81,20 +84,14 @@ public class StudentOperations implements operationHelper{
 	}
 	
 	//For viewing the grades of the student
-	public String viewReportCard(String emailID) {
-		student = studentDAO.getGrade(emailID);
-		String grades = "";
-		int ind = 0;
+	public void viewReportCard(String emailID) {
+		student = studentDAO.listByID(emailID);
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		map.putAll(marksDAO.fetchGrades(student.getStudentID()));
+		for (Map.Entry<Integer,Integer> entry : map.entrySet())  
+            logger.info(getCourseName(entry.getKey()) + 
+                             "\t" + entry.getValue());	
 		
-		for(Integer itr : student.getMarks()) {
-			grades = grades + (getCourseName(student.getStudentCourses().get(ind)) +"\t"+itr+"\n");
-			ind++;
-		}
-		//if no grades are available
-		if(grades.equals("")) {
-			grades = "Not Available";
-		}
-		return grades;
 	}
 	
 	//helper funtion to print details

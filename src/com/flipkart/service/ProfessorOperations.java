@@ -69,9 +69,10 @@ public class ProfessorOperations implements operationHelper{
 				.collect(Collectors.toList())) {											
 			logger.info(student.getName()+"\t"+student.getStudentID()+" :");
 			index = student.getStudentCourses().indexOf(courseCode);						//getting the course code index to determine which course is that
-			int grade = input.nextInt();
-			student.setMarks(index, grade);													//setting up marks
-			studentDAO.setGrades(index,student);											//updating the grades in student table
+			int grade = input.nextInt();												//setting up marks
+			//studentDAO.setGrades(index,student);
+			marksDAO.uploadGrades(student.getStudentID(), courseCode, grade);
+			//updating the grades in student table
 		}
 	}
 	

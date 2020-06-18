@@ -65,7 +65,7 @@ public class StudentClient implements clientHelper , operationHelper{
 					break;
 					
 				case 6:
-					logger.info("\n"+studOperations.viewReportCard(user.getEmailID()));
+					studOperations.viewReportCard(user.getEmailID());
 					break;
 				
 				default:

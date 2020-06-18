@@ -20,7 +20,8 @@ public class SQLQueryConstant {
 	public static final String USER_SET_TIMESTAMP = "select LastLogin from users where EmailID=?";
 	public static final String USER_UPDATE = "update users set Password = ? where EmailID = ?";
 	public static final String USER_INSERT = "insert into users (EmailID , Password,Type,Gender) values (?,?,?,?)";
-
+	public static final String DELETE_USER = "delete from users where EmailID = ?";
+	
 	//COURSE TABLE QUERIES
 	public static final String COURSE_SELECT_ALL = "select * from course";
 	public static final String COURSE_UPDATE_COUNT = "update course set NumberOfStudent = ? where CourseCode = ?";
@@ -44,19 +45,13 @@ public class SQLQueryConstant {
 	public static final String ADMIN_SELECT_ALL = "select * from admin";
 	public static final String ADMIN_INSERT = "insert into admin (EmailID , Name , Level) values (?,?,?)";
 		
-	//MARKS TABLE QUERIES
-	public static final String MARKS_SELECT_BY_ID = "select * from grades where StudentID = ?";
-	public static final String MARKS_INSERT = "insert into grades (StudentID) values (?)";
-	public static final String MARKS_UPDATE = "update grades set Course1 = ? , Course2 = ? , Course3 = ? , Course4 = ?  where StudentID = ?";
-	public static final String MARKS_UPDATE_COURSE1 = "update grades set Course1 = ?  where StudentID = ?";
-	public static final String MARKS_UPDATE_COURSE2 = "update grades set Course2 = ?  where StudentID = ?";
-	public static final String MARKS_UPDATE_COURSE3 = "update grades set Course3 = ?  where StudentID = ?";
-	public static final String MARKS_UPDATE_COURSE4 = "update grades set Course4 = ?  where StudentID = ?";
+	//REPORTCARD TABLE QUERIES
+	public static final String REPORTCARD_INSERT = "insert into reportcard values (?,?,?)";
+	public static final String REPORTCARD_BY_ID = "select * from reportcard where StudentID = ?";
+
 		
 	//PAYMENT TABLE QUERIES
 	public static final String PAYMENT_INSERT = "insert into payment values (?,?,?,?,?)";
 	public static final String PAYMENT_STATUS = "select * from payment where RegNo = ?";
 	
-	public static final String DELETE_USER = "delete from users where EmailID = ?";
-
 }

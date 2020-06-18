@@ -109,8 +109,7 @@ public class RegistrationOperations implements operationHelper {
 		//updating in  database
 		registrationDAO.addRegistration(newRegistration, student);
 		studentDAO.UpdateStudentRegistration(final_course, student); //studentCourseDao
-		courseDAO.updateStudents(final_course);
-		marksDAO.createStudent(student.getStudentID());   
+		courseDAO.updateStudents(final_course);   
 		return "Registration Completed";
 	}
 	
