@@ -16870,3 +16870,105 @@ Choices
 20:47:32,137  INFO StudentClient,main:96 - Logging Out at 20:47    18-JUNE    THURSDAY
 20:47:32,137  INFO Login,main:31 - Enter ID 
 20:47:34,671  INFO Login,main:68 - Terminated.!
+21:08:53,954  INFO Login,main:25 - SMS
+21:08:53,963  INFO Login,main:31 - Enter ID 
+21:08:57,529  INFO Login,main:37 - Enter Password
+21:09:01,949  INFO Login,main:42 - Last Login : 2020-06-18 20:46:56  THURSDAY
+21:09:02,675 DEBUG StudentClient,main:23 - Logged in as Student :  Mr. pratik
+21:09:02,675  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
+21:09:05,100  INFO StudentClient,main:48 - Already Added Courses  :
+21:09:05,116  INFO StudentClient,main:52 - 
+Registered Courses : 
+21:09:05,121  INFO StudentClient,main:54 - Physics
+21:09:05,123  INFO StudentClient,main:54 - SE
+21:09:05,124  INFO StudentClient,main:54 - DAA
+21:09:05,126  INFO StudentClient,main:54 - Chemistry
+21:09:05,127  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
+21:09:10,202  INFO StudentClient,main:63 - Registration Already Done 
+ Cannot perform this operations now
+21:09:10,202  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
+21:09:12,209  INFO StudentClient,main:68 - Registration Already Done 
+ Cannot perform this operations now
+21:09:12,209  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
+21:09:14,222  INFO StudentClient,main:73 - Registration Already Done 
+ Pay fees (if not paid yet)
+21:09:14,223  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
+21:09:15,729  INFO StudentClient,main:82 - Fees Already Paid on :2020-06-18 20:42:00  THURSDAY
+21:09:15,729  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
+21:09:18,379  INFO StudentOperations,main:101 - Math	44
+21:09:18,379  INFO StudentClient,main:29 - 
+Choices
+1.Show My Details
+2.View My Courses
+3.View Catalog
+4.Add Course
+5.Drop Course
+6.Start Registration
+7.Pay Semester Fees
+8.View Report card
+9.Logout
+21:09:21,472  INFO StudentClient,main:96 - Logging Out at 21:9    18-JUNE    THURSDAY
+21:09:21,472  INFO Login,main:31 - Enter ID 
+21:09:23,719  INFO Login,main:68 - Terminated.!
+22:00:39,300  INFO Login,main:25 - SMS
+22:00:39,313  INFO Login,main:31 - Enter ID 

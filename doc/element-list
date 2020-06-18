@@ -5,4 +5,5 @@ com.flipkart.DAO
 com.flipkart.exception
 com.flipkart.helper
 com.flipkart.service
+com.flipkart.threadsolution
 com.flipkart.utils
