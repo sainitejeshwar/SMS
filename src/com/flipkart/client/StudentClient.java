@@ -29,10 +29,12 @@ public class StudentClient implements clientHelper , operationHelper{
 							+ "1.Show My Details\n"
 							+ "2.View My Courses\n"
 							+ "3.View Catalog\n"
-							+ "4.Start Registration\n"
-							+ "5.Pay Semester Fees\n"
-							+ "6.View Report card\n"
-							+ "7.Logout");
+							+ "4.Add Course\n"
+							+ "5.Drop Course\n"
+							+ "6.Start Registration\n"
+							+ "7.Pay Semester Fees\n"
+							+ "8.View Report card\n"
+							+ "9.Logout");
 			
 			choice = studScanner.nextInt();
 			switch (choice) {
@@ -41,16 +43,26 @@ public class StudentClient implements clientHelper , operationHelper{
 					break;
 					
 				case 2:
+					student = studOperations.getStudent(user.getEmailID());
 					for(Integer itr : student.getStudentCourses()) {
-						logger.info(getCourseName(itr));
-					}
+						logger.info(getCourseName(itr));}
 					break;
 					
 				case 3:
 					studOperations.showCourse(student.getSemester());
 					break;
 					
+				//Can only be done before registering
 				case 4:
+					logger.info(studOperations.addCourse(student, studScanner));
+					break;
+					
+				//Can only be done before registering
+				case 5:
+					logger.info(studOperations.dropCourse(student, studScanner));
+					break;
+					
+				case 6:
 					try {
 						logger.info(regOperations.doRegistration(student,studScanner));
 					} catch (NotificationMessage e) {			// throws this exception when registration cannot be completed
@@ -60,24 +72,18 @@ public class StudentClient implements clientHelper , operationHelper{
 					}
 					break;
 					
-				case 5:
+				case 7:
 					logger.info(studOperations.payFees(student.getRegistrationNumber()));
 					break;
 					
-				case 6:
-					studOperations.viewReportCard(user.getEmailID());
-					break;
 				case 8:
-					studOperations.addCourse(student.getStudentID(), studScanner);
-					break;
-				case 9:
-					logger.info(studOperations.dropCourse(student, studScanner));
+					studOperations.viewReportCard(user.getEmailID());
 					break;
 				default:
 					break;
 			}
 		}
-		while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6);
+		while(choice == 1 || choice == 2|| choice == 3|| choice == 4|| choice == 5|| choice == 6 || choice == 7 || choice == 8);
 	logger.info("Logging Out at "+ DTUtils.currDateandTime());			// printing logging out Timestamp
 	}
 }

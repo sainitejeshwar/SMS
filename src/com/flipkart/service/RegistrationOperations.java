@@ -39,40 +39,21 @@ public class RegistrationOperations implements operationHelper {
 			throw new RegistrationEndedException(RegistrationEndDate);
 		}
 		
-		
-		//-----
-		//feteched all courses and filtered course based on student semester
-		logger.info("Courses Available for you : ");
-		ArrayList<Course> avaiableCourses = new ArrayList<Course>();
-		avaiableCourses.addAll((returnCourseCatalog()
-				.stream()
-				.filter(course -> course.getCatalogID() == student.getSemester())
-				.collect(Collectors.toList())));
-		
-		for(Course course : avaiableCourses) {
-				logger.info(course.getCourseCode()+"\t"+course.getName()+"\t"+course.getFees());
-		}
-		
-		
-		//student enters 4 primary and 2 secondary coures
+		//Fetching the added courses
 		ArrayList<Integer> tempCourses = new ArrayList<Integer>();
-		logger.info("Enter 4 Primary Course and 2 Secondary Course");
-		for(int i = 0 ;  i<6 ; i ++){
-			String str = input.next();
-			tempCourses.add(Integer.parseInt(str));}
-		
-		//---
+		tempCourses = studentCourseDAO.getCourse(student.getStudentID());
+		 
 		//checking whether courses are valid or not based on number of student and valid course code
 		boolean flag = false;
 		int ind = 0;
 		Set<Course> final_courses = new HashSet<Course>();
-		for(ind = 0 ; ind < 6 ; ind++) {
+		for(ind = 0 ; ind < tempCourses.size() ; ind++) {
 			if(final_courses.size()==4) {
 				break;
 			}
 			try {
 				checkCourseConstraints(tempCourses.get(ind));
-				final_courses.add(isCourseContained(tempCourses.get(ind), avaiableCourses));
+				final_courses.add(getCourseDetails(tempCourses.get(ind)));
 				}
 				catch (CourseFilledException e) {
 					logger.error(getCourseName(e.Message()) +" is already filled");

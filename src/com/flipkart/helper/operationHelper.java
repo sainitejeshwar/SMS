@@ -107,6 +107,20 @@ public interface operationHelper {
 		}
 		return name;
 	}
+	default public Course getCourseDetails(int courseCode) {
+		Course course1 = new Course();
+		try {
+			 course1 = returnCourseCatalog()
+			.stream()
+			.filter((course) -> course.getCourseCode() == courseCode)		//Filter only that course from list of all courses
+			.collect(Collectors.toList()).get(0);					//Collected the result into list and this will contian single entry so
+																			//first element is our answer
+		}
+		catch (IndexOutOfBoundsException e) {								// if now such course the throws exception
+			return null;
+		}
+		return course1;
+	}
 	
 	//Add user into User table
 	default public User addNewUser(Scanner input) {

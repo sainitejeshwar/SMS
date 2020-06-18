@@ -109,8 +109,11 @@ public class StudentOperations implements operationHelper{
 		+"\nSemester:"+student.getSemester();
 	}
 	
-	public String addCourse(int studentID , Scanner input) {
-		logger.info("Already Added Courses");
+	public String addCourse(Student student , Scanner input) {
+		if(student.getRegistrationNumber() != 0) {
+			return "Registration Already Done \n Cannot perform this operations now";
+		}
+		logger.info("Already Added Courses  :");
 		for(Integer itr: studentCourseDAO.getCourse(student.getStudentID())) {
 			logger.info(getCourseName(itr) + "  "+itr);
 		}
@@ -129,15 +132,18 @@ public class StudentOperations implements operationHelper{
 		int courseCode = input.nextInt();
 		try {
 			if(isCourseContained(courseCode,avaiableCourses) != null){
-				studentCourseDAO.addCourse(studentID, courseCode);
+				studentCourseDAO.addCourse(student.getStudentID(), courseCode);
 			}
 		} catch (InvalidCourseException e) {
 			return (e.Message()+" not valid for you");
 		}
-		return "Course" +getCourseName(courseCode) + "added";
+		return "Course " +getCourseName(courseCode) + "  added";
 	}
 	
 	public String  dropCourse(Student student , Scanner input) {
+		if(student.getRegistrationNumber() != 0) {
+			return "Registration Already Done \n Cannot perform this operations now";
+		}
 		logger.info("Added Courses");
 		for(Integer itr: studentCourseDAO.getCourse(student.getStudentID())) {
 			logger.info(getCourseName(itr) + "  "+itr);
@@ -151,7 +157,7 @@ public class StudentOperations implements operationHelper{
 		else {
 			return "Invalid CourseCode";
 		}
-		return "Course" + getCourseName(courseCode) + " deleted";
+		return "Course " + getCourseName(courseCode) + " deleted";
 	}
 }
 
