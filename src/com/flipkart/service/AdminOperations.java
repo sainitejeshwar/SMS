@@ -51,6 +51,7 @@ public class AdminOperations implements operationHelper,clientHelper {
 			default:
 				break;
 			}
+		logger.info("User Added : "+user.getemailID());
 	}
 	//For updating user password
 	public void updateUser(Scanner input ) {
@@ -88,6 +89,7 @@ public class AdminOperations implements operationHelper,clientHelper {
 		logger.info("Enter new Password : ");
 		password = input.next();
 		authorCredentialDAO.updateUser(emailID,password);
+		logger.info("Password reset successful");
 	}
 	
 	//view list all user base on type of user
@@ -123,12 +125,15 @@ public class AdminOperations implements operationHelper,clientHelper {
 		logger.info("Enter Fee for the course");
 		course.setFees(input.nextInt());
 		courseDAO.addCourse(course);
+		logger.info("Course Added");
 	}
 	//Reseting the course means removing the professor teaching the course
 	public void updateCourse(Scanner input) {
+		viewCourseCatalog();
 		logger.info("Enter Course Code to Reset");
 		int courseCode = input.nextInt();
 		courseDAO.resetCourse(courseCode);
+		logger.info(getCourseName(courseCode)+" Updated");
 	}
 	//get Admin by ID
 	public Admin getAdmin(String emailID) {
@@ -143,6 +148,7 @@ public class AdminOperations implements operationHelper,clientHelper {
 			return ;
 		}
 		authorCredentialDAO.deleteUser(emailID);
+		logger.info("User Deleted : "+EmailID);
 	}
 	
 }

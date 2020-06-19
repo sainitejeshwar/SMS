@@ -18092,3 +18092,165 @@ Choices
 09:08:37,158  INFO AdminClient,main:75 - Logging Out at 9:8    19-JUNE    FRIDAY
 09:08:37,158  INFO Login,main:31 - Enter ID 
 09:08:39,195  INFO Login,main:71 - Terminated.!
+09:35:10,704  INFO Login,main:25 - *************WELCOME TO STUDENT MANAGEMENT SYSTEM***********
+09:35:10,716  INFO Login,main:31 - Enter ID 
+09:35:15,056  INFO Login,main:37 - Enter Password
+09:35:16,973 ERROR Login,main:68 - Invalid Id or Password
+09:35:16,974  INFO Login,main:31 - Enter ID 
+09:35:22,213  INFO Login,main:37 - Enter Password
+09:35:24,456  INFO Login,main:42 - Last Login : 2020-06-19 09:07:48  FRIDAY
+09:35:25,469 DEBUG AdminClient,main:27 - Logged in as Admin: Mr. Tejas
+09:35:25,469  INFO AdminClient,main:33 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Delete User
+5.Add Course
+6.Reset Course
+7.View Courses
+8.Logout
+09:35:30,376  INFO AdminOperations,main:129 - Enter Course Code to Reset
+09:35:40,634  INFO AdminClient,main:33 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Delete User
+5.Add Course
+6.Reset Course
+7.View Courses
+8.Logout
+09:35:47,514  INFO operationHelper,main:61 - 101	DAA	-1	0
+09:35:47,515  INFO operationHelper,main:61 - 102	CN	1001	10
+09:35:47,515  INFO operationHelper,main:61 - 103	Math	1001	10
+09:35:47,515  INFO operationHelper,main:61 - 104	English	1003	10
+09:35:47,516  INFO operationHelper,main:61 - 105	Graph	1001	10
+09:35:47,516  INFO operationHelper,main:61 - 106	Chemistry	-1	9
+09:35:47,516  INFO operationHelper,main:61 - 107	Physics	-1	8
+09:35:47,516  INFO operationHelper,main:61 - 108	SCM	-1	4
+09:35:47,516  INFO operationHelper,main:61 - 109	SE	-1	5
+09:35:47,517  INFO operationHelper,main:61 - 110	DM	1004	8
+09:35:47,517  INFO operationHelper,main:61 - 111	SQL	1001	0
+09:35:47,517  INFO operationHelper,main:61 - 113	REST	1001	2
+09:35:47,517  INFO operationHelper,main:61 - 114	JQUERY	1001	3
+09:35:47,517  INFO AdminClient,main:33 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Delete User
+5.Add Course
+6.Reset Course
+7.View Courses
+8.Logout
+09:36:30,347  INFO AdminClient,main:75 - Logging Out at 9:36    19-JUNE    FRIDAY
+09:36:30,347  INFO Login,main:31 - Enter ID 
+09:36:32,344  INFO Login,main:71 - Terminated.!
+10:41:40,105  INFO Login,main:25 - *************WELCOME TO STUDENT MANAGEMENT SYSTEM***********
+10:41:40,116  INFO Login,main:31 - Enter ID 
+10:41:44,687  INFO Login,main:37 - Enter Password 
+10:41:47,568  INFO Login,main:42 - Last Login : 2020-06-19 09:35:24  FRIDAY
+10:41:47,621 DEBUG AdminClient,main:27 - Logged in as Admin: Mr. Tejas
+10:41:47,621  INFO AdminClient,main:33 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Delete User
+5.Add Course
+6.Reset Course
+7.View Courses
+8.Logout
+10:41:50,541  INFO operationHelper,main:128 - Enter Name : 
+10:41:53,270  INFO operationHelper,main:135 - Enter EmailID : 
+10:41:56,382  INFO operationHelper,main:142 - Email ID available
+10:41:56,382  INFO operationHelper,main:148 - Enter Password
+10:41:59,573  INFO operationHelper,main:150 - Enter Type 
+Choices	 1 = admin	2 = student	3 = professor
+10:42:01,015  INFO operationHelper,main:152 - Enter Gender (M/F)
+10:42:02,629  INFO AdminOperations,main:42 - Enter Student Semester :
+10:42:03,817  INFO AdminOperations,main:44 - Enter Branch : 
+10:42:06,222  INFO AdminClient,main:33 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Delete User
+5.Add Course
+6.Reset Course
+7.View Courses
+8.Logout
+10:42:08,990  INFO AdminOperations,main:140 - Enter email ID to delete : 
+10:42:12,220  INFO AdminClient,main:33 - 
+Choices
+1.Add User
+2.Update User
+3.View All Users
+4.Delete User
+5.Add Course
+6.Reset Course
+7.View Courses
+8.Logout
+10:42:18,197  INFO AdminClient,main:75 - Logging Out at 10:42    19-JUNE    FRIDAY
+10:42:18,197  INFO Login,main:31 - Enter ID 
+10:42:20,405  INFO Login,main:37 - Enter Password 
+10:42:22,758 ERROR Login,main:68 - Invalid Id or Password
+10:42:22,759  INFO Login,main:31 - Enter ID 
+10:42:25,346  INFO Login,main:71 - Terminated.!
+10:56:51,707  INFO Login,main:25 - *************WELCOME TO STUDENT MANAGEMENT SYSTEM***********
+10:56:51,716  INFO Login,main:31 - Enter ID 
+10:56:55,640  INFO Login,main:37 - Enter Password 
+10:56:58,320  INFO Login,main:42 - Last Login : 2020-06-18 23:24:15  THURSDAY
+10:56:58,382 DEBUG ProfessorClient,main:24 - Logged in as Professor : Mr. Amit
+10:56:58,382  INFO ProfessorClient,main:30 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+10:57:05,253  INFO ProfessorClient,main:46 - 102	CN
+10:57:05,253  INFO ProfessorClient,main:46 - 103	Math
+10:57:05,254  INFO ProfessorClient,main:46 - 105	Graph
+10:57:05,254  INFO ProfessorClient,main:46 - 111	SQL
+10:57:05,254  INFO ProfessorClient,main:46 - 113	REST
+10:57:05,255  INFO ProfessorClient,main:46 - 114	JQUERY
+10:57:05,255  INFO ProfessorClient,main:30 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+10:57:09,448  INFO ProfessorOperations,main:82 - Avaliable Courses for you
+10:57:09,452  INFO ProfessorOperations,main:86 - 101	DAA
+10:57:09,453  INFO ProfessorOperations,main:86 - 106	Chemistry
+10:57:09,453  INFO ProfessorOperations,main:86 - 107	Physics
+10:57:09,453  INFO ProfessorOperations,main:86 - 108	SCM
+10:57:09,453  INFO ProfessorOperations,main:86 - 109	SE
+10:57:11,600  INFO ProfessorClient,main:54 - Course Added
+10:57:11,600  INFO ProfessorClient,main:30 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+10:57:17,879  INFO ProfessorClient,main:46 - 101	DAA
+10:57:17,880  INFO ProfessorClient,main:46 - 102	CN
+10:57:17,880  INFO ProfessorClient,main:46 - 103	Math
+10:57:17,880  INFO ProfessorClient,main:46 - 105	Graph
+10:57:17,880  INFO ProfessorClient,main:46 - 111	SQL
+10:57:17,881  INFO ProfessorClient,main:46 - 113	REST
+10:57:17,881  INFO ProfessorClient,main:46 - 114	JQUERY
+10:57:17,881  INFO ProfessorClient,main:30 - 
+Choices
+1.View Students in a Course
+2.View My Courses
+3.Upload Grades
+4.Add courses to teach
+5.Logout
+10:57:24,312  INFO ProfessorClient,main:67 - Logging Out at 10:57    19-JUNE    FRIDAY
+10:57:24,312  INFO Login,main:31 - Enter ID 
+10:57:26,145  INFO Login,main:71 - Terminated.!

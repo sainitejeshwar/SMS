@@ -22,7 +22,7 @@ public class Login implements clientHelper{
 	private static User user = new User();
 	
 	public static void main (String[] args) {
-		logger.info("SMS");
+		logger.info("*************WELCOME TO STUDENT MANAGEMENT SYSTEM***********");
 		Scanner input = new Scanner(System.in);			// Scanner object for taking input
 		String emailid = "" , password ="";
 		boolean exit = true;
@@ -34,7 +34,7 @@ public class Login implements clientHelper{
 				exit = false;							// Else can login again
 				break;
 			}
-			logger.info("Enter Password");
+			logger.info("Enter Password ");
 			password = input.next();
 
 			try {
