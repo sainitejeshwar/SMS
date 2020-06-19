@@ -64,6 +64,9 @@ public class Login implements clientHelper{
 			} catch (InvalidUserException e) {									// id or password doenot match with one saved in data base throws this exception
 				logger.error(e.getMessage());
 			}
+			catch (NullPointerException e) {
+				logger.error("Invalid Id or Password");
+			}
 		}
 		logger.info("Terminated.!");
 	}

@@ -28,7 +28,7 @@ public class AdminClient implements clientHelper {
 		
 		//ADMIN FUNCTIONALITIES
 		int choice  = 7;
-		boolean flag = false;
+		boolean flag = true;
 		do {
 			logger.info("\nChoices\n"
 						+ "1.Add User\n"
@@ -61,7 +61,7 @@ public class AdminClient implements clientHelper {
 				adminOperations.viewCourseCatalog();
 				break;
 			case 4:
-				adminOperations.deleteUser(input);
+				adminOperations.deleteUser(input,user.getemailID());
 				break;
 			case 8:
 				flag = false;

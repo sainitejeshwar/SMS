@@ -135,9 +135,13 @@ public class AdminOperations implements operationHelper,clientHelper {
 		return adminDAO.listByID(emailID);
 	}
 	//delete the user 
-	public void deleteUser(Scanner input) {
+	public void deleteUser(Scanner input , String EmailID) {
 		logger.info("Enter email ID to delete : ");
 		String emailID = input.next();
+		if(emailID.equals(EmailID)) {
+			logger.info("Cannot delete yourself");
+			return ;
+		}
 		authorCredentialDAO.deleteUser(emailID);
 	}
 	
